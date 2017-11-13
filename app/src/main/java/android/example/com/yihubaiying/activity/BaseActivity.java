@@ -1,4 +1,5 @@
 package android.example.com.yihubaiying.activity;
+
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -28,6 +29,5 @@ public class BaseActivity extends AppCompatActivity {
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
     }
-
 
 }

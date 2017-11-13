@@ -1,6 +1,8 @@
 package android.example.com.yihubaiying.fragment.fragment_hongbaomap;
 
+import android.content.Intent;
 import android.example.com.yihubaiying.R;
+import android.example.com.yihubaiying.activity.group_chat_activity;
 import android.example.com.yihubaiying.adapter.DongtaiItem;
 import android.example.com.yihubaiying.adapter.MessAdapter;
 import android.example.com.yihubaiying.adapter.MessItem;
@@ -14,6 +16,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +41,12 @@ public class Fragment_XiaoXi extends  Fragment implements View.OnClickListener{
         recyclerView.setLayoutManager(layoutManager);
         MessAdapter adapter=new MessAdapter(R.layout.message_layout,MessItemList);
         recyclerView.setAdapter(adapter);
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(new Intent(getActivity(),group_chat_activity.class));
+            }
+        });
 
 
 

@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:zhy="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@color/red"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="选择领取者身份"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="20dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            zhy:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择性别"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_sex"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择年龄"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_age"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择籍贯"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_home"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择学历"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_edu"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择毕业院校"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_sch"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择院系"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_col"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="20dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            zhy:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择行业"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_ind"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择年龄"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_job"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择年薪范围"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_sal"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="20dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            zhy:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择婚姻状况"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_marry"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择子女情况"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_child"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择年薪范围"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_child_age"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择父母概况"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_child_parent"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="20dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            zhy:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择情趣属性"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_believe"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择餐饮喜好"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_food"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择年薪范围"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_hobby"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="20dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            zhy:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择其他关键词标签"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_others"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择车辆情况"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_cars"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+                <View  android:layout_height="1px"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#CFCFCF"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择房屋情况"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/flow_houses"
+                    zhy:max_select="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="该区域大概有600人符合条件"/>
+        <Button
+            android:id="@+id/btn_next_step"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="下一步"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:background="@drawable/btn_bg_white"/>
+    </LinearLayout>
+
+
+    </ScrollView>

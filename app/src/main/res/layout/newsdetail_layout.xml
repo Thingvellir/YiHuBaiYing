@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#1F1F1F"
+            android:textSize="26dp"
+            android:text="携程亲子园曾一度被叫停 背后负责人张葆葆是谁？"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="南方都市报"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11/9 12:46:28"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="浏览 7953"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:text="今日上午，小米公司创始人、董事长兼CEO雷军在人民大会堂参加中美企业家对话会。随后，在习主席和美国总统特朗普到场见证下，雷军和美国高通公司CEO  Steve Mollenkopf签署了芯片采购项目合作备忘录。\n\n据悉，小米、OPPO和vivo三家中国手机制造商非约束性采购意向备忘录，金额达120亿美元。高通将在今后三年向这三家手机制造商销售零部件。\n\n下午的的时候，小米公司创始人、董事长兼CEO雷军在微博上晒出今晚的国宴邀请函，将受邀出席美国总统特朗普访华晚宴。"
+            android:textSize="18dp" />
+
+
+
+        <View  android:layout_height="20px"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="#1C1C1C"
+                android:text="双十一必买，时尚男必看！"
+                />
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/weipinhui_icon"/>
+        </LinearLayout>
+
+        <View  android:layout_height="20px"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/comment_icon"
+                    />
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最新评论"
+                    android:textSize="18dp"
+                    android:textColor="#1C1C1C"/>
+            </LinearLayout>
+
+
+
+        <View  android:layout_height="1px"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:background="#CFCFCF"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/comment_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</ScrollView>

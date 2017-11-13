@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@color/red"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="选择红包金额"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/jiamianli"/>
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="见面红包"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="见面红包总金额"/>
+                        <EditText
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="80dp"
+                            android:textSize="14dp"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="鉴赏人数"/>
+                        <EditText
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/tran_icon"/>
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="转发"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="转发总金额"/>
+                        <EditText
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="转发赏人数"/>
+                        <EditText
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/daodian_icon"/>
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="到店红包"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="到店有奖总金额"/>
+                        <EditText
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="到店奖励人数"/>
+                        <EditText
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="140dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:id="@+id/imageView3"
+                        android:layout_width="40dp"
+
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="45dp"
+                        android:src="@drawable/groupp_icon" />
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="加群红包"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="进群密码"/>
+                        <EditText
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="群名"/>
+                        <EditText
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="进群总赏金"/>
+                        <EditText
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="进群人数上限"/>
+                        <EditText
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/pay_icon"/>
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="支付方式"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="22dp"
+                            android:text="共550元"
+                            />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginLeft="90dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_margin="10dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/wechat_icon"/>
+                        <ImageView
+                            android:layout_margin="10dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/zhifubao_icon"/>
+
+                        <ImageView
+                            android:layout_margin="10dp"
+                            android:id="@+id/imageView4"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/yinlian_icon" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_next_step"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="发布红包"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:background="@drawable/btn_bg_white"/>
+
+
+    </LinearLayout>
+</ScrollView>

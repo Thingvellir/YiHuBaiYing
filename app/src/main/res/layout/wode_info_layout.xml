@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@color/red"
+            android:fitsSystemWindows="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="我的信息"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </android.support.v7.widget.Toolbar>
+
+
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="郑重提示：隐私一旦设置，不建议更改，如需更改，则会耗费大量信誉钻石！"
+            android:textColor="#CD0000"/>
+        <View  android:layout_height="20px"
+
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的基本信息"/>
+        </LinearLayout>
+        <View  android:layout_height="20px"
+
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓氏"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定胡姓族系条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="性别"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定男性条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="所在地"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定地域条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="籍贯"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定籍贯条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="婚姻状况"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定婚姻情况条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="子女情况"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定子女条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="子女年龄"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定子女年龄条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="已退休"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="便于限定退休条件的人呼应到您"
+                    android:textSize="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="毕业院校"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定毕业院校条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="院系"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定院系条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学历"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定学历条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="行业"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定行业条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="职位"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定职位条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View  android:layout_height="10px"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="年薪"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="便于限定年薪条件的人呼应到您"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.suke.widget.SwitchButton
+                    android:layout_marginTop="10dp"
+
+                    app:sb_checked="true"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的标签"/>
+        </LinearLayout>
+        <View  android:layout_height="20px"
+
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/flow_wode"
+            zhy:max_select="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+        <View  android:layout_height="20px"
+
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+
+
+
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="若有勾选，即代表所勾选条件提供予限定标签条件的人呼应到您。"
+            android:textColor="#CD0000"/>
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="保存"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:background="@drawable/btn_bg_white"/>
+
+
+
+    </LinearLayout>
+</ScrollView>

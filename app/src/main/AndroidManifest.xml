@@ -36,25 +36,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.HongBaoActivity"></activity>
-        <activity android:name=".activity.RandomHongbaoActivity"></activity>
-        <activity android:name=".activity.SelectHongbaoActivity"></activity>
-        <activity android:name=".activity.JiaQunActivity"></activity>
-        <activity android:name=".activity.ZhuanFaActivity"></activity>
+        <activity android:name=".activity.HongBaoActivity" />
+        <activity android:name=".activity.RandomHongbaoActivity" />
+        <activity android:name=".activity.SelectHongbaoActivity" />
+        <activity android:name=".activity.JiaQunActivity" />
+        <activity android:name=".activity.ZhuanFaActivity" />
 
-        <service android:name="com.amap.api.location.APSService" ></service>
-
+        <service android:name="com.amap.api.location.APSService" />
 
         <activity android:name=".activity.Main2Activity" />
         <activity android:name=".activity.pickpeople_activity" />
         <activity android:name=".activity.redpacketdetail_activity" />
         <activity android:name=".activity.Newsdetail_activity" />
         <activity android:name=".activity.group_chat_activity" />
-        <activity android:name=".activity.detail_group_acitivity">
-        </activity>
-
-
-
+        <activity android:name=".activity.detail_group_acitivity" />
+        <activity android:name=".activity.wode_set_activity" />
+        <activity android:name=".activity.shoudao_activity" />
+        <activity android:name=".activity.renwu_activity"></activity>
     </application>
 
 </manifest>

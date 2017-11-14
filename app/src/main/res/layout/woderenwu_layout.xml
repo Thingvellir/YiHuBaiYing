@@ -6,6 +6,8 @@
     android:background="@color/white"
     android:orientation="vertical">
 
+
+
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="57dp"
@@ -17,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:text="我的红包"
+            android:text="我的任务"
             android:textColor="@android:color/white"
             android:textSize="20sp" />
     </android.support.v7.widget.Toolbar>
@@ -52,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:text="@string/jrmf_rp_all_receive"
+            android:text="共完成任务"
             android:textColor="@color/color_a0a0a0"
             android:textSize="10sp" />
     </LinearLayout>
@@ -61,6 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal" >
 
@@ -68,7 +71,7 @@
             android:id="@+id/tv_money"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="49.8元"
+            android:text="6件"
             android:textColor="@color/red_dark"
             android:textSize="26sp" />
 
@@ -79,65 +82,12 @@
             android:textSize="10sp" />
     </LinearLayout>
 
-    <LinearLayout
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:orientation="horizontal" >
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/tv_receiveRpNum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/red_dark"
-                android:text="  " />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/jrmf_rp_receive2"
-                android:textColor="@color/color_a0a0a0"
-                android:textSize="10sp" />
-        </LinearLayout>
-        
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="@dimen/base_padding"
-            android:gravity="center"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/tv_receiveBestRpNum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/red_dark"
-                android:text="  " />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="发出的红包"
-                android:textColor="@color/color_a0a0a0"
-                android:textSize="10sp" />
-        </LinearLayout>
-    </LinearLayout>
-    
-    <View 
-       android:layout_width="match_parent"
-       android:layout_height="@dimen/base_margin"
-       android:background="@color/background"
-       />
+        android:layout_height="@dimen/base_margin"
+        android:background="@color/background"
+        />
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -155,7 +105,7 @@
                 android:layout_marginLeft="@dimen/base_margin"
                 android:drawablePadding="2dp"
                 android:gravity="center_vertical"
-                android:text="定向红包"
+                android:text="寻找张妈妈"
                 android:textColor="@color/color_535353"
                 android:textSize="14sp"/>
 
@@ -168,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/base_margin"
-                android:text="7.9元"
+                android:text="10月11日"
                 android:textColor="@color/color_535353"
                 android:textSize="14sp"/>
         </LinearLayout>
@@ -190,9 +140,9 @@
                 android:layout_marginLeft="@dimen/base_margin"
                 android:drawablePadding="2dp"
                 android:gravity="center_vertical"
+                android:text="寻找最美成都姑娘"
                 android:textColor="@color/color_535353"
-                android:textSize="14sp"
-                android:text="进群红包" />
+                android:textSize="14sp" />
 
             <View
                 android:layout_width="0dp"
@@ -203,7 +153,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/base_margin"
-                android:text="8.6元"
+                android:text="10月19日"
                 android:textColor="@color/color_535353"
                 android:textSize="14sp"/>
         </LinearLayout>
@@ -224,7 +174,7 @@
                 android:layout_marginLeft="@dimen/base_margin"
                 android:drawablePadding="2dp"
                 android:gravity="center_vertical"
-                android:text="签到红包"
+                android:text="中海国际商家推广"
                 android:textColor="@color/color_535353"
                 android:textSize="14sp"/>
 
@@ -237,7 +187,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/base_margin"
-                android:text="1.7元"
+                android:text="10月21日"
                 android:textColor="@color/color_535353"
                 android:textSize="14sp"/>
         </LinearLayout>
@@ -259,7 +209,7 @@
                 android:layout_marginLeft="@dimen/base_margin"
                 android:drawablePadding="2dp"
                 android:gravity="center_vertical"
-                android:text="转发红包"
+                android:text="转发寻人信息"
                 android:textColor="@color/color_535353"
                 android:textSize="14sp"/>
 
@@ -273,7 +223,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/base_margin"
-                android:text="16.8元"
+                android:text="10月23日"
                 android:textColor="@color/color_535353"
                 android:textSize="14sp"/>
         </LinearLayout>
@@ -294,7 +244,7 @@
                 android:layout_marginLeft="@dimen/base_margin"
                 android:drawablePadding="2dp"
                 android:gravity="center_vertical"
-                android:text="签到红包"
+                android:text="百草路美食节"
                 android:textColor="@color/color_535353"
                 android:textSize="14sp"/>
 
@@ -307,7 +257,41 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/base_margin"
-                android:text="14.8元"
+                android:text="11月27日"
+                android:textColor="@color/color_535353"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <View  android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:background="#CFCFCF"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_margin"
+                android:drawablePadding="2dp"
+                android:gravity="center_vertical"
+                android:text="心心相印线下纸品促销"
+                android:textColor="@color/color_535353"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/base_margin"
+                android:text="12月19日"
                 android:textColor="@color/color_535353"
                 android:textSize="14sp"/>
         </LinearLayout>

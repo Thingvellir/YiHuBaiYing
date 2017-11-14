@@ -72,5 +72,6 @@ dependencies {
     compile 'com.hyman:flowlayout-lib:1.1.2'
     compile 'com.wx.goodview:goodview:1.0.0'
     compile 'com.github.zcweng:switch-button:0.0.3@aar'
+    compile 'com.vivian.widgets:TimeLineItemDecoration:1.1'
     testCompile 'junit:junit:4.12'
 }

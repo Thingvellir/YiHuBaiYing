@@ -27,13 +27,16 @@ import java.util.List;
 
 public class Fragment_YouYiSi extends Fragment implements View.OnClickListener{
     List<News> newsItemList=new ArrayList<>();
+    int flag=0;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.youyisi_layout,container,false);
         initView(view);
-
-        initDatas();
+        if (flag==0){
+            initDatas();
+            flag+=1;
+        }
         RecyclerView recyclerView= (RecyclerView) view.findViewById(R.id.youyisi_recycle);
         LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
@@ -51,14 +54,17 @@ public class Fragment_YouYiSi extends Fragment implements View.OnClickListener{
     }
 
     private void initDatas() {
-        News news1=new News("创纪录！中美两天签经贸大单2535亿美元","网易新闻","58971看过",R.drawable.jiang_icon);
-        News news2=new News("创纪录！中美两天签经贸大单2535亿美元","网易新闻","58971看过",R.drawable.jiang_icon);
-        News news3=new News("创纪录！中美两天签经贸大单2535亿美元","网易新闻","58971看过",R.drawable.jiang_icon);
-        News news4=new News("创纪录！中美两天签经贸大单2535亿美元","网易新闻","58971看过",R.drawable.jiang_icon);
+        News news1=new News("产品力再升级！10-15万实惠家轿如何选","车天下","23569看过",R.drawable.youyisi_jiaoche);
+        News news2=new News("从《功守道》，你就只看到马云的钱吗？","成都商报","24581看过",R.drawable.youyisi_gongshoudao);
+        News news3=new News("大豆蛋白是不预防心脏病的，这样吃才可以","39健康网","86514看过",R.drawable.youyisi_daodou);
+        News news4=new News("冬天到了，吃点麻辣辣才是冬天正确的打开方式","本地宝","14527看过",R.drawable.youyisi_malatang);
+        News news5=new News("惊！公积金余额怎么只剩5毛？我的钱呢？","钱袋子金融","34527看过",R.drawable.youyisi_gongjijin);
+
         newsItemList.add(news1);
         newsItemList.add(news2);
-        newsItemList.add(news2);
-        newsItemList.add(news2);
+        newsItemList.add(news3);
+        newsItemList.add(news4);
+        newsItemList.add(news5);
 
 
     }

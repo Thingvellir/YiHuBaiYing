@@ -22,12 +22,16 @@ import java.util.List;
 
 public class Fragment_TongXunLu extends Fragment implements View.OnClickListener{
         List<ContactItem> contentItemList=new ArrayList<>();
+    int flag=0;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.tongxunlu_layout,container,false);
         initView(view);
-        initDatas();
+        if (flag==0){
+            initDatas();
+            flag+=1;
+        }
         RecyclerView recyclerView= (RecyclerView) view.findViewById(R.id.contact_recycleview);
         LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);

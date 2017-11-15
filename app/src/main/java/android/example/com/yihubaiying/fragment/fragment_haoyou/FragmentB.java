@@ -1,10 +1,14 @@
-package android.example.com.yihubaiying.fragment.fragment_youyisi;
+package android.example.com.yihubaiying.fragment.fragment_haoyou;
 
 import android.content.Intent;
 import android.example.com.yihubaiying.R;
 import android.example.com.yihubaiying.activity.Newsdetail_activity;
+import android.example.com.yihubaiying.activity.group_chat_activity;
+import android.example.com.yihubaiying.adapter.MessAdapter;
+import android.example.com.yihubaiying.adapter.Message;
 import android.example.com.yihubaiying.adapter.News;
 import android.example.com.yihubaiying.adapter.NewsAdapter;
+import android.example.com.yihubaiying.fragment.fragment_youyisi.BaseFragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -19,7 +23,9 @@ import java.util.List;
 /**
  * Created by asus on 2016/6/23.
  */
-public class FragmentF extends BaseFragment {
+public class FragmentB extends BaseFragment {
+    private List<Message> MessItemList=new ArrayList<>();
+
 
     List<News> newsItemList=new ArrayList<>();
     private String title;
@@ -28,7 +34,7 @@ public class FragmentF extends BaseFragment {
 
     @Override
     public int getLayoutID() {
-        return R.layout.fragment_layout_a;
+        return R.layout.fragment_layout_b;
     }
 
     @Override
@@ -42,35 +48,26 @@ public class FragmentF extends BaseFragment {
         recyclerView= (RecyclerView) view.findViewById(R.id.recycle);
         LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        NewsAdapter adapter=new NewsAdapter(R.layout.news_layout,newsItemList);
+        MessAdapter adapter=new MessAdapter(R.layout.message_layout,MessItemList);
         recyclerView.setAdapter(adapter);
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 Toast.makeText(getContext(), "onItemChildClick" + position, Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getActivity(),Newsdetail_activity.class));
+                startActivity(new Intent(getActivity(),group_chat_activity.class));
             }
         });
 
     }
     private void initDatas() {
-        News news1=new News("产品力再升级！10-15万实惠家轿如何选","车天下","23569看过",R.drawable.youyisi_jiaoche);
-        News news2=new News("从《功守道》，你就只看到马云的钱吗？","成都商报","24581看过",R.drawable.youyisi_gongshoudao);
-        News news3=new News("大豆蛋白是不预防心脏病的，这样吃才可以","39健康网","86514看过",R.drawable.youyisi_daodou);
-        News news4=new News("冬天到了，吃点麻辣辣才是冬天正确的打开方式","本地宝","14527看过",R.drawable.youyisi_malatang);
-        News news5=new News("惊！公积金余额怎么只剩5毛？我的钱呢？","钱袋子金融","34527看过",R.drawable.youyisi_gongjijin);
-
-        newsItemList.add(news1);
-        newsItemList.add(news2);
-        newsItemList.add(news3);
-        newsItemList.add(news4);
-        newsItemList.add(news5);
+        Message item=new Message(R.drawable.user_nine,"旅行社小张","嗯嗯好的我知道了，我马上把位置发过去。","15:28",R.drawable.red_icon);
+        MessItemList.add(item);
 
 
     }
 
-    public static FragmentF getInstance(String title) {
-        FragmentF mf = new FragmentF();
+    public static FragmentB getInstance(String title) {
+        FragmentB mf = new FragmentB();
         mf.title = title;
         return mf;
     }

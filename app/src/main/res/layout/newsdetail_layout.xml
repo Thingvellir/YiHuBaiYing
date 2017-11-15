@@ -59,14 +59,14 @@
                 android:layout_height="wrap_content"
                 android:textSize="16dp"
                 android:textColor="#1C1C1C"
-                android:text="双十一必买，时尚男必看！"
+                android:text="成都安捷悦信 团购汽车最高六折优惠"
                 />
             <ImageView
                 android:layout_marginTop="10dp"
                 android:scaleType="fitCenter"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:src="@drawable/weipinhui_icon"/>
+                android:src="@drawable/adv_tuangou"/>
             <TextView
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="30dp"
-            android:text="10-15万元是家庭轿车最集中的产品投放区间，紧凑级轿车竞争惨烈，在该级别中只有真正有过硬产品力的车型才能存活下来。而原本销量不错的车型也必须经常保持更新升级，才能通过不断提升产品力让自己进一步扩大领先。今天腾讯汽车为大家精挑细选了四款刚刚更新不就的10-15万元轿车，供选车的朋友参考。\n\n2017年11月6日，东风雪铁龙(微博)C4世嘉（参配、图片、询价） 2018款正式上市，官方指导价9.88万元起。雪铁龙C4世嘉2018款相比原车型在配置方面进行了优化，在舒适性上进一步提升。作为年度小改款车型，新款雪铁龙C4世嘉外观、内饰基本不变，主要针对配置进行了调整，全新配备了全新7英寸中控多媒体显示屏，豪华版及以上车型增加了电动天窗、发动机启停、胎压监测等。此外，旗舰车型中配备了带有车道偏离预警以及跟车距离预警的行车记录仪以及盲区监测等。\n\n雪铁龙C4世嘉2018款在安全保障和人性科技方面得到精进。全系升级全新一代7英寸彩色多媒体触屏系统，豪华版及以上车型增配了电动天窗、STT发动机智能启停系统、间接式胎压监测，旗舰型车型在此基础上增配了IDVR 智能行车监视系统。升级的Citroen Connect车载互联系统除了具有智能导航、娱乐资讯、汽车安防服务、远程车辆诊断、车载互联通讯等功能外，还拥有云语音控制系统，从而得以实现语音导航、收发邮件等操作，这有效解放了驾驶员的双手。\n\n动力方面，新款雪铁龙C4世嘉继续搭载1.6L或1.2T发动机，其中1.6L自然吸气发动机最大输出功率为117马力，峰值扭矩为150牛·米；1.2T涡轮增压发动机最大输出功率为136马力，峰值扭矩为230牛·米。传动部分，低配车型继续采用5速手动，其余车型搭配6速手自一体变速箱。\n\n2018款宝来在外观和内饰设计上延续了老款车型的造型，车身涂装增加至8款，卡梅尔棕车漆为新增选项。其他配置方面，新款宝来时尚型新增胎压监测功能，并增加16英寸铝合金轮圈供选装；舒适型和豪华型将标配多功能方向盘以及前雷达，新增17英寸铝合金轮圈以及支持大众MirrorLink和苹果CarPlay功能的6.5英寸触摸式彩屏可供选装，为消费者提供更加丰富的选择。\n\n动力方面，新车将提供全新的1.5L自然吸气发动机和1.4TSI两种动力选择，其中1.5L发动机的最大功率为110马力（81kW），峰值扭矩为150N·m，传动部分匹配5速手动或6速手自一体变速箱；1.4TSI发动机的最大功率则为131马力（96kW），峰值扭矩达到225N·m，传动部分匹配5速手动或7速DSG双离合变速箱。"
+            android:text="10-15万元是家庭轿车最集中的产品投放区间，紧凑级轿车竞争惨烈，在该级别中只有真正有过硬产品力的车型才能存活下来。而原本销量不错的车型也必须经常保持更新升级，才能通过不断提升产品力让自己进一步扩大领先。今天腾讯汽车为大家精挑细选了四款刚刚更新不就的10-15万元轿车，供选车的朋友参考。\n\n2017年11月6日，东风雪铁龙(微博)C4世嘉（参配、图片、询价） 2018款正式上市，官方指导价9.88万元起。雪铁龙C4世嘉2018款相比原车型在配置方面进行了优化，在舒适性上进一步提升。作为年度小改款车型，新款雪铁龙C4世嘉外观、内饰基本不变，主要针对配置进行了调整，全新配备了全新7英寸中控多媒体显示屏，豪华版及以上车型增加了电动天窗、发动机启停、胎压监测等。此外，旗舰车型中配备了带有车道偏离预警以及跟车距离预警的行车记录仪以及盲区监测等。\n\n雪铁龙C4世嘉2018款在安全保障和人性科技方面得到精进。全系升级全新一代7英寸彩色多媒体触屏系统，豪华版及以上车型增配了电动天窗、STT发动机智能启停系统、间接式胎压监测，旗舰型车型在此基础上增配了IDVR 智能行车监视系统。升级的Citroen Connect车载互联系统除了具有智能导航、娱乐资讯、汽车安防服务、远程车辆诊断、车载互联通讯等功能外，还拥有云语音控制系统，从而得以实现语音导航、收发邮件等操作，这有效解放了驾驶员的双手。"
             android:textSize="18dp" />
 
 
@@ -112,14 +112,62 @@
                 android:layout_height="wrap_content"
                 android:textSize="16dp"
                 android:textColor="#1C1C1C"
-                android:text="双十一必买，时尚男必看！"
+                android:text="成都申蓉圣飞4S店年终钜惠，朗行8.8折优惠"
                 />
             <ImageView
                 android:layout_marginTop="10dp"
-                android:scaleType="fitCenter"
+                android:scaleType="centerCrop"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:src="@drawable/weipinhui_icon"/>
+                android:src="@drawable/adv_langxing"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="广告"/>
+        </LinearLayout>
+        <View  android:layout_height="20px"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="动力方面，新款雪铁龙C4世嘉继续搭载1.6L或1.2T发动机，其中1.6L自然吸气发动机最大输出功率为117马力，峰值扭矩为150牛·米；1.2T涡轮增压发动机最大输出功率为136马力，峰值扭矩为230牛·米。传动部分，低配车型继续采用5速手动，其余车型搭配6速手自一体变速箱。\n\n2018款宝来在外观和内饰设计上延续了老款车型的造型，车身涂装增加至8款，卡梅尔棕车漆为新增选项。其他配置方面，新款宝来时尚型新增胎压监测功能，并增加16英寸铝合金轮圈供选装；舒适型和豪华型将标配多功能方向盘以及前雷达，新增17英寸铝合金轮圈以及支持大众MirrorLink和苹果CarPlay功能的6.5英寸触摸式彩屏可供选装，为消费者提供更加丰富的选择。\n\n动力方面，新车将提供全新的1.5L自然吸气发动机和1.4TSI两种动力选择，其中1.5L发动机的最大功率为110马力（81kW），峰值扭矩为150N·m，传动部分匹配5速手动或6速手自一体变速箱；1.4TSI发动机的最大功率则为131马力（96kW），峰值扭矩达到225N·m，传动部分匹配5速手动或7速DSG双离合变速箱。"
+            android:textSize="18dp" />
+
+        <View  android:layout_height="20px"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="#1C1C1C"
+                android:text="成都崇州通达 雪铁龙全线团购8折"
+                />
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/adv_xuetielong"/>
             <TextView
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"

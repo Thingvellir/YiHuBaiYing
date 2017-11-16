@@ -48,7 +48,8 @@
         <activity android:name=".activity.pickpeople_activity" />
         <activity android:name=".activity.redpacketdetail_activity" />
         <activity android:name=".activity.Newsdetail_activity" />
-        <activity android:name=".activity.group_chat_activity" />
+        <activity android:name=".activity.group_chat_activity"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".activity.detail_group_acitivity" />
         <activity android:name=".activity.wode_set_activity" />
         <activity android:name=".activity.shoudao_activity" />

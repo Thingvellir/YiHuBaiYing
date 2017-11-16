@@ -1,12 +1,15 @@
 package android.example.com.yihubaiying.activity;
 
 import android.example.com.yihubaiying.R;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
+
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,6 +35,8 @@ public class detail_group_acitivity extends AppCompatActivity {
                 finish();
             }
         });
+        toolbar.setNavigationIcon(R.drawable.white_back_icon1);
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         gridView= (GridView) findViewById(R.id.gridview);
         data_list=new ArrayList<Map<String,Object>>();
         getData();
@@ -39,6 +44,8 @@ public class detail_group_acitivity extends AppCompatActivity {
         int [] to={R.id.image};
         sim_adapter=new SimpleAdapter(this,data_list, R.layout.group_item,from,to);
         gridView.setAdapter(sim_adapter);
+
+
 
     }
 

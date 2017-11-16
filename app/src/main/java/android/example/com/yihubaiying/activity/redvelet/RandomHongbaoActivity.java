@@ -1,7 +1,10 @@
-package android.example.com.yihubaiying.activity;
+package android.example.com.yihubaiying.activity.redvelet;
 
 import android.content.Intent;
 import android.example.com.yihubaiying.R;
+import android.example.com.yihubaiying.activity.redvelet.BaseActivity;
+import android.example.com.yihubaiying.utils.AppManager;
+import android.example.com.yihubaiying.view.TigerMachineView;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -36,6 +39,8 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
     private Handler mHandler=new Handler();
     private Button startA;
     private ImageButton back_hongbaorandom;
+    private String thisSnippet;
+    private TextView thisTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +61,11 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
         mViewHandler.post(mTask);
         startA.setOnClickListener(this);
         back_hongbaorandom.setOnClickListener(this);
+
+        Intent intent=getIntent();
+        thisSnippet=intent.getStringExtra("snippet");
+        thisTextView=(TextView)findViewById(R.id.title_randomactivity);
+        thisTextView.setText(thisSnippet);
     }
     @Override
     public void onDestroy() {
@@ -69,7 +79,9 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
         switch (v.getId()){
             case R.id.random_getget:
                     mViewHandler.removeCallbacks(mTask);
-                    startActivity(new Intent(this, SelectHongbaoActivity.class));
+                Intent thisIntent=new Intent(RandomHongbaoActivity.this, SelectHongbaoActivity.class);
+                thisIntent.putExtra("snippet",thisSnippet);
+                startActivity(thisIntent);
                     AppManager.getAppManager().finishActivity(this);
                 break;
             case R.id.back_hongbaorandom:

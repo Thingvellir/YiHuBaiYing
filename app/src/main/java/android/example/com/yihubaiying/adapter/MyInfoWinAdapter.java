@@ -14,7 +14,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.example.com.yihubaiying.MainActivity;
 import android.example.com.yihubaiying.R;
-import android.example.com.yihubaiying.activity.HongBaoActivity;
+
 import android.example.com.yihubaiying.enity.HongBao;
 import android.os.Debug;
 import android.support.annotation.NonNull;
@@ -22,10 +22,10 @@ import android.util.DebugUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-        import android.view.View;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
-        import android.widget.TextView;
+import android.widget.TextView;
 
 
 public class MyInfoWinAdapter implements AMap.InfoWindowAdapter {
@@ -70,7 +70,7 @@ public class MyInfoWinAdapter implements AMap.InfoWindowAdapter {
         addrTV = (TextView) view.findViewById(R.id.addr);
 
         nameTV.setText(String.format(context.getString(R.string.agent_title),agentName));
-        addrTV.setText(String.format(context.getString(R.string.agent_message),snippet));
+        addrTV.setText(String.format(snippet));
 
 //        navigation.setOnClickListener(this);
 //        call.setOnClickListener(this);

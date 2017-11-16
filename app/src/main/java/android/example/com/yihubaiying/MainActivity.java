@@ -1,8 +1,7 @@
 package android.example.com.yihubaiying;
 
 
-import android.Manifest;
-import android.example.com.yihubaiying.activity.BaseActivity;
+import android.example.com.yihubaiying.activity.redvelet.BaseActivity;
 
 import android.content.Intent;
 import android.example.com.yihubaiying.activity.Main2Activity;
@@ -11,18 +10,14 @@ import android.example.com.yihubaiying.fragment.Fragment_HongBaoMap;
 import android.example.com.yihubaiying.fragment.Fragment_TongXunLu;
 import android.example.com.yihubaiying.fragment.Fragment_WoDe;
 import android.example.com.yihubaiying.fragment.Fragment_YouYiSi;
-import android.graphics.Color;
-import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RadioButton;

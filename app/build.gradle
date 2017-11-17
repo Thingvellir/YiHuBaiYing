@@ -33,28 +33,19 @@ dependencies {
     //底部分享弹出框
     //滑动验证
 
-
-
-    
-
+    //输入框edittext
+    //底部分享弹出框 //滑动验证
 
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    
-
-
-    //输入框edittext
-    //底部分享弹出框
-    //滑动验证
-    
-    compile'com.android.support.constraint:constraint-layout:1.0.2'
-    compile'com.github.bumptech.glide:glide:3.7.0'
-    compile'cn.pedant.sweetalert:library:1.3'
-    compile'com.android.support:appcompat-v7:25.3.1'
-    compile'com.android.support:design:25.3.1'
-    compile'com.youth.banner:banner:1.4.10'
-    compile'com.yanzhenjie:permission:1.1.2'
-    compile'com.hanks:lineheightedittext-library:1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'cn.pedant.sweetalert:library:1.3'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.youth.banner:banner:1.4.10'
+    compile 'com.yanzhenjie:permission:1.1.2'
+    compile 'com.hanks:lineheightedittext-library:1.0'
     compile 'top.zibin:BottomDialog:1.0.5'
     compile 'com.github.mcxtzhang:SwipeCaptcha:V1.0.0'
     compile 'nl.dionsegijn:konfetti:1.1.0'
@@ -73,8 +64,8 @@ dependencies {
     compile 'com.wx.goodview:goodview:1.0.0'
     compile 'com.github.zcweng:switch-button:0.0.3@aar'
     compile 'com.vivian.widgets:TimeLineItemDecoration:1.1'
-    testCompile 'junit:junit:4.12'
     compile 'com.flyco.roundview:FlycoRoundView_Lib:1.1.2@aar'
     compile 'com.flyco.tablayout:FlycoTabLayout_Lib:1.5.0@aar'
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    testCompile 'junit:junit:4.12'
 }

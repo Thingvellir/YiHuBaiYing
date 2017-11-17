@@ -1,8 +1,10 @@
 package android.example.com.yihubaiying.activity;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.example.com.yihubaiying.R;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -16,11 +18,25 @@ import com.zhy.view.flowlayout.TagFlowLayout;
 public class wode_set_activity extends AppCompatActivity {
     private String[] xingqu = new String[]
             {"创业人士","健身爱好者","有车一族","有房一族","极客一族","租房一族","好吃一族"};
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wode_info_layout);
+
+        toolbar= (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        toolbar.setNavigationIcon(R.drawable.white_back_icon1);
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
+        toolbar.set
 
         final TagFlowLayout flowLayout= (TagFlowLayout) findViewById(R.id.flow_wode);
         flowLayout.setAdapter(new TagAdapter<String>(xingqu) {

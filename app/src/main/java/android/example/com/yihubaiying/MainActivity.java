@@ -7,6 +7,7 @@ import android.example.com.yihubaiying.activity.BaseActivity;
 import android.content.Intent;
 import android.example.com.yihubaiying.activity.Main2Activity;
 
+import android.example.com.yihubaiying.activity.youyisi_fahongbao;
 import android.example.com.yihubaiying.fragment.Fragment_HongBaoMap;
 import android.example.com.yihubaiying.fragment.Fragment_TongXunLu;
 import android.example.com.yihubaiying.fragment.Fragment_WoDe;
@@ -84,7 +85,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 findt.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(getApplicationContext(),"heihei",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this,youyisi_fahongbao.class));
                     }
                 });
                 dialog.show();

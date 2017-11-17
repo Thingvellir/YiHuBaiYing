@@ -44,21 +44,15 @@ public class FragmentE extends BaseFragment {
         recyclerView.setLayoutManager(layoutManager);
         NewsAdapter adapter=new NewsAdapter(R.layout.news_layout,newsItemList);
         recyclerView.setAdapter(adapter);
-        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Toast.makeText(getContext(), "onItemChildClick" + position, Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getActivity(),Newsdetail_activity.class));
-            }
-        });
+
 
     }
     private void initDatas() {
-        News news1=new News("产品力再升级！10-15万实惠家轿如何选","车天下","23569看过",R.drawable.youyisi_jiaoche);
-        News news2=new News("从《功守道》，你就只看到马云的钱吗？","成都商报","24581看过",R.drawable.youyisi_gongshoudao);
-        News news3=new News("大豆蛋白是不预防心脏病的，这样吃才可以","39健康网","86514看过",R.drawable.youyisi_daodou);
-        News news4=new News("冬天到了，吃点麻辣辣才是冬天正确的打开方式","本地宝","14527看过",R.drawable.youyisi_malatang);
-        News news5=new News("惊！公积金余额怎么只剩5毛？我的钱呢？","钱袋子金融","34527看过",R.drawable.youyisi_gongjijin);
+        News news1=new News("毁灭人类！波士顿动力人形机器人会后空翻了","新浪科技","13969看过",R.drawable.keji1);
+        News news2=new News("Xbox One X在日本销量不佳 上市首周仅售出1344台","凤凰科技","64581看过",R.drawable.keji2);
+        News news3=new News("全国首家无人智慧餐厅落地：你会去试试吗？","网易科技","46814看过",R.drawable.keji3);
+        News news4=new News("iPhone X获《时代》评为2017年25大最佳发明之一","百度科技","34527看过",R.drawable.keji4);
+        News news5=new News("为打击假新闻 谷歌等四家科技公司将采纳Trust Project新闻指标","IT之家","94557看过",R.drawable.keji5);
 
         newsItemList.add(news1);
         newsItemList.add(news2);

@@ -18,7 +18,7 @@
         tl:tl_indicator_width_equal_title="true"
         tl:tl_tab_padding="22dp"
         tl:tl_tab_space_equal="true"
-        tl:tl_textSelectColor="#FF0000"
+        tl:tl_textSelectColor="@color/red"
         tl:tl_textUnselectColor="#1C1C1C"
         tl:tl_underline_color="#1AFFFFFF"
         tl:tl_underline_height="1dp">

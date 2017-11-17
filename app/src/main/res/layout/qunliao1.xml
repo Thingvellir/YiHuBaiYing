@@ -900,7 +900,7 @@
 
 
         <ImageView
-            android:id="@+id/emotion_button"
+            android:id="@+id/group_chat_fahongbao"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginLeft="@dimen/content_horizontal_margin"

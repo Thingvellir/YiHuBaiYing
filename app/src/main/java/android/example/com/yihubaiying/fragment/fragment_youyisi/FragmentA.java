@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amap.api.maps.model.Text;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.ArrayList;
@@ -48,8 +49,11 @@ public class FragmentA extends BaseFragment {
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Toast.makeText(getContext(), "onItemChildClick" + position, Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getActivity(),Newsdetail_activity.class));
+                TextView a=(TextView)view.findViewById(R.id.title);
+                if(a.getText().toString().contains("产品力再升级！")){
+                    startActivity(new Intent(getActivity(),Newsdetail_activity.class));
+                };
+
             }
         });
 

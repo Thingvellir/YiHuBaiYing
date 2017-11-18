@@ -46,25 +46,6 @@ public class CustomHelper{
         init();
     }
     private void init(){
-//        rgCrop= (RadioGroup) rootView.findViewById(R.id.rgCrop);
-//        rgCompress= (RadioGroup) rootView.findViewById(R.id.rgCompress);
-//        rgCompressTool= (RadioGroup) rootView.findViewById(R.id.rgCompressTool);
-//        rgCropSize= (RadioGroup) rootView.findViewById(R.id.rgCropSize);
-//        rgFrom= (RadioGroup) rootView.findViewById(R.id.rgFrom);
-//        rgPickTool= (RadioGroup) rootView.findViewById(R.id.rgPickTool);
-//        rgRawFile = (RadioGroup) rootView.findViewById(R.id.rgRawFile);
-//        rgCorrectTool= (RadioGroup) rootView.findViewById(R.id.rgCorrectTool);
-//        rgShowProgressBar= (RadioGroup) rootView.findViewById(R.id.rgShowProgressBar);
-//        rgCropTool= (RadioGroup) rootView.findViewById(R.id.rgCropTool);
-//        etCropHeight= (EditText) rootView.findViewById(R.id.etCropHeight);
-//        etCropWidth= (EditText) rootView.findViewById(R.id.etCropWidth);
-//        etLimit= (EditText) rootView.findViewById(R.id.etLimit);
-//        etSize= (EditText) rootView.findViewById(R.id.etSize);
-//        etHeightPx= (EditText) rootView.findViewById(R.id.etHeightPx);
-//        etWidthPx= (EditText) rootView.findViewById(R.id.etWidthPx);
-
-
-
     }
 
     public void onClick(View view,TakePhoto takePhoto) {

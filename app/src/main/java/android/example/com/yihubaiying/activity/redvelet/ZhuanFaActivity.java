@@ -43,6 +43,8 @@ public class ZhuanFaActivity extends BaseActivity implements View.OnClickListene
         thisSnippet=intent.getStringExtra("snippet");
         thisTextView=(TextView)findViewById(R.id.title_zhuanfa);
         thisTextView.setText(thisSnippet);
+
+
     }
     @Override
     public void onClick(View v){
@@ -54,7 +56,9 @@ public class ZhuanFaActivity extends BaseActivity implements View.OnClickListene
                         @Override
                         public void click(Item item) {
                             Toast.makeText(ZhuanFaActivity.this, getString(R.string.share_title) + item.getTitle() +"成功", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(ZhuanFaActivity.this, RandomHongbaoActivity.class));
+                            Intent thisIntent=new Intent(ZhuanFaActivity.this,RandomHongbaoActivity.class);
+                            thisIntent.putExtra("from","ZhuanFaActivity");
+                            startActivity(thisIntent);
                             AppManager.getAppManager().finishActivity(ZhuanFaActivity.this);
                         }
                     })

@@ -2,6 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/velet_red">
+    </LinearLayout>
     <com.amap.api.maps.MapView
         android:id="@+id/picK_location"
         android:layout_width="match_parent"

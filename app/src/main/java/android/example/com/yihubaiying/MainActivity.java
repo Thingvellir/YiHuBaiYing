@@ -38,6 +38,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private RadioGroup radioGroup;
     private RadioButton radio_hongBaoMap,radio_tongXunLu,radio_woDe,radio_youYiSi;
     private static MainActivity instance;
+    private ImageView yihu;
 
     private Fragment fragment_HongBaoMap,fragment_TongXunLu,fragment_WoDe,fragment_YouYiSi;
 //    private List<Fragment> fragmentList;
@@ -60,9 +61,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     }
 
     private void initView(){
-
-        FloatingActionButton floatingActionButton= (FloatingActionButton) findViewById(R.id.ibHome);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+        yihu=(ImageView)findViewById(R.id.ibHome) ;
+        yihu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogPlus dialog=DialogPlus.newDialog(MainActivity.this).setContentHolder(new ViewHolder(R.layout.bottomdialog)).setGravity(Gravity.CENTER).setContentBackgroundResource(R.drawable.shape_corner).create();

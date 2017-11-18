@@ -69,7 +69,7 @@ public class MyInfoWinAdapter implements AMap.InfoWindowAdapter {
         nameTV = (TextView) view.findViewById(R.id.name);
         addrTV = (TextView) view.findViewById(R.id.addr);
 
-        nameTV.setText(String.format(context.getString(R.string.agent_title),agentName));
+        nameTV.setText(String.format(agentName));
         addrTV.setText(String.format(snippet));
 
 //        navigation.setOnClickListener(this);

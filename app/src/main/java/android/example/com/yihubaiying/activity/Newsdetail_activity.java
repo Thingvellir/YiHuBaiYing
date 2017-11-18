@@ -48,15 +48,11 @@ public class Newsdetail_activity extends AppCompatActivity {
         CommentItem item2=new CommentItem(R.drawable.user_four,"仓晓","2小时前","哇雷总厉害了",R.drawable.good);
         CommentItem item3=new CommentItem(R.drawable.user_four,"仓晓","2小时前","哇雷总厉害了",R.drawable.good);
         CommentItem item4=new CommentItem(R.drawable.user_four,"仓晓","2小时前","哇雷总厉害了",R.drawable.good);
-
-
-
         CommentItemList.add(item);
         CommentItemList.add(item1);
         CommentItemList.add(item2);
         CommentItemList.add(item3);
         CommentItemList.add(item4);
-
 
     }
 

@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.example.com.yihubaiying.R;
 import android.example.com.yihubaiying.activity.redvelet.HongBaoActivity;
-import android.example.com.yihubaiying.activity.yihubaiying.PickLocation;
 import android.example.com.yihubaiying.adapter.MyInfoWinAdapter;
 import android.example.com.yihubaiying.enity.HongBao;
 import android.example.com.yihubaiying.loader.GlideImageLoader;
@@ -88,7 +87,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
 
     private ImageButton location_btn;
 
-
+    private Marker pickedMarker;
 
     private MyInfoWinAdapter adapter;
     private ArrayList<HongBao>hongBaos;
@@ -99,11 +98,11 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
 
     private Circle circle;
 
-    private Marker sendMarker;
 
     private Dialog hongbaoDia;
     private ImageButton openRedvelet;
     private Button closeDia;
+    private TextView hongbaoDiaText;
 
     @Nullable
     @Override
@@ -139,6 +138,11 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         markerView=inflater.inflate(R.layout.marker_hongbao,null);
         numHongbao =(TextView)markerView.findViewById(R.id.num_hongbao);
         location_btn=(ImageButton) view.findViewById(R.id.location_bt);
+//
+//        //一呼百应长按选点
+//        pickedMarker = aMap.addMarker(new MarkerOptions().anchor(0.5f, 0.5f)
+//                .icon(BitmapDescriptorFactory
+//                        .defaultMarker(BitmapDescriptorFactory.HUE_RED)));
     }
 
     public void initBanner(View view){
@@ -172,7 +176,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         aMap.setOnMapClickListener(this);
         aMap.setOnMarkerClickListener(this);
         aMap.setOnInfoWindowClickListener(this);
-
+        aMap.setOnMapLongClickListener(this);
         location_btn.setOnClickListener(this);
 
 //视角
@@ -390,15 +394,12 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         snippetList.add("失物寻找，一张饭卡胡一菲");
         snippetList.add("寻找合租，坐标成都合院");
         snippetList.add("求计院院花联系方式");
-        snippetList.add("寻找走失老人");
+        snippetList.add("寻人启示");
         snippetList.add("招聘送餐兼职学生");
         snippetList.add("求在银桦广场投宿舍347一票");
 
     }
-//    private ArrayList<String> detailList=new ArrayList<>();
-////    private void initDetailList(){
-////        detailList.add("这是这个红包的内容");
-////    }
+
 
     private void initHongbao(){
         hongBaos=new ArrayList<>();
@@ -490,10 +491,10 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
             if(circle!=null) {
                 circle.remove();
             }
-            if (!marker.getPosition().equals(mineLatLng)) {
+
+            if (!marker.getPosition().equals(mineLatLng)&&marker!=pickedMarker) {
 
                 markerLocal = marker;
-                marker.getId();
                 changeCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition(
                         markerLocal.getPosition(), 17, 0, 0)), this);
             }
@@ -524,7 +525,6 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
                 break;
             case R.id.close:
                 hongbaoDia.dismiss();
-                startActivity(new Intent(getActivity(), PickLocation.class));
         }
 
 
@@ -541,23 +541,34 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
             markerLocal=null;
 
         }
+        if(pickedMarker!=null){
+            pickedMarker.remove();
+        }
 
     }
     @Override
     public void onMapLongClick(LatLng point){
-        sendMarker= aMap.addMarker(new MarkerOptions().anchor(0.5f, 0.5f)
-                .position(point)
-                .title("一呼百应 发布红包")
-                .snippet("您是否要在此处发布红包？编辑发布详细信息请点击窗口")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.poi_marker_pressed)));
+        if(pickedMarker!=null){
+            pickedMarker.remove();
+
+        }
+        pickedMarker = aMap.addMarker(new MarkerOptions().anchor(0.5f, 0.5f)
+                .icon(BitmapDescriptorFactory
+                        .defaultMarker(BitmapDescriptorFactory.HUE_RED))
+        .title("在此处发布红包")
+                .snippet("详细发布信息编辑请点击窗口跳转")
+        .infoWindowEnable(true));
+        pickedMarker.setPosition(point);
+        pickedMarker.showInfoWindow();
 
     }
 
     @Override
     public void onInfoWindowClick(Marker marker){
-        if(marker == sendMarker){
-            sendMarker.hideInfoWindow();
-            sendMarker.remove();
+        if(marker == pickedMarker){
+            pickedMarker.hideInfoWindow();
+            pickedMarker.remove();
+
 
         }else {
             marker.hideInfoWindow();
@@ -566,7 +577,9 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
             if(distance>300){
                 Toast.makeText(getContext(),"距离太远，您无法领取红包",Toast.LENGTH_SHORT).show();
             }else {
+
                 showDialog();
+                hongbaoDiaText.setText(marker.getTitle());
             }
         }
     }
@@ -593,6 +606,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         lp.height = WindowManager.LayoutParams.MATCH_PARENT;
         hongbaoDia.getWindow().setAttributes(lp);
         hongbaoDia.show();
+        hongbaoDiaText=(TextView)window .findViewById(R.id.name);
         closeDia=(Button)window.findViewById(R.id.close);
         openRedvelet=(ImageButton)window.findViewById(R.id.open_btn);
         closeDia.setOnClickListener(this);
@@ -605,14 +619,15 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
     public void onFinish() {
 
         markerLocal.showInfoWindow();
-
-        circle=aMap.addCircle(new CircleOptions()
-                .center(markerLocal.getPosition())
-                .strokeColor(STROKE_COLOR)
-                .fillColor(FILL_COLOR)
-                .strokeWidth(2f)
-                .radius(320)
-                .visible(true));
+if(markerLocal!=pickedMarker) {
+    circle = aMap.addCircle(new CircleOptions()
+            .center(markerLocal.getPosition())
+            .strokeColor(STROKE_COLOR)
+            .fillColor(FILL_COLOR)
+            .strokeWidth(2f)
+            .radius(320)
+            .visible(true));
+}
     }
 
     private void changeCamera(CameraUpdate update, CancelableCallback callback) {

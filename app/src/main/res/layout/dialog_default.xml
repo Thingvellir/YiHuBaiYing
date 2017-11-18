@@ -71,7 +71,7 @@
                     android:layout_marginTop="5dp"
                     android:textSize="15sp"
                     android:textColor="@color/white"
-                    android:text="您领取了见赏红包"/>
+                    android:text="您正在领取见赏红包"/>
 
                 <TextView
                     android:id="@+id/textView2"

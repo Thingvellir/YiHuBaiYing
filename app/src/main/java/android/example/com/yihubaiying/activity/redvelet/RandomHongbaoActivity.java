@@ -41,6 +41,7 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
     private ImageButton back_hongbaorandom;
     private String thisSnippet;
     private TextView thisTextView;
+    private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +63,7 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
         startA.setOnClickListener(this);
         back_hongbaorandom.setOnClickListener(this);
 
-        Intent intent=getIntent();
+        intent=getIntent();
         thisSnippet=intent.getStringExtra("snippet");
         thisTextView=(TextView)findViewById(R.id.title_randomactivity);
         thisTextView.setText(thisSnippet);
@@ -92,12 +93,19 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
 
 
     private Runnable mTask = new Runnable() {
+//全是随机数生成
+//        private void doIt(TigerMachineView v, int time) {
+//            Random r = new Random();
+//            int idx;
+//            idx=r.nextInt(10);
+//            v.scrollTo(idx,  time);
+//            String change=idx+"";
+//            money.add(change);
+//        }
+        //只生成015.88
 
-        private void doIt(TigerMachineView v, int time) {
-            Random r = new Random();
-            int idx;
-            idx=r.nextInt(10);
-            v.scrollTo(idx,  time);
+        private void doIt(TigerMachineView v,int time,int idx){
+            v.scrollTo(idx,time);
             String change=idx+"";
             money.add(change);
         }
@@ -106,49 +114,99 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
         public void run() {
 
             int time = 1000;
-            try {
-                Thread.sleep(time);
+            if(intent.getStringExtra("from").equals("HongBaoActivity")){
+                try {
+                    Thread.sleep(time);
 
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                money.clear();
+
+                doIt(mTigerView5, time,8);
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                doIt(mTigerView4, time,8);
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                doIt(mTigerView3, time,5);
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                doIt(mTigerView2, time,1);
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                doIt(mTigerView1, time,0);
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }else if(intent.getStringExtra("from").equals("ZhuanFaActivity")){
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                money.clear();
+
+                doIt(mTigerView5, time,2);
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                doIt(mTigerView4, time,1);
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                doIt(mTigerView3, time,5);
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                doIt(mTigerView2, time,0);
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                doIt(mTigerView1, time,0);
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }else {
+                Log.e("error","random intent value wrong");
             }
-            money.clear();
 
-            doIt(mTigerView5, time);
-            try {
-                Thread.sleep(time);
 
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            doIt(mTigerView4, time);
-            try {
-                Thread.sleep(time);
-
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            doIt(mTigerView3, time);
-            try {
-                Thread.sleep(time);
-
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            doIt(mTigerView2, time);
-            try {
-                Thread.sleep(time);
-
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            doIt(mTigerView1, time);
-            try {
-                Thread.sleep(time);
-
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
             mHandler.post(new Runnable() {
                 @Override
                 public void run() {

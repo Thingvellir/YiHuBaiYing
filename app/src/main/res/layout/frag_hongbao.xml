@@ -26,7 +26,7 @@
             android:layout_height="match_parent" />
         >
 
-        <!-- 自定义按钮位置，具体可以通过margin_left 和 top来确定-->
+
         <ImageButton
             android:layout_marginLeft="320dp"
             android:layout_marginTop="10dp"

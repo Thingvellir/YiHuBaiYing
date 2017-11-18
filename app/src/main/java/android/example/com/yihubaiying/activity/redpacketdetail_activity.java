@@ -20,9 +20,6 @@ public class redpacketdetail_activity extends AppCompatActivity {
 
         final SweetAlertDialog pDialog=new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE);
         pDialog.setTitleText("Good job!").setContentText("You clicked the button!");
-//        pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
-//        pDialog.setTitleText("Loading");
-//        pDialog.setCancelable(false);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

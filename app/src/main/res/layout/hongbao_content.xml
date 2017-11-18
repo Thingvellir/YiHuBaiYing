@@ -173,12 +173,6 @@
                     android:textSize="14sp" />
 
             </LinearLayout>
-
-
-
-
-
-
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

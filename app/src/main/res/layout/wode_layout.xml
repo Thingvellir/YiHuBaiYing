@@ -37,7 +37,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/user_eight"/>
+                android:src="@drawable/user_three"/>
 
             <LinearLayout
                 android:layout_marginTop="20dp"
@@ -48,7 +48,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="辛格韦德利丶"
+                    android:text="孙老师"
                     android:textSize="18dp"
                     />
                 <LinearLayout

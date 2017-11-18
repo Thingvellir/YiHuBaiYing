@@ -30,210 +30,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:gravity="right"
-                    android:orientation="horizontal"
-                    android:paddingBottom="20dp"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:paddingTop="10dp">
 
-                    <!-- 重试 -->
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:visibility="gone">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="重试"
-                            android:visibility="gone"
-                            />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:layout_margin="5dp"
-                            android:src="@mipmap/img_error"/>
-                    </LinearLayout>
-
-                    <ProgressBar
-
-                        style="?android:attr/progressBarStyleSmall"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:visibility="gone"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:layout_marginRight="10dp"
-                            android:text="孙老师"
-                            android:textColor="#666666"
-                            android:textSize="12sp"
-                            android:visibility="visible"/>
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:autoLink="phone|email|map|web"
-                            android:background="@drawable/img_bubble_send"
-                            android:gravity="left|center_vertical"
-                            android:linksClickable="true"
-                            android:maxWidth="240dp"
-                            android:minHeight="40dp"
-                            android:paddingBottom="12dp"
-                            android:paddingLeft="16dp"
-                            android:paddingRight="16dp"
-                            android:paddingTop="12dp"
-                            android:text="我老妈下午出去买菜就一直没回来，谁能提供点线索吗，真是急死了。黑色的外套，大概在高升桥附近。"
-                            android:textColor="#ffff"
-                            android:textColorLink="#3655bf"
-                            android:textSize="16sp"/>
-                    </LinearLayout>
-                    <!-- 人物头像 -->
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:src="@drawable/user_three"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:gravity="right"
-                    android:orientation="horizontal"
-                    android:paddingBottom="20dp"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:paddingTop="10dp">
-
-                    <!-- 重试 -->
-
-                    <LinearLayout
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:visibility="gone">
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="重试"
-                            android:visibility="gone" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:layout_margin="5dp"
-                            android:src="@mipmap/img_error" />
-                    </LinearLayout>
-
-                    <ProgressBar
-
-                        style="?android:attr/progressBarStyleSmall"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:visibility="gone" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:layout_marginRight="10dp"
-                            android:text="孙老师"
-                            android:textColor="#666666"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
-
-                        <RelativeLayout
-                            android:layout_width="260dp"
-                            android:layout_height="100dp"
-                            android:background="@mipmap/_bg_from_hongbao">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="70dp"
-                                android:layout_marginTop="15dp"
-                                android:orientation="vertical">
-
-                                <TextView
-
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="寻人求助，万分感谢"
-                                    android:textColor="@color/white"
-                                    android:textSize="14sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="领取红包"
-                                    android:textColor="@color/white"
-                                    android:textSize="14sp" />
-
-                            </LinearLayout>
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginBottom="5dp"
-                                android:layout_marginLeft="20dp"
-                                android:text="群红包"
-                                android:textColor="#464646"
-                                android:textSize="12sp" />
-
-                        </RelativeLayout>
-                    </LinearLayout>
-                    <!-- 人物头像 -->
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:src="@drawable/user_three" />
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -253,7 +50,7 @@
                         android:layout_height="40dp"
                         android:focusable="false"
                         android:focusableInTouchMode="false"
-                        android:src="@drawable/user_two" />
+                        android:src="@drawable/user_xiaosong" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -267,7 +64,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="沧晓"
+                            android:text="中海国际左岸售楼员小宋"
                             android:textColor="#666666"
                             android:textSize="12sp"
                             android:visibility="visible" />
@@ -292,7 +89,7 @@
                                 android:paddingLeft="16dp"
                                 android:paddingRight="16dp"
                                 android:paddingTop="12dp"
-                                android:text="我下午在蜀汉街附近有看到过阿姨，我发下大概位置的定位好了。"
+                                android:text="各位群友大家好！我是中海国际的售楼员小宋，目前中海国际左岸一期已火爆开售，团购可享九点五折优惠，请愿购房的速速与我联系。"
                                 android:textColor="#444444"
                                 android:textColorLink="#666666"
                                 android:textSize="16sp" />
@@ -351,7 +148,7 @@
                         android:layout_height="40dp"
                         android:focusable="false"
                         android:focusableInTouchMode="false"
-                        android:src="@drawable/user_two"/>
+                        android:src="@drawable/user_xiaosong"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -365,7 +162,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="沧晓"
+                            android:text="中海国际左岸售楼员小宋"
                             android:textColor="#666666"
                             android:textSize="12sp"
                             android:visibility="visible"/>
@@ -392,7 +189,7 @@
                                     android:minHeight="40dp"
                                     android:paddingLeft="10dp"
                                     android:paddingRight="10dp"
-                                    android:text="四川省成都市蜀汉街24号"
+                                    android:text="四川省郫都区中海国际左岸售楼部"
                                     android:textColor="#444444"
                                     android:textColorLink="#666666"
                                     android:textSize="12sp"/>
@@ -442,6 +239,127 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp">
+
+                    <!-- 人物头像 -->
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivAvatar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:src="@drawable/user_xiaosong"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- 昵称，当在群组中则要显示 -->
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="中海国际左岸售楼员小宋"
+                            android:textColor="#666666"
+                            android:textSize="12sp"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <ProgressBar
+                                android:id="@+id/pbSending"
+                                style="?android:attr/progressBarStyleSmall"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:visibility="gone"/>
+
+                            <LinearLayout
+                                android:id="@+id/llError"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:visibility="gone">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/ivError"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="5dp"
+                                    android:src="@mipmap/img_error"/>
+
+                                <TextView
+                                    android:id="@+id/tvRetry"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="重试"
+                                    android:visibility="gone"/>
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="260dp"
+                                android:layout_height="100dp"
+                                android:background="@mipmap/_bg_to_hongbao">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="80dp"
+                                    android:layout_marginTop="18dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvRedPacketGreeting"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="中海左岸 火爆销售"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="领取红包"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"/>
+
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="23dp"
+                                    android:text="群红包"
+                                    android:textColor="@color/gray0"
+                                    android:textSize="12sp"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -516,7 +434,7 @@
                             android:paddingLeft="16dp"
                             android:paddingRight="16dp"
                             android:paddingTop="12dp"
-                            android:text="非常感谢沧晓，据说当时还和高升桥摊贩聊了天，水果摊贩还说买了两斤李子走，只是走的方向好像是红牌楼。"
+                            android:text="这个房子是地铁房，地理位置真的很不错，请问现在均价多少钱一平呢？"
                             android:textColor="#ffff"
                             android:textColorLink="#3655bf"
                             android:textSize="16sp" />
@@ -532,135 +450,6 @@
                         android:src="@drawable/user_three" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:gravity="right"
-                    android:orientation="horizontal"
-                    android:paddingBottom="20dp"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:paddingTop="10dp">
-
-                    <!-- 重试 -->
-
-                    <LinearLayout
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:visibility="gone">
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="重试"
-                            android:visibility="gone" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:layout_margin="5dp"
-                            android:src="@mipmap/img_error" />
-                    </LinearLayout>
-
-                    <ProgressBar
-
-                        style="?android:attr/progressBarStyleSmall"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:visibility="gone" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:layout_marginRight="10dp"
-                            android:text="孙老师"
-                            android:textColor="#666666"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
-
-                        <RelativeLayout
-                            android:layout_width="260dp"
-                            android:layout_height="100dp"
-                            android:background="@mipmap/_bg_from_hongbao">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="70dp"
-                                android:layout_marginTop="15dp"
-                                android:orientation="vertical">
-
-                                <TextView
-
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="一点心意，万分感谢"
-                                    android:textColor="@color/white"
-                                    android:textSize="14sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="\@仓晓"
-                                    android:textColor="@color/white"
-                                    android:textSize="14sp" />
-
-                            </LinearLayout>
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginBottom="5dp"
-                                android:layout_marginLeft="20dp"
-                                android:text="定向红包"
-                                android:textColor="@color/gray0"
-                                android:textSize="12sp" />
-
-                        </RelativeLayout>
-                    </LinearLayout>
-                    <!-- 人物头像 -->
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:src="@drawable/user_three" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/shape_notification_bg"
-                    android:gravity="center"
-                    android:paddingBottom="2dp"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:paddingTop="2dp"
-                    android:text="沧晓已领取定向红包"
-                    android:textColor="#fff"
-                    android:textSize="12sp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -679,7 +468,7 @@
                         android:layout_height="40dp"
                         android:focusable="false"
                         android:focusableInTouchMode="false"
-                        android:src="@drawable/user_six" />
+                        android:src="@drawable/user_xiaosong" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -693,7 +482,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="老张新鲜果子"
+                            android:text="中海国际左岸售楼员小宋"
                             android:textColor="#666666"
                             android:textSize="12sp"
                             android:visibility="visible" />
@@ -717,7 +506,7 @@
                                 android:paddingLeft="16dp"
                                 android:paddingRight="16dp"
                                 android:paddingTop="12dp"
-                                android:text="我是下午两点左右和阿姨聊过两句，她好像说要去看外孙女。"
+                                android:text="现在的均价是4500元一平，七层电梯洋房。"
                                 android:textColor="#444444"
                                 android:textColorLink="#666666"
                                 android:textSize="16sp" />
@@ -757,6 +546,217 @@
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_notification_bg"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:text="你已领取群红包"
+                    android:textColor="#fff"
+                    android:textSize="12sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp">
+
+                    <!-- 人物头像 -->
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:src="@drawable/user_four" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- 昵称，当在群组中则要显示 -->
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="画家老宋"
+                            android:textColor="#666666"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoLink="phone|email|map|web"
+                                android:background="@drawable/img_bubble_receive"
+                                android:gravity="left|center_vertical"
+                                android:maxWidth="240dp"
+                                android:minHeight="40dp"
+                                android:paddingBottom="12dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:paddingTop="12dp"
+                                android:text="停车位是买房带还是需要另购？"
+                                android:textColor="#444444"
+                                android:textColorLink="#666666"
+                                android:textSize="16sp" />
+
+                            <ProgressBar
+
+                                style="?android:attr/progressBarStyleSmall"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:visibility="gone">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="5dp"
+                                    android:src="@mipmap/img_error" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="重试"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp">
+
+                    <!-- 人物头像 -->
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:src="@drawable/user_xiaosong" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- 昵称，当在群组中则要显示 -->
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="中海国际左岸售楼员小宋"
+                            android:textColor="#666666"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoLink="phone|email|map|web"
+                                android:background="@drawable/img_bubble_receive"
+                                android:gravity="left|center_vertical"
+                                android:maxWidth="240dp"
+                                android:minHeight="40dp"
+                                android:paddingBottom="12dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:paddingTop="12dp"
+                                android:text="停车位需要另外购买，3万一个。"
+                                android:textColor="#444444"
+                                android:textColorLink="#666666"
+                                android:textSize="16sp" />
+
+                            <ProgressBar
+
+                                style="?android:attr/progressBarStyleSmall"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:visibility="gone">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="5dp"
+                                    android:src="@mipmap/img_error" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="重试"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -771,28 +771,24 @@
                     <!-- 重试 -->
 
                     <LinearLayout
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:visibility="gone">
 
                         <TextView
-
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="重试"
-                            android:visibility="gone"
-                            />
+                            android:visibility="gone" />
 
                         <de.hdodenhof.circleimageview.CircleImageView
-
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
-                            android:src="@mipmap/img_error"/>
+                            android:src="@mipmap/img_error" />
                     </LinearLayout>
 
                     <ProgressBar
@@ -802,20 +798,87 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
-                        android:visibility="gone"/>
+                        android:visibility="gone" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="right"
                         android:orientation="vertical">
 
                         <TextView
 
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="right"
                             android:layout_marginRight="10dp"
                             android:text="孙老师"
+                            android:textColor="#666666"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:autoLink="phone|email|map|web"
+                            android:background="@drawable/img_bubble_send"
+                            android:gravity="left|center_vertical"
+                            android:linksClickable="true"
+                            android:maxWidth="240dp"
+                            android:minHeight="40dp"
+                            android:paddingBottom="12dp"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="12dp"
+                            android:text="好的，我明天就去看看楼盘。"
+                            android:textColor="#ffff"
+                            android:textColorLink="#3655bf"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <!-- 人物头像 -->
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:src="@drawable/user_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp">
+
+                    <!-- 人物头像 -->
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivAvatar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:src="@drawable/user_xiaosong"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- 昵称，当在群组中则要显示 -->
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="中海国际左岸售楼员小宋"
                             android:textColor="#666666"
                             android:textSize="12sp"
                             android:visibility="visible"/>
@@ -825,43 +888,87 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <TextView
 
+                            <ProgressBar
+                                android:id="@+id/pbSending"
+                                style="?android:attr/progressBarStyleSmall"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:visibility="gone"/>
+
+                            <LinearLayout
+                                android:id="@+id/llError"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="6''"/>
+                                android:layout_gravity="center"
+                                android:visibility="gone">
 
-                            <RelativeLayout
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/ivError"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="5dp"
+                                    android:src="@mipmap/img_error"/>
 
-                                android:layout_width="65dp"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/img_bubble_send">
-
-                                <ImageView
-
+                                <TextView
+                                    android:id="@+id/tvRetry"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignParentRight="true"
-                                    android:background="@drawable/audio_animation_right_list"/>
+                                    android:layout_gravity="center"
+                                    android:text="重试"
+                                    android:visibility="gone"/>
+                            </LinearLayout>
 
+                            <RelativeLayout
+                                android:layout_width="260dp"
+                                android:layout_height="100dp"
+                                android:background="@mipmap/_bg_to_hongbao">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="80dp"
+                                    android:layout_marginTop="18dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="欢迎莅临售楼部了解详情"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="\@孙老师"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"/>
+
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="23dp"
+                                    android:text="定向红包"
+                                    android:textColor="@color/gray0"
+                                    android:textSize="12sp"/>
                             </RelativeLayout>
                         </LinearLayout>
-
                     </LinearLayout>
-
-                    <!-- 人物头像 -->
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:src="@drawable/user_three"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="30dp"></LinearLayout>
+
             </LinearLayout>
         </ScrollView>
 

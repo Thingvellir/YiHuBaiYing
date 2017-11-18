@@ -5,6 +5,7 @@ import android.example.com.yihubaiying.R;
 import android.example.com.yihubaiying.activity.Newsdetail_activity;
 import android.example.com.yihubaiying.activity.group_chat_activity;
 import android.example.com.yihubaiying.adapter.MessAdapter;
+import android.example.com.yihubaiying.adapter.MessItem;
 import android.example.com.yihubaiying.adapter.Message;
 import android.example.com.yihubaiying.adapter.News;
 import android.example.com.yihubaiying.adapter.NewsAdapter;
@@ -50,18 +51,32 @@ public class FragmentB extends BaseFragment {
         recyclerView.setLayoutManager(layoutManager);
         MessAdapter adapter=new MessAdapter(R.layout.message_layout,MessItemList);
         recyclerView.setAdapter(adapter);
-        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Toast.makeText(getContext(), "onItemChildClick" + position, Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getActivity(),group_chat_activity.class));
-            }
-        });
+
 
     }
     private void initDatas() {
-        Message item=new Message(R.drawable.user_nine,"旅行社小张","嗯嗯好的我知道了，我马上把位置发过去。","15:28",R.drawable.red_icon);
+        Message item=new Message(R.drawable.user_nine,"旅行社小张","嗯嗯好的我知道了，我马上把位置发过去。","01:28",R.drawable.red_icon);
+        Message item1=new Message(R.drawable.user11,"范璐","能不能帮我找到成都所有的建筑师","05:27",R.drawable.red_icon);
+        Message item2=new Message(R.drawable.user13,"小木匠","你能帮我调一下九眼桥附近的监控吗","15:25",R.drawable.red_icon);
+        Message item3=new Message(R.drawable.user12,"同样仍是并不在意","马上到了","12:26",R.drawable.red_icon);
+        Message item4=new Message(R.drawable.user10,"紫霞狼","我们这边三件七折 亲可以来选购呢","08:24",R.drawable.red_icon);
+        Message item5=new Message(R.drawable.user4,"美丽生燕窝","亲您的优惠卷已经可以领取了","09:27",R.drawable.red_icon);
+        Message item6=new Message(R.drawable.user2,"文刀先生","鹿晗今天乘坐的航班是C98526 下午到成都","11:24",R.drawable.red_icon);
+        Message item7=new Message(R.drawable.user1,"张云云","您能详细的描述一下事发当晚你看到的东西吗？","16:58",R.drawable.red_icon);
+        Message item8=new Message(R.drawable.user8,"天狼爸","我打听了，他就在高新区工作","19:43",R.drawable.red_icon);
+        Message item9=new Message(R.drawable.user6,"果儿","法院的判决结果，这个必须立即生效的","15:52",R.drawable.red_icon);
+
         MessItemList.add(item);
+        MessItemList.add(item1);
+        MessItemList.add(item2);
+        MessItemList.add(item3);
+        MessItemList.add(item4);
+        MessItemList.add(item5);
+        MessItemList.add(item6);
+        MessItemList.add(item7);
+        MessItemList.add(item8);
+        MessItemList.add(item9);
+
 
 
     }

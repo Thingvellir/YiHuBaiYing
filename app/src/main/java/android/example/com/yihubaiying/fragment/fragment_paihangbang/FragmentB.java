@@ -56,14 +56,18 @@ public class FragmentB extends BaseFragment {
 
     }
     private void initDatas() {
-        RankItem item=new RankItem(""+3, R.drawable.user_four,"嘻哈王", R.drawable.diamond_icon,"日红包:152.6元", R.drawable.up_icon);
-        RankItem item1=new RankItem(""+4, R.drawable.user_one,"龙的传人", R.drawable.diamond_icon,"日红包:142.6元", R.drawable.down_icon);
-        RankItem item2=new RankItem(""+5, R.drawable.user_four,"知乎", R.drawable.diamond_icon,"日红包:121.6元", R.drawable.down_icon);
-        RankItem item3=new RankItem(""+6, R.drawable.user_four,"那时年少", R.drawable.diamond_icon,"日红包:111.6元", R.drawable.up_icon);
+        RankItem item=new RankItem(""+3, R.drawable.user_six,"漫漫", R.drawable.diamond_icon,"日红包:31.6元", R.drawable.up_icon);
+        RankItem item1=new RankItem(""+4, R.drawable.user_seven,"眉眼", R.drawable.diamond_icon,"日红包:28.7元", R.drawable.down_icon);
+        RankItem item2=new RankItem(""+5, R.drawable.user_eight,"死亡之翼", R.drawable.diamond_icon,"日红包:26.5元", R.drawable.down_icon);
+        RankItem item3=new RankItem(""+6, R.drawable.user_nine,"冬雨如春", R.drawable.diamond_icon,"日红包:21.3元", R.drawable.up_icon);
+        RankItem item4=new RankItem(""+6, R.drawable.user3,"晴空万里", R.drawable.diamond_icon,"日红包:19.3元", R.drawable.up_icon);
+        RankItem item5=new RankItem(""+6, R.drawable.user4,"陈凌锋", R.drawable.diamond_icon,"日红包:17.4元", R.drawable.up_icon);
         rankItemList.add(item);
         rankItemList.add(item1);
         rankItemList.add(item2);
         rankItemList.add(item3);
+        rankItemList.add(item4);
+        rankItemList.add(item5);
 
 
     }

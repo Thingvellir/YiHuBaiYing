@@ -10,12 +10,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
+
+import com.orhanobut.dialogplus.DialogPlus;
+import com.orhanobut.dialogplus.ViewHolder;
 
 public class group_chat_activity extends AppCompatActivity {
 
@@ -33,6 +38,18 @@ public class group_chat_activity extends AppCompatActivity {
                 finish();
             }
         });
+        toolbar.setTitle("寻找孙老师的老妈群");
+
+        final DialogPlus dialog=DialogPlus.newDialog(group_chat_activity.this).setContentHolder(new ViewHolder(R.layout.dialog_xunzhaosunlaoshi)).setGravity(Gravity.CENTER).setContentBackgroundResource(R.drawable.shape_corner).create();
+        ImageView delect= (ImageView) dialog.getHolderView().findViewById(R.id.delect_icon);
+        delect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
 
         ImageView fahongbao= (ImageView) findViewById(R.id.group_chat_fahongbao);
         fahongbao.setOnClickListener(new View.OnClickListener() {

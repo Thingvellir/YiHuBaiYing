@@ -36,7 +36,6 @@ public class wode_set_activity extends AppCompatActivity {
         });
         toolbar.setNavigationIcon(R.drawable.white_back_icon1);
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
-        toolbar.set
 
         final TagFlowLayout flowLayout= (TagFlowLayout) findViewById(R.id.flow_wode);
         flowLayout.setAdapter(new TagAdapter<String>(xingqu) {

@@ -1,6 +1,7 @@
 package android.example.com.yihubaiying.activity;
 
 import android.content.Intent;
+import android.example.com.yihubaiying.enity.MyHongBao;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.example.com.yihubaiying.R;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import me.gujun.android.taggroup.TagGroup;
 
 public class pickpeople_activity extends AppCompatActivity {
+    private MyHongBao hongBao;
 
     private String[] sexs = new String[]
             {"男","女"};
@@ -68,6 +70,7 @@ public class pickpeople_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pickpeople_layout);
+        hongBao= (MyHongBao) getIntent().getSerializableExtra("hongbao");
         final TagFlowLayout flowLayout= (TagFlowLayout) findViewById(R.id.flow_sex);
         flowLayout.setAdapter(new TagAdapter<String>(sexs) {
             @Override
@@ -274,7 +277,11 @@ public class pickpeople_activity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(pickpeople_activity.this,redpacketdetail_activity.class));
+                Intent intent=new Intent(pickpeople_activity.this,redpacketdetail_activity.class);
+                Bundle mBundle=new Bundle();
+                mBundle.putSerializable("hongbao",hongBao);
+                intent.putExtras(mBundle);
+                startActivity(intent);
             }
         });
 

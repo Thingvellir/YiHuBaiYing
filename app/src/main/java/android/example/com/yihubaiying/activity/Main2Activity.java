@@ -3,16 +3,21 @@ package android.example.com.yihubaiying.activity;
 import android.Manifest;
 import android.content.Intent;
 import android.example.com.yihubaiying.MainActivity;
+import android.example.com.yihubaiying.enity.MyHongBao;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.example.com.yihubaiying.R;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.amap.api.maps.model.LatLng;
 import com.bumptech.glide.Glide;
 import com.jph.takephoto.app.TakePhoto;
 import com.jph.takephoto.app.TakePhotoActivity;
@@ -30,6 +35,7 @@ import java.util.List;
 import static android.example.com.yihubaiying.R.id.image;
 import static android.example.com.yihubaiying.R.id.imageView;
 import static android.example.com.yihubaiying.R.id.pickimage1;
+import static android.example.com.yihubaiying.R.id.start;
 
 public class Main2Activity extends TakePhotoActivity {
 
@@ -43,6 +49,11 @@ public class Main2Activity extends TakePhotoActivity {
     private CompressConfig compressConfig;  //压缩参数
     private Uri imageUri;  //图片保存路径
     private Button nextstep;
+    private EditText name;
+    private EditText neirong;
+    MyHongBao hongBao;
+    private LatLng latLng;
+    ArrayList<String> ImageResourceId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,14 +72,44 @@ public class Main2Activity extends TakePhotoActivity {
         });
         initPermission();
         initData();
+        name= (EditText) findViewById(R.id.fabu_name);
+        neirong= (EditText) findViewById(R.id.fabu_neirong);
+        ImageResourceId=new ArrayList<String>();
+
         pickimage1= (ImageView) findViewById(R.id.pickimage1);
         pickimage2= (ImageView) findViewById(R.id.pickimage2);
         pickimage3= (ImageView) findViewById(R.id.pickimage3);
+        hongBao=new MyHongBao();
         nextstep= (Button) findViewById(R.id.btn_next_step);
         nextstep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Main2Activity.this,pickpeople_activity.class));
+                String guanggaotitle=name.getText().toString();
+                String xuanchuanyu=neirong.getText().toString();
+                if (guanggaotitle.length()==0){
+                    Toast.makeText(getApplicationContext(),"红包名称不可为空",Toast.LENGTH_SHORT).show();
+
+                }
+                if (xuanchuanyu.length()==0){
+                    Toast.makeText(getApplicationContext(),"红包内容不可为空",Toast.LENGTH_SHORT).show();
+                }
+                if (ImageResourceId.isEmpty()){
+                    Toast.makeText(getApplicationContext(),"宣传照片不可为空",Toast.LENGTH_SHORT).show();
+
+                }
+                if (!(guanggaotitle.length()==0||xuanchuanyu.length()==0||ImageResourceId.isEmpty())){
+                    Toast.makeText(getApplicationContext(),"哇咔咔",Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(Main2Activity.this,pickpeople_activity.class);
+                    hongBao.setTitle(guanggaotitle);
+                    hongBao.setGuanggaoyu(xuanchuanyu);
+                    hongBao.setImageResourceId(ImageResourceId);
+                    Bundle mBundle=new Bundle();
+                    mBundle.putSerializable("hongbao",hongBao);
+                    intent.putExtras(mBundle);
+                    startActivity(intent);
+
+                }
+
             }
         });
     }
@@ -83,6 +124,10 @@ public class Main2Activity extends TakePhotoActivity {
 //        Glide.with(this).load(iconPath).into(pickimage2);
        ArrayList<TImage> images=result.getImages();
 
+
+        ImageResourceId.add(images.get(0).getCompressPath());
+        ImageResourceId.add(images.get(1).getCompressPath());
+        ImageResourceId.add(images.get(2).getCompressPath());
         Glide.with(this).load(new File(images.get(0).getCompressPath())).into(pickimage1);
         Glide.with(this).load(new File(images.get(1).getCompressPath())).into(pickimage2);
        Glide.with(this).load(new File(images.get(2).getCompressPath())).into(pickimage3);

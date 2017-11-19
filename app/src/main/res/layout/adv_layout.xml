@@ -78,6 +78,7 @@
                         />
 
                     <EditText
+                        android:id="@+id/fabu_name"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:layout_width="match_parent"
@@ -181,6 +182,7 @@
             android:layout_height="wrap_content"
             android:text="请输入推广内容"/>
         <EditText
+            android:id="@+id/fabu_neirong"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:lines="5"/>

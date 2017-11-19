@@ -104,43 +104,40 @@
 
 
 </RelativeLayout>
-<LinearLayout
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="25dp"
-    android:orientation="vertical">
+    android:layout_marginTop="25dp">
     <Button
         android:id="@+id/jiaqun_jump"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="10dp"
         android:background="@drawable/btn_background"
-        android:text="点击进群"
+        android:text="加群领取"
+        android:layout_centerHorizontal="true"
         android:textColor="@color/dark_gold"
-        android:textSize="18sp" />
+        android:textSize="15sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="58dp"/>
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="26dp"
-        android:orientation="horizontal">
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp">
 
         <CheckBox
             android:id="@+id/checkbox_jiaquncontent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
-
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
         <CheckedTextView
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
             android:gravity="center"
+            android:layout_marginLeft="5dp"
             android:text="我已阅读并同意《服务协议》和《隐私条款》"
             android:textColor="#8a8a8a"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
 </LinearLayout>

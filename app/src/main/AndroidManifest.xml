@@ -41,6 +41,12 @@
         <activity android:name=".activity.SelectHongbaoActivity" />
         <activity android:name=".activity.JiaQunActivity" />
         <activity android:name=".activity.ZhuanFaActivity" />
+        <activity android:name=".activity.redvelet.HongBaoActivity"></activity>
+        <activity android:name=".activity.redvelet.RandomHongbaoActivity"></activity>
+        <activity android:name=".activity.redvelet.SelectHongbaoActivity"></activity>
+        <activity android:name=".activity.redvelet.JiaQunActivity"></activity>
+        <activity android:name=".activity.redvelet.ZhuanFaActivity"></activity>
+        <activity android:name=".activity.yihubaiying.PickLocation"></activity>
 
         <service android:name="com.amap.api.location.APSService" />
 

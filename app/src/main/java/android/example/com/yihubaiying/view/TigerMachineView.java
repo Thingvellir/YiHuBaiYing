@@ -1,4 +1,4 @@
-package android.example.com.yihubaiying.activity;
+package android.example.com.yihubaiying.view;
 
 import android.content.Context;
 import android.example.com.yihubaiying.R;

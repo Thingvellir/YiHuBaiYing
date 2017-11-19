@@ -1,7 +1,9 @@
-package android.example.com.yihubaiying.activity;
+package android.example.com.yihubaiying.activity.redvelet;
 import android.content.Intent;
 import android.example.com.yihubaiying.R;
 
+import android.example.com.yihubaiying.activity.redvelet.BaseActivity;
+import android.example.com.yihubaiying.utils.AppManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;

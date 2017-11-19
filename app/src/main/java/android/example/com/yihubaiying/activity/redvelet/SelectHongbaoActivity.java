@@ -1,7 +1,10 @@
-package android.example.com.yihubaiying.activity;
-
+package android.example.com.yihubaiying.activity.redvelet;
 import android.content.Intent;
 import android.example.com.yihubaiying.R;
+import android.example.com.yihubaiying.activity.redvelet.BaseActivity;
+import android.example.com.yihubaiying.activity.redvelet.JiaQunActivity;
+import android.example.com.yihubaiying.activity.redvelet.ZhuanFaActivity;
+import android.example.com.yihubaiying.utils.AppManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,6 +13,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 /**
  * Created by carnivalnian on 2017/11/8.
@@ -21,6 +25,8 @@ public class SelectHongbaoActivity extends BaseActivity implements View.OnClickL
     private Button jiaqun;
     private Button diaocha;
     private ImageButton back_hongbaoselect;
+    private String thisSnippet;
+    private TextView thisTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -40,6 +46,13 @@ public class SelectHongbaoActivity extends BaseActivity implements View.OnClickL
         jiaqun.setOnClickListener(this);
         diaocha.setOnClickListener(this);
         back_hongbaoselect.setOnClickListener(this);
+
+        Intent intent=getIntent();
+        thisSnippet=intent.getStringExtra("snippet");
+        thisTextView=(TextView)findViewById(R.id.tittle_select);
+        thisTextView.setText(thisSnippet);
+
+
     }
     @Override
     public void onClick(View v){
@@ -47,11 +60,14 @@ public class SelectHongbaoActivity extends BaseActivity implements View.OnClickL
             case R.id.daodian_get:
                 break;
             case R.id.zhuanfa_get:
-                startActivity(new Intent(this,ZhuanFaActivity.class));
+                Intent thisIntent=new Intent(SelectHongbaoActivity.this,ZhuanFaActivity.class);
+                thisIntent.putExtra("snippet",thisSnippet);
+                startActivity(thisIntent);
                 AppManager.getAppManager().finishActivity(this);
                 break;
             case R.id.jiaqun_get:
-                startActivity(new Intent(this,JiaQunActivity.class));
+                Intent thatIntent=new Intent(SelectHongbaoActivity.this,JiaQunActivity.class);
+                startActivity(thatIntent);
                 AppManager.getAppManager().finishActivity(this);
                 break;
             case R.id.diaocha_get:

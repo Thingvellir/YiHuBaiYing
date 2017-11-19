@@ -3,9 +3,7 @@ package android.example.com.yihubaiying.fragment.fragment_hongbaomap;
 import android.content.Intent;
 import android.example.com.yihubaiying.R;
 import android.example.com.yihubaiying.activity.group_chat_activity;
-import android.example.com.yihubaiying.adapter.DongtaiItem;
 import android.example.com.yihubaiying.adapter.MessAdapter;
-import android.example.com.yihubaiying.adapter.MessItem;
 import android.example.com.yihubaiying.adapter.Message;
 import android.example.com.yihubaiying.fragment.fragment_haoyou.FragmentA;
 import android.example.com.yihubaiying.fragment.fragment_youyisi.BaseFragment;
@@ -21,7 +19,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.flyco.tablayout.SlidingTabLayout;

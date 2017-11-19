@@ -1,8 +1,7 @@
 package android.example.com.yihubaiying;
 
 
-import android.Manifest;
-import android.example.com.yihubaiying.activity.BaseActivity;
+import android.example.com.yihubaiying.activity.redvelet.BaseActivity;
 
 import android.content.Intent;
 import android.example.com.yihubaiying.activity.Main2Activity;
@@ -12,18 +11,14 @@ import android.example.com.yihubaiying.fragment.Fragment_HongBaoMap;
 import android.example.com.yihubaiying.fragment.Fragment_TongXunLu;
 import android.example.com.yihubaiying.fragment.Fragment_WoDe;
 import android.example.com.yihubaiying.fragment.Fragment_YouYiSi;
-import android.graphics.Color;
-import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -44,6 +39,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private RadioGroup radioGroup;
     private RadioButton radio_hongBaoMap,radio_tongXunLu,radio_woDe,radio_youYiSi;
     private static MainActivity instance;
+    private ImageView yihu;
 
     private Fragment fragment_HongBaoMap,fragment_TongXunLu,fragment_WoDe,fragment_YouYiSi;
 //    private List<Fragment> fragmentList;
@@ -66,9 +62,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     }
 
     private void initView(){
-
-        FloatingActionButton floatingActionButton= (FloatingActionButton) findViewById(R.id.ibHome);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+        yihu=(ImageView)findViewById(R.id.ibHome) ;
+        yihu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogPlus dialog=DialogPlus.newDialog(MainActivity.this).setContentHolder(new ViewHolder(R.layout.bottomdialog)).setGravity(Gravity.CENTER).setContentBackgroundResource(R.drawable.shape_corner).create();

@@ -1,5 +1,5 @@
-package android.example.com.yihubaiying.activity;
-
+package android.example.com.yihubaiying.activity.redvelet;
+import android.example.com.yihubaiying.utils.AppManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;

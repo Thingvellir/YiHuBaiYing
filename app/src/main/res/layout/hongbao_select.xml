@@ -77,16 +77,20 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tittle_select"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
             android:layout_marginTop="4dp"
             android:gravity="center"
             android:text="中海左岸，十一国庆\n盛大开盘，回馈全城"
             android:textColor="@color/red"
-            android:textSize="21sp" />
+            android:textSize="21sp"  />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_finish"
             android:background="@color/transparent"/>
@@ -96,6 +100,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="8dp"
             android:text="恭喜您！领取成功！"
             android:gravity="center"
             android:textSize="30sp"
@@ -104,7 +109,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:textSize="13sp"
@@ -115,12 +120,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp">
             <Button
                 android:id="@+id/zhuanfa_get"
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:layout_weight="0.8"
                 android:layout_gravity="center_horizontal"
@@ -135,7 +140,7 @@
                 android:layout_weight="0.5"></LinearLayout>
             <Button
                 android:id="@+id/jiaqun_get"
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:layout_weight="0.8"
                 android:layout_gravity="center_horizontal"
@@ -149,11 +154,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp">
             <Button
                 android:id="@+id/diaocha_get"
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:layout_weight="0.8"
                 android:layout_gravity="center_horizontal"
@@ -168,7 +174,7 @@
                 android:layout_weight="0.5"></LinearLayout>
             <Button
                 android:id="@+id/daodian_get"
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:layout_weight="0.8"
                 android:layout_gravity="center_horizontal"

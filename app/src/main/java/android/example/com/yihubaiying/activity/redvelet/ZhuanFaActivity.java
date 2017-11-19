@@ -1,8 +1,9 @@
-package android.example.com.yihubaiying.activity;
+package android.example.com.yihubaiying.activity.redvelet;
 
 import android.content.Intent;
 import android.example.com.yihubaiying.MainActivity;
 import android.example.com.yihubaiying.R;
+import android.example.com.yihubaiying.utils.AppManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import me.curzbin.library.BottomDialog;
@@ -24,6 +26,8 @@ import me.curzbin.library.OnItemClickListener;
 public class ZhuanFaActivity extends BaseActivity implements View.OnClickListener {
     private EditText comments_txt;
     private Button zhuanfa_btn;
+    private String thisSnippet;
+    private TextView thisTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +38,13 @@ public class ZhuanFaActivity extends BaseActivity implements View.OnClickListene
         comments_txt=(EditText)findViewById(R.id.comments);
         zhuanfa_btn=(Button)findViewById(R.id.zhuanfa_jump);
         zhuanfa_btn.setOnClickListener(this);
+
+        Intent intent=getIntent();
+        thisSnippet=intent.getStringExtra("snippet");
+        thisTextView=(TextView)findViewById(R.id.title_zhuanfa);
+        thisTextView.setText(thisSnippet);
+
+
     }
     @Override
     public void onClick(View v){
@@ -45,7 +56,9 @@ public class ZhuanFaActivity extends BaseActivity implements View.OnClickListene
                         @Override
                         public void click(Item item) {
                             Toast.makeText(ZhuanFaActivity.this, getString(R.string.share_title) + item.getTitle() +"成功", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(ZhuanFaActivity.this,RandomHongbaoActivity.class));
+                            Intent thisIntent=new Intent(ZhuanFaActivity.this,RandomHongbaoActivity.class);
+                            thisIntent.putExtra("from","ZhuanFaActivity");
+                            startActivity(thisIntent);
                             AppManager.getAppManager().finishActivity(ZhuanFaActivity.this);
                         }
                     })

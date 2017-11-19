@@ -98,7 +98,6 @@ public class Main2Activity extends TakePhotoActivity {
 
                 }
                 if (!(guanggaotitle.length()==0||xuanchuanyu.length()==0||ImageResourceId.isEmpty())){
-                    Toast.makeText(getApplicationContext(),"哇咔咔",Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(Main2Activity.this,pickpeople_activity.class);
                     hongBao.setTitle(guanggaotitle);
                     hongBao.setGuanggaoyu(xuanchuanyu);

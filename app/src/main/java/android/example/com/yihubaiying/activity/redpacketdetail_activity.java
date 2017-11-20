@@ -8,9 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.example.com.yihubaiying.R;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.orhanobut.dialogplus.DialogPlus;
+import com.orhanobut.dialogplus.ViewHolder;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -36,7 +40,7 @@ public class redpacketdetail_activity extends AppCompatActivity {
          hongBao= (MyHongBao) getIntent().getSerializableExtra("hongbao");
         final String ImageResourceId=hongBao.getTitle();
 
-        Button button= (Button) findViewById(R.id.btn_next_step);
+        final Button button= (Button) findViewById(R.id.btn_next_step);
 //        pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
 //        pDialog.setTitleText("Loading");
 //        pDialog.setCancelable(false);
@@ -44,12 +48,24 @@ public class redpacketdetail_activity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),ImageResourceId,Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(redpacketdetail_activity.this,MainActivity.class);
-                Bundle mBundle=new Bundle();
-                mBundle.putSerializable("hongbao",hongBao);
-                intent.putExtras(mBundle);
-                startActivity(intent);
+//                Toast.makeText(getApplicationContext(),ImageResourceId,Toast.LENGTH_SHORT).show();
+
+
+                final DialogPlus dialog=DialogPlus.newDialog(redpacketdetail_activity.this).setContentHolder(new ViewHolder(R.layout.dialog_pay)).setGravity(Gravity.BOTTOM).create();
+                Button button1= (Button) dialog.getHolderView().findViewById(R.id.btn_save);
+                button1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(getApplicationContext(),"支付成功",Toast.LENGTH_SHORT).show();
+                                        Intent intent=new Intent(redpacketdetail_activity.this,MainActivity.class);
+                                        Bundle mBundle=new Bundle();
+                                        mBundle.putSerializable("hongbao",hongBao);
+                                        intent.putExtras(mBundle);
+                                        startActivity(intent);
+                    }
+                });
+
+                dialog.show();
             }
         });
     }

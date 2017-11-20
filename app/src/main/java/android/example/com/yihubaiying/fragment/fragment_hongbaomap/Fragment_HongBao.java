@@ -15,6 +15,7 @@ import android.graphics.Matrix;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -24,6 +25,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -86,6 +88,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
     private TextView numHongbao;
 
     private ImageButton location_btn;
+    private CardView cardView;
 
     private Marker pickedMarker;
 
@@ -103,7 +106,6 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
     private ImageButton openRedvelet;
     private Button closeDia;
     private TextView hongbaoDiaText;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -111,6 +113,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         isInit=true;
         mapView=(TextureMapView)view.findViewById(R.id.map);
         mapView.onCreate(savedInstanceState);
+        cardView= (CardView) view.findViewById(R.id.cardView);
         Log.e("fragment_1","onCreate");
         AndPermission.with(this)
                 .requestCode(101)
@@ -535,6 +538,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
     public void onMapClick(LatLng point){
         //点击地图上没marker 的地方，隐藏inforwindow
         banner.setVisibility(View.GONE);
+        cardView.setVisibility(View.VISIBLE);
         if (markerLocal != null) {
             circle.remove();
             markerLocal.hideInfoWindow();

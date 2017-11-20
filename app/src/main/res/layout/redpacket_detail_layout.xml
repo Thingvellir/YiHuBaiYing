@@ -21,11 +21,13 @@
         </android.support.v7.widget.Toolbar>
 
         <android.support.v7.widget.CardView
+            android:id="@+id/card1"
             android:layout_margin="10dp"
             app:cardCornerRadius="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
+                android:id="@+id/linear1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
@@ -74,6 +76,14 @@
                             android:textSize="14dp"
                             android:layout_height="wrap_content" />
 
+                        <ImageView
+                            android:id="@+id/delect1"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="45dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/delect_icon"/>
+
 
 
                     </LinearLayout>
@@ -102,6 +112,7 @@
 
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+            android:id="@+id/card2"
             android:layout_margin="10dp"
             app:cardCornerRadius="8dp"
             android:layout_width="match_parent"
@@ -154,6 +165,13 @@
                             android:layout_marginLeft="5dp"
                             android:layout_width="80dp"
                             android:layout_height="wrap_content" />
+                        <ImageView
+                            android:id="@+id/delect2"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="73dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/delect_icon"/>
 
 
 
@@ -183,6 +201,7 @@
 
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+            android:id="@+id/card3"
             android:layout_margin="10dp"
             app:cardCornerRadius="8dp"
             android:layout_width="match_parent"
@@ -235,6 +254,13 @@
                             android:layout_marginLeft="5dp"
                             android:layout_width="80dp"
                             android:layout_height="wrap_content" />
+                        <ImageView
+                            android:id="@+id/delect3"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="45dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/delect_icon"/>
 
 
 
@@ -265,6 +291,7 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
+            android:id="@+id/card4"
             android:layout_margin="10dp"
             app:cardCornerRadius="8dp"
             android:layout_width="match_parent"
@@ -319,6 +346,13 @@
                             android:layout_marginLeft="5dp"
                             android:layout_width="80dp"
                             android:layout_height="wrap_content" />
+                        <ImageView
+                            android:id="@+id/delect4"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="85dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/delect_icon"/>
 
 
 

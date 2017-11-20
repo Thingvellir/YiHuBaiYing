@@ -7,10 +7,13 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.example.com.yihubaiying.R;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.orhanobut.dialogplus.DialogPlus;
@@ -21,6 +24,10 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 public class redpacketdetail_activity extends AppCompatActivity {
     private MyHongBao hongBao;
     private Toolbar toolbar;
+    private CardView cardView1;
+    private CardView cardView2;
+    private CardView cardView3;
+    private CardView cardView4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +44,42 @@ public class redpacketdetail_activity extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.white_back_icon1);
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         toolbar.setTitle("设置红包金额");
+        cardView1= (CardView) findViewById(R.id.card1);
+        cardView2= (CardView) findViewById(R.id.card2);
+        cardView3= (CardView) findViewById(R.id.card3);
+        cardView4= (CardView) findViewById(R.id.card4);
+        ImageView delect1= (ImageView) findViewById(R.id.delect1);
+        delect1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cardView1.setVisibility(View.GONE);
+
+            }
+        });
+        ImageView delect2= (ImageView) findViewById(R.id.delect2);
+        delect2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cardView2.setVisibility(View.GONE);
+
+            }
+        });
+        ImageView delect3= (ImageView) findViewById(R.id.delect3);
+        delect3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cardView3.setVisibility(View.GONE);
+
+            }
+        });
+        ImageView delect4= (ImageView) findViewById(R.id.delect4);
+        delect4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cardView4.setVisibility(View.GONE);
+
+            }
+        });
          hongBao= (MyHongBao) getIntent().getSerializableExtra("hongbao");
         final String ImageResourceId=hongBao.getTitle();
 

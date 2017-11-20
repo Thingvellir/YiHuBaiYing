@@ -67,12 +67,6 @@ public class PickLocation extends AppCompatActivity implements AMap.OnMapLongCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.picklocation_layout);
-        mapView = (MapView) findViewById(R.id.picK_location);
-        mapView.onCreate(savedInstanceState);
-        init();
-        progDialog = new ProgressDialog(this);
-
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         if (Build.VERSION.SDK_INT >= 21) {
             View decorView = getWindow().getDecorView();
@@ -82,6 +76,16 @@ public class PickLocation extends AppCompatActivity implements AMap.OnMapLongCli
             decorView.setSystemUiVisibility(option);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
+
+        setContentView(R.layout.picklocation_layout);
+
+        mapView = (MapView) findViewById(R.id.picK_location);
+        mapView.onCreate(savedInstanceState);
+        init();
+        progDialog = new ProgressDialog(this);
+
+
+
     }
     /**
      * 初始化AMap对象

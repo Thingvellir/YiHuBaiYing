@@ -14,7 +14,7 @@
             android:layout_gravity="center"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/wodequn1"
+            android:src="@drawable/anjieyuexin"
             />
         <LinearLayout
             android:layout_marginLeft="20dp"
@@ -31,12 +31,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="寻找孙老师的老妈群"/>
+                android:text="成都安捷悦信购车群"/>
         </LinearLayout>
         <ImageView
             android:id="@+id/delect_icon"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="95dp"
+            android:layout_marginLeft="65dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/delect_icon"/>
@@ -49,11 +49,12 @@
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_gravity="center"
+            android:id="@+id/circleImageView"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/user_three"
-            />
+            android:layout_gravity="center"
+            android:src="@drawable/user2" />
+
         <LinearLayout
             android:layout_marginLeft="20dp"
             android:layout_gravity="center"
@@ -69,7 +70,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="孙老师（已认证）"/>
+                android:text="店长龙云"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -101,7 +102,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="328元"/>
+                android:text="928元"/>
         </LinearLayout>
 
 
@@ -137,7 +138,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="孙老师的妈妈与下午在高升桥附近买菜时失踪，现在家人万分着急，希望能够提供相关线索的可以与群主联系，定有丰厚酬劳。\n"/>
+                android:text="成都安捷悦信 团购汽车最高六折优惠。传祺GS5 传祺GS4 传祺 GA6 全线钜惠。凭此群二维码到店还将有机会享受购车送路宝活动。\n"/>
         </LinearLayout>
 
 

@@ -3,13 +3,16 @@ package android.example.com.yihubaiying.activity;
 import android.Manifest;
 import android.content.Intent;
 import android.example.com.yihubaiying.MainActivity;
+import android.example.com.yihubaiying.activity.yihubaiying.PickLocation;
 import android.example.com.yihubaiying.enity.MyHongBao;
+import android.graphics.Color;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.example.com.yihubaiying.R;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -43,6 +46,7 @@ public class Main2Activity extends TakePhotoActivity {
     private ImageView pickimage1;
     private ImageView pickimage2;
     private ImageView pickimage3;
+    private ImageView pickloation;
 
     private TakePhoto takePhoto;
     private CropOptions cropOptions;  //裁剪参数
@@ -54,11 +58,29 @@ public class Main2Activity extends TakePhotoActivity {
     MyHongBao hongBao;
     private LatLng latLng;
     ArrayList<String> ImageResourceId;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.adv_layout);
+        toolbar= (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        toolbar.setNavigationIcon(R.drawable.white_back_icon1);
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
+        toolbar.setTitle("发布红包");
+        pickloation= (ImageView) findViewById(R.id.adv_picklocation);
+        pickloation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Main2Activity.this, PickLocation.class));
+            }
+        });
         takeFromGalleyBtn= (ImageView) findViewById(R.id.image_pick);
         takeFromGalleyBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -36,6 +36,7 @@ public class wode_set_activity extends AppCompatActivity {
         });
         toolbar.setNavigationIcon(R.drawable.white_back_icon1);
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
+        toolbar.setTitle("我的信息");
 
         final TagFlowLayout flowLayout= (TagFlowLayout) findViewById(R.id.flow_wode);
         flowLayout.setAdapter(new TagAdapter<String>(xingqu) {
@@ -55,5 +56,11 @@ public class wode_set_activity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        toolbar.setTitle("我的信息");
     }
 }

@@ -5,9 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.example.com.yihubaiying.R;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+
+import com.orhanobut.dialogplus.DialogPlus;
+import com.orhanobut.dialogplus.ViewHolder;
 
 public class qunliao_paotongshu extends AppCompatActivity {
 
@@ -26,6 +31,17 @@ public class qunliao_paotongshu extends AppCompatActivity {
             }
         });
         toolbar.setTitle("泡桐树小学最佳少先队员");
+
+        final DialogPlus dialog=DialogPlus.newDialog(qunliao_paotongshu.this).setContentHolder(new ViewHolder(R.layout.dialog_paotongshu)).setGravity(Gravity.CENTER).setContentBackgroundResource(R.drawable.shape_corner).create();
+        ImageView delect= (ImageView) dialog.getHolderView().findViewById(R.id.delect_icon);
+        delect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.chat_item,menu);

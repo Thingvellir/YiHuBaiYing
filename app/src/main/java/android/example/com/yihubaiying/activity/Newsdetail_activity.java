@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.example.com.yihubaiying.adapter.CommentAdapter;
 import android.example.com.yihubaiying.adapter.CommentItem;
 import android.graphics.Color;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.example.com.yihubaiying.R;
@@ -14,12 +13,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 import com.wx.goodview.GoodView;
@@ -73,13 +70,12 @@ public class Newsdetail_activity extends AppCompatActivity {
         textView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"ss",Toast.LENGTH_SHORT).show();
-                final DialogPlus dialog=DialogPlus.newDialog(Newsdetail_activity.this).setContentHolder(new ViewHolder(R.layout.dialog_youyisi)).setGravity(Gravity.CENTER).create();
+                final DialogPlus dialog=DialogPlus.newDialog(Newsdetail_activity.this).setContentHolder(new ViewHolder(R.layout.dialog_youyisi)).setGravity(Gravity.CENTER).setContentBackgroundResource(R.drawable.shape_corner_hongbao).setInAnimation(R.anim.fade_in_center).create();
                 ImageView ad= (ImageView) dialog.getHolderView().findViewById(R.id.open_btn);
                 ad.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(Newsdetail_activity.this,group_chat_activity.class));
+                        startActivity(new Intent(Newsdetail_activity.this,qunliao_anjieyuexin.class));
                     }
                 });
 

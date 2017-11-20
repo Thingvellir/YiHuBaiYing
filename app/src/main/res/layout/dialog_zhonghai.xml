@@ -14,7 +14,7 @@
             android:layout_gravity="center"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/wodequn1"
+            android:src="@drawable/wodequn3"
             />
         <LinearLayout
             android:layout_marginLeft="20dp"
@@ -31,12 +31,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="寻找孙老师的老妈群"/>
+                android:text="中海左岸"/>
         </LinearLayout>
         <ImageView
             android:id="@+id/delect_icon"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="95dp"
+            android:layout_marginLeft="160dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/delect_icon"/>
@@ -52,7 +52,7 @@
             android:layout_gravity="center"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/user_three"
+            android:src="@drawable/user_xiaosong"
             />
         <LinearLayout
             android:layout_marginLeft="20dp"
@@ -69,7 +69,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="孙老师（已认证）"/>
+                android:text="中海国际左岸售楼员小宋（已认证)"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -101,7 +101,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="328元"/>
+                android:text="229元"/>
         </LinearLayout>
 
 
@@ -137,7 +137,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="孙老师的妈妈与下午在高升桥附近买菜时失踪，现在家人万分着急，希望能够提供相关线索的可以与群主联系，定有丰厚酬劳。\n"/>
+                android:text="中海国际左岸一期盛大开盘，团购即可享受九点五折超低优惠，购房就送软装。每日看房大巴市内发车，楼盘交通便利，是您居住投资的好选择。\n"/>
         </LinearLayout>
 
 

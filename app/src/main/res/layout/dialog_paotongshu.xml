@@ -14,7 +14,7 @@
             android:layout_gravity="center"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/wodequn1"
+            android:src="@drawable/wodequn2"
             />
         <LinearLayout
             android:layout_marginLeft="20dp"
@@ -31,12 +31,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="寻找孙老师的老妈群"/>
+                android:text="泡桐树小学最佳少先队员"/>
         </LinearLayout>
         <ImageView
             android:id="@+id/delect_icon"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="95dp"
+            android:layout_marginLeft="65dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/delect_icon"/>
@@ -52,7 +52,7 @@
             android:layout_gravity="center"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/user_three"
+            android:src="@drawable/user_six"
             />
         <LinearLayout
             android:layout_marginLeft="20dp"
@@ -69,7 +69,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="孙老师（已认证）"/>
+                android:text="胡云野(已认证)"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -101,7 +101,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="328元"/>
+                android:text="495元"/>
         </LinearLayout>
 
 
@@ -137,7 +137,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="孙老师的妈妈与下午在高升桥附近买菜时失踪，现在家人万分着急，希望能够提供相关线索的可以与群主联系，定有丰厚酬劳。\n"/>
+                android:text="泡桐树小学正在举行最佳少先队员的评选活动，我家的小娃胡小鑫是候选人，还希望大家都能够在网站上给我家小娃投上宝贵的一票。\n"/>
         </LinearLayout>
 
 

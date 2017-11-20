@@ -2,9 +2,11 @@ package android.example.com.yihubaiying.activity;
 
 import android.content.Intent;
 import android.example.com.yihubaiying.enity.MyHongBao;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.example.com.yihubaiying.R;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -64,12 +66,23 @@ public class pickpeople_activity extends AppCompatActivity {
             {"有房","无房","租房"};
     private String[] cars = new String[]
             {"无车","10万及以下","10-20万","20-30万","30-40万"};
+    private Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pickpeople_layout);
+        toolbar= (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        toolbar.setNavigationIcon(R.drawable.white_back_icon1);
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
+        toolbar.setTitle("选择领取者身份");
         hongBao= (MyHongBao) getIntent().getSerializableExtra("hongbao");
         final TagFlowLayout flowLayout= (TagFlowLayout) findViewById(R.id.flow_sex);
         flowLayout.setAdapter(new TagAdapter<String>(sexs) {

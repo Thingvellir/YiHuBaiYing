@@ -63,6 +63,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import static android.example.com.yihubaiying.enity.value.latLng;
+import static com.amap.api.col.sl3.dj.m;
+
 /**
  * Created by carnivalnian on 2017/10/21.
  *
@@ -156,18 +159,13 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
 
         initTitleList();
         initSnipprtList();
-//        initDetailList();
+        initDetailList();
         initHongbao();
         initBanner(view);
         LayoutInflater inflater=(LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         markerView=inflater.inflate(R.layout.marker_hongbao,null);
         numHongbao =(TextView)markerView.findViewById(R.id.num_hongbao);
         location_btn=(ImageButton) view.findViewById(R.id.location_bt);
-//
-//        //一呼百应长按选点
-//        pickedMarker = aMap.addMarker(new MarkerOptions().anchor(0.5f, 0.5f)
-//                .icon(BitmapDescriptorFactory
-//                        .defaultMarker(BitmapDescriptorFactory.HUE_RED)));
     }
 
     public void initBanner(View view){
@@ -426,70 +424,102 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
 
     }
 
+    private ArrayList<String> detailList=new ArrayList<>();
+    private void initDetailList(){
+        detailList.add("项目一期主推70-85m²通透两房,95-125m²全功能三房。\n" +
+                "\" +\n" +
+                "                \"项目位于天府核心地段,规划50万平商业集群,尊享便利生活。\\n\" +\n" +
+                "                \"地铁4号线、9号线换乘站也将途径这里,双地铁直通城市繁华中心。附近有149路,154路,327路等多条公交线路,出行更加便捷。\\n\" +\n" +
+                "                \"479中学尽在咫尺，两所名校可优先入学。\n");
+
+        detailList.add("               购物万福佳，幸福千万家\n" +
+                "                 天天平价，天天惊喜\n" +
+                "                 永辉购物，价格最优  \n" +
+                "                 风雨相伴，一载相辉\n" +
+                "               周年店庆日，购物狂欢时");
+        detailList.add("        送剪发卡 回馈老顾客\n" +
+                "凡是在本店做大头的顾客，一律赠送6张精剪卡（有效期为1个月），这样做的目的是吸引客流，增加店内的客流\n" +
+                "        烫发0元，倒膜带回家\n" +
+                "凡是在店内购买倒膜的顾客，赠送1次烫发，例如：380元一套倒膜，赠送价值280元的烫发一次\n");
+        detailList.add("          肯德基花生霸王双层堡霸气登场！\n" +
+                "\" +\n" +
+                "                \"              丰富好料，绝色搭配\\n\" +\n" +
+                "                \"外脆里嫩的大块鸡腿肉饱满多汁，搭配大块香酥薯饼，丰富的食材层次分明，一口下去满满都是幸福，厚实的感觉\\\"堡\\\"你大满足！\\n\" +\n" +
+                "                \"              醇厚花生酱，双层享受\\n\" +\n" +
+                "                \"当柔滑香浓的花生酱遇上脆辣鲜嫩的鸡腿肉，两种美味在舌尖碰撞，给味蕾一次新奇体验，前所未有的口感，给你不一样惊喜~");
+        detailList.add("        寻人启事：杜应美，女，籍贯：云南省昭通市威信县\n" +
+                "出生日期：1995年11月12日，身高：160厘米，右手有残疾，右手的拇指反在手背上，身材苗条，不胖不瘦，右嘴角边有一颗痣。\n" +
+                "身份证号为53213019951112****。于2017年11月09日离家出走，至今无音信。\n" +
+                "请知情者帮忙提供线索，提供信息酬金：重谢，护送回家酬金：重谢。\n");
+
+    }
+
+
 
     private void initHongbao(){
         hongBaos=new ArrayList<>();
         for (int i=0;i<16;i++){
             final HongBao mHongBao=new HongBao();
-            mHongBao.setId(i+1);
+            mHongBao.setId(i);
             mHongBao.setNumber(88);
             mHongBao.setTitle(titleList.get(i));
             mHongBao.setSnippet(snippetList.get(i));
-//            mHongBao.setDetail(detailList.get(i));
+            mHongBao.setDetail("");
             hongBaos.add(mHongBao);
+        }
+        hongBaos.get(0).setDetail(detailList.get(0));
+        hongBaos.get(2).setDetail(detailList.get(1));
+        hongBaos.get(3).setDetail(detailList.get(2));
+        hongBaos.get(6).setDetail(detailList.get(3));
+        hongBaos.get(15).setDetail(detailList.get(4));
+
+        hongBao= (MyHongBao)getActivity().getIntent().getSerializableExtra("hongbao");//这样获取红包对象
+        if(hongBao!=null) {
+            HongBao newHongBao = new HongBao();
+            newHongBao.setId(hongBaos.size() + 1);
+            newHongBao.setNumber(88);
+            newHongBao.setTitle(hongBao.getTitle());
+            newHongBao.setSnippet(hongBao.getGuanggaoyu());
+            newHongBao.setImageResourceId(hongBao.getImageResourceId());
+            hongBaos.add(newHongBao);
         }
     }
 
 
-
-    //
-//    public void initHongbaoMarker(Location location){
-//        if (aMap != null && location != null) {
-//            initTitleList();
-//            Random r=new Random(1);
-//            mBitmap=convertViewToBitmap(markerView);
-//            for (int i=0;i<16;i++) {
-//
-//                LatLng latLng=new LatLng(location.getLatitude() + 0.001 * (r.nextInt(10) - 5), location.getLongitude() + 0.001 * (r.nextInt(10) - 5));
-//                aMap.addMarker(new MarkerOptions().anchor(0.5f, 0.5f)
-//                        .position(latLng)
-//                        .title(titleList.get(i))
-//                        .snippet("电子科技大学附近锦绣花园二期开盘了！查看详细信息可以领取红包。")
-//                        .icon(BitmapDescriptorFactory.fromBitmap(changeBitmapSize(mBitmap))));
-//            }
-//        }
-//    }
-    private ArrayList<String> idList=new ArrayList<>();
+    private ArrayList<Integer> idList=new ArrayList<>();
+    private ArrayList<String> markeridList=new ArrayList<>();
     public void initHongbaoMarker(Location location){
 
         if (aMap != null && location != null) {
-            Random r=new Random(1);
-            mBitmap=convertViewToBitmap(markerView);
-            for (int i=0;i<16;i++) {
+            Random r = new Random(1);
+            mBitmap = convertViewToBitmap(markerView);
+            for (int i = 0; i < 16; i++) {
 
-                LatLng latLng=new LatLng(location.getLatitude() + 0.001 * (r.nextInt(10) - 5), location.getLongitude() + 0.001 * (r.nextInt(10) - 5));
-                final Marker marker=aMap.addMarker(new MarkerOptions().anchor(0.5f, 0.5f)
+                LatLng latLng = new LatLng(location.getLatitude() + 0.001 * (r.nextInt(10) - 5), location.getLongitude() + 0.001 * (r.nextInt(10) - 5));
+                final Marker marker = aMap.addMarker(new MarkerOptions().anchor(0.5f, 0.5f)
                         .position(latLng)
                         .title(hongBaos.get(i).getTitle())
                         .snippet(hongBaos.get(i).getSnippet())
                         .icon(BitmapDescriptorFactory.fromBitmap(changeBitmapSize(mBitmap))));
-                idList.add(marker.getId());
-                Log.e("id",idList.get(i));
+                idList.add(hongBaos.get(i).getId());
+                markeridList.add(marker.getId());
+                Log.e("id", idList.get(i) + "");
             }
-
-            hongBao= (MyHongBao)getActivity().getIntent().getSerializableExtra("hongbao");//这样获取红包对象
-            LatLng getLatlng=new LatLng(hongBao.getLatitude(),hongBao.getLongitude());
-            if(hongBao!=null){
-                final Marker markerAdd =aMap.addMarker(new MarkerOptions().title("用户 孙老师")
-                        .snippet(hongBao.getTitle())
-                        .position(getLatlng)
-                        .icon(BitmapDescriptorFactory.fromBitmap(changeBitmapSize(mBitmap)))
-                );
-                idList.add(markerAdd.getId());
-                Log.e("id",idList.get(16));
+            if (hongBaos.size() > 16) {
+                for (int i = 16; i < hongBaos.size(); i++) {
+                    LatLng thislat=new LatLng(hongBao.getLatitude(),hongBao.getLongitude());
+                    final Marker yiMarker = aMap.addMarker(new MarkerOptions().anchor(0.5f, 0.5f)
+                            .position(thislat)
+                            .title(hongBaos.get(i).getTitle())
+                            .snippet(hongBaos.get(i).getSnippet())
+                            .icon(BitmapDescriptorFactory.fromBitmap(changeBitmapSize(mBitmap))));
+                    idList.add(hongBaos.get(i).getId());
+                    markeridList.add(yiMarker.getId());
+                }
             }
         }
     }
+
 
 
     private Bitmap changeBitmapSize(Bitmap bitmap) {
@@ -554,11 +584,11 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
                         mineLatLng, 17, 0, 0)),this);
                 break;
             case R.id.open_btn:
+                int passId= markeridList.indexOf(markerLocal.getId());
+                HongBao passHongBao=hongBaos.get(passId);
                 Intent intent=new Intent(getActivity(),HongBaoActivity.class);
-                intent.putExtra("markerId",markerLocal.getId());
-                intent.putExtra("snippet",markerLocal.getSnippet());
                 Bundle mBundle=new Bundle();
-                mBundle.putSerializable("hongbao",hongBao);
+                mBundle.putSerializable("hongbao",passHongBao);
                 intent.putExtras(mBundle);
                 startActivity(intent);
                 hongbaoDia.dismiss();

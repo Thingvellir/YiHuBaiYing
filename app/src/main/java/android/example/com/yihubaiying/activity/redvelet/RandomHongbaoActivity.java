@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.example.com.yihubaiying.R;
 import android.example.com.yihubaiying.activity.redvelet.BaseActivity;
 import android.example.com.yihubaiying.application.MyAppication;
+import android.example.com.yihubaiying.enity.HongBao;
 import android.example.com.yihubaiying.utils.AppManager;
 import android.example.com.yihubaiying.view.TigerMachineView;
 import android.graphics.Color;
@@ -44,6 +45,7 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
     private TextView thisTextView;
     private Intent intent;
     private MyAppication appication;
+    private HongBao passedHongBao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,10 +68,12 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
         back_hongbaorandom.setOnClickListener(this);
 
         intent=getIntent();
-        thisSnippet=intent.getStringExtra("snippet");
+//        thisSnippet=intent.getStringExtra("snippet");
+//        thisTextView=(TextView)findViewById(R.id.title_randomactivity);
+//        thisTextView.setText(thisSnippet);
+        passedHongBao=(HongBao)getIntent().getSerializableExtra("hongbao");
         thisTextView=(TextView)findViewById(R.id.title_randomactivity);
-        thisTextView.setText(thisSnippet);
-
+        thisTextView.setText(passedHongBao.getSnippet());
         appication=(MyAppication)this.getApplicationContext();
     }
     @Override
@@ -83,11 +87,13 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
     public void onClick(View v){
         switch (v.getId()){
             case R.id.random_getget:
-                    mViewHandler.removeCallbacks(mTask);
+                mViewHandler.removeCallbacks(mTask);
                 Intent thisIntent=new Intent(RandomHongbaoActivity.this, SelectHongbaoActivity.class);
-                thisIntent.putExtra("snippet",thisSnippet);
+                Bundle mBundle=new Bundle();
+                mBundle.putSerializable("hongbao",passedHongBao);
+                thisIntent.putExtras(mBundle);
                 startActivity(thisIntent);
-                    AppManager.getAppManager().finishActivity(this);
+                AppManager.getAppManager().finishActivity(this);
                 break;
             case R.id.back_hongbaorandom:
                 AppManager.getAppManager().finishActivity(this);

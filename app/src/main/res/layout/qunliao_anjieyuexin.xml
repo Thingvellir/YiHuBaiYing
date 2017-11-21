@@ -252,7 +252,7 @@
                     <!-- 人物头像 -->
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/ivAvatar"
+
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:focusable="false"
@@ -283,7 +283,7 @@
 
 
                             <ProgressBar
-                                android:id="@+id/pbSending"
+
                                 style="?android:attr/progressBarStyleSmall"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -292,14 +292,14 @@
                                 android:visibility="gone"/>
 
                             <LinearLayout
-                                android:id="@+id/llError"
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:visibility="gone">
 
                                 <de.hdodenhof.circleimageview.CircleImageView
-                                    android:id="@+id/ivError"
+
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:layout_gravity="center"
@@ -307,7 +307,7 @@
                                     android:src="@mipmap/img_error"/>
 
                                 <TextView
-                                    android:id="@+id/tvRetry"
+
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
@@ -877,7 +877,7 @@
                         <!-- 昵称，当在群组中则要显示 -->
 
                         <TextView
-                            android:id="@+id/tvName"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"

@@ -30,42 +30,43 @@
             android:name="com.amap.api.v2.apikey"
             android:value="e276da00da975076c827432d23128f2a" />
 
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.redvelet.HongBaoActivity"></activity>
-        <activity android:name=".activity.redvelet.RandomHongbaoActivity"></activity>
-        <activity android:name=".activity.redvelet.SelectHongbaoActivity"></activity>
-        <activity android:name=".activity.redvelet.JiaQunActivity"></activity>
-        <activity android:name=".activity.redvelet.ZhuanFaActivity"></activity>
-        <activity android:name=".activity.yihubaiying.PickLocation"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".activity.redvelet.HongBaoActivity" />
+        <activity android:name=".activity.redvelet.RandomHongbaoActivity" />
+        <activity android:name=".activity.redvelet.SelectHongbaoActivity" />
+        <activity android:name=".activity.redvelet.JiaQunActivity" />
+        <activity android:name=".activity.redvelet.ZhuanFaActivity" />
+        <activity android:name=".activity.yihubaiying.PickLocation" />
 
         <service android:name="com.amap.api.location.APSService" />
 
-        <activity android:name=".activity.Main2Activity"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".activity.pickpeople_activity"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".activity.redpacketdetail_activity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activity.Main2Activity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.pickpeople_activity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.redpacketdetail_activity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.Newsdetail_activity"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.group_chat_activity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.detail_group_acitivity"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".activity.wode_set_activity"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".activity.shoudao_activity"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".activity.renwu_activity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activity.detail_group_acitivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.wode_set_activity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.shoudao_activity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.renwu_activity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.youyisi_fahongbao"
             android:theme="@style/AppTheme" />
@@ -75,12 +76,23 @@
         <activity
             android:name=".activity.webview_activity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.qunliao_paotongshu"
+        <activity
+            android:name=".activity.qunliao_paotongshu"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.qunliao_zhonghai"
-            android:theme="@style/AppTheme" ></activity>
-        <activity android:name=".activity.qunliao_anjieyuexin"
-            android:theme="@style/AppTheme" ></activity>
+        <activity
+            android:name=".activity.qunliao_zhonghai"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.qunliao_anjieyuexin"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.RegisterActivity"></activity>
     </application>
 
 </manifest>

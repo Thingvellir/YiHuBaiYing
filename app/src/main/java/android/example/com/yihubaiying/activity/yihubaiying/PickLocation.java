@@ -74,15 +74,15 @@ public class PickLocation extends AppCompatActivity implements AMap.OnMapLongCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        if (Build.VERSION.SDK_INT >= 21) {
-            View decorView = getWindow().getDecorView();
-            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-
-            decorView.setSystemUiVisibility(option);
-            getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
+//        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        if (Build.VERSION.SDK_INT >= 21) {
+//            View decorView = getWindow().getDecorView();
+//            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+//
+//            decorView.setSystemUiVisibility(option);
+//            getWindow().setStatusBarColor(Color.TRANSPARENT);
+//        }
 
         setContentView(R.layout.picklocation_layout);
 

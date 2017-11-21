@@ -165,9 +165,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     @Override
     protected void onResume() {
         super.onResume();
-//        hongBao= (MyHongBao) getIntent().getSerializableExtra("hongbao");//这样获取红包对象
-//        if(hongBao!=null){
-//            Toast.makeText(getApplicationContext(),hongBao.getTitle()+""+hongBao.getLatitude(),Toast.LENGTH_SHORT).show();
-//        }
+
     }
 }

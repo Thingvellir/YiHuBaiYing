@@ -3,6 +3,7 @@ package android.example.com.yihubaiying.activity.redvelet;
 import android.content.Intent;
 import android.example.com.yihubaiying.R;
 import android.example.com.yihubaiying.activity.redvelet.BaseActivity;
+import android.example.com.yihubaiying.enity.MyHongBao;
 import android.example.com.yihubaiying.utils.AppManager;
 import android.graphics.Color;
 import android.os.Build;
@@ -15,9 +16,13 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+
+import static android.example.com.yihubaiying.R.id.imageView;
 import static com.amap.api.col.sl3.dj.m;
 
 
@@ -35,6 +40,11 @@ public class HongBaoActivity extends BaseActivity implements View.OnClickListene
     private TextView mSnippet;
     private TextView mDetail;
 
+
+    private ImageView imageView1;
+    private ImageView imageView2;
+    private ImageView imageView3;
+    private MyHongBao hongBao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,13 +57,16 @@ public class HongBaoActivity extends BaseActivity implements View.OnClickListene
         back_hongbao=(ImageButton)findViewById(R.id.back_hongbao);
         back_hongbao.setOnClickListener(this);
 
+        imageView1=(ImageView) findViewById(R.id.content_image1);
+        imageView2=(ImageView) findViewById(R.id.content_image2);
+        imageView3=(ImageView) findViewById(R.id.content_image3);
+
         Intent intent=getIntent();
         markerId=intent.getStringExtra("markerId");
         markerSnippet=intent.getStringExtra("snippet");
-
         mSnippet=(TextView) findViewById(R.id.snippet_hongbaoactivity);
         mDetail=(TextView)findViewById(R.id.content_hongbaoactivity);
-
+        hongBao= (MyHongBao)getIntent().getSerializableExtra("hongbao");//这样获取红包对象
         mSnippet.setText(markerSnippet);
         mDetail.setGravity(View.TEXT_ALIGNMENT_CENTER);
 switch (markerId){
@@ -76,12 +89,20 @@ switch (markerId){
                 "                 永辉购物，价格最优  \n" +
                 "                 风雨相伴，一载相辉\n" +
                 "               周年店庆日，购物狂欢时");
+        imageView1.setImageDrawable(getResources().getDrawable(R.drawable.yonghui_one));
+        imageView2.setImageDrawable(getResources().getDrawable(R.drawable.yonghui_two));
+        imageView3.setImageDrawable(getResources().getDrawable(R.drawable.yonghui_three));
         break;
+
     case "Marker5":
         mDetail.setText("        送剪发卡 回馈老顾客\n" +
                 "凡是在本店做大头的顾客，一律赠送6张精剪卡（有效期为1个月），这样做的目的是吸引客流，增加店内的客流\n" +
                 "        烫发0元，倒膜带回家\n" +
                 "凡是在店内购买倒膜的顾客，赠送1次烫发，例如：380元一套倒膜，赠送价值280元的烫发一次\n");
+
+        imageView1.setImageDrawable(getResources().getDrawable(R.drawable.ziranmei_one));
+        imageView2.setImageDrawable(getResources().getDrawable(R.drawable.ziranmei_two));
+        imageView3.setImageDrawable(getResources().getDrawable(R.drawable.ziranmei_three));
         break;
     case "Marker6":
         mDetail.setText("新起点教育为高考生,中考生,小升初考生,艺考生、小学生,初中生,高中生提供全学科一对一个性化辅导补习课程。\n" +
@@ -97,6 +118,9 @@ switch (markerId){
                 "外脆里嫩的大块鸡腿肉饱满多汁，搭配大块香酥薯饼，丰富的食材层次分明，一口下去满满都是幸福，厚实的感觉\"堡\"你大满足！\n" +
                 "              醇厚花生酱，双层享受\n" +
                 "当柔滑香浓的花生酱遇上脆辣鲜嫩的鸡腿肉，两种美味在舌尖碰撞，给味蕾一次新奇体验，前所未有的口感，给你不一样惊喜~");
+        imageView1.setImageDrawable(getResources().getDrawable(R.drawable.kfc_one));
+        imageView2.setImageDrawable(getResources().getDrawable(R.drawable.kfc_two));
+        imageView3.setImageDrawable(getResources().getDrawable(R.drawable.kfc_three));
         break;
     case "Marker9":
         mDetail.setText("如家快捷酒店（阳朔西街店）地处阳朔县北门厄，步行可至著名的阳朔西街，可谓闹中取静。\n" +
@@ -138,10 +162,19 @@ switch (markerId){
                 "详情可联系：1985655455");
         break;
     case "Marker17":
-        mDetail.setText("         我们通信同心志愿者服务队评优来啦\n" +
-                "拉着自己的亲朋好友，今天中午来朝阳餐厅门前给我们学院的志愿者队投票吧！\n" +
-                "        中午11点30-13点\n" +
-                "投票方式：记得凭学生证或者有照片的一卡通来领票从而进行投票。");
+        mDetail.setText("        寻人启事：杜应美，女，籍贯：云南省昭通市威信县\n" +
+                "出生日期：1995年11月12日，身高：160厘米，右手有残疾，右手的拇指反在手背上，身材苗条，不胖不瘦，右嘴角边有一颗痣。\n" +
+                "身份证号为53213019951112****。于2017年11月09日离家出走，至今无音信。\n" +
+                "请知情者帮忙提供线索，提供信息酬金：重谢，护送回家酬金：重谢。\n");
+        imageView1.setImageDrawable(getResources().getDrawable(R.drawable.yangtingfei));
+        imageView2.setImageDrawable(getResources().getDrawable(R.drawable.yangtingfei));
+        imageView3.setImageDrawable(getResources().getDrawable(R.drawable.yangtingfei));
+        break;
+    case "Marker18":
+        mDetail.setText(hongBao.getGuanggaoyu());
+        Glide.with(this).load(hongBao.getImageResourceId().get(0)).into(imageView1);
+        Glide.with(this).load(hongBao.getImageResourceId().get(1)).into(imageView2);
+        Glide.with(this).load(hongBao.getImageResourceId().get(2)).into(imageView3);
         break;
 
 }

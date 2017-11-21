@@ -10,6 +10,7 @@ import android.example.com.yihubaiying.adapter.MyInfoWinAdapter;
 import android.example.com.yihubaiying.adapter.RollingAdapter;
 import android.example.com.yihubaiying.application.MyAppication;
 import android.example.com.yihubaiying.enity.HongBao;
+import android.example.com.yihubaiying.enity.MyHongBao;
 import android.example.com.yihubaiying.loader.GlideImageLoader;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -110,10 +111,14 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
     private ImageButton openRedvelet;
     private Button closeDia;
     private TextView hongbaoDiaText;
+
+
     private RollingAdapter rollingAdapter;
     private LinearLayout linearLayout1;
     private MyAppication appication;
     private TextView mymoney;
+
+    private MyHongBao hongBao;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -140,6 +145,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         setUpMap();
         appication= (MyAppication) getActivity().getApplicationContext();
         mymoney= (TextView) view.findViewById(R.id.xuanfutiao_money);
+
 
 
         return view;
@@ -414,9 +420,9 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         snippetList.add("失物寻找，一张饭卡胡一菲");
         snippetList.add("寻找合租，坐标成都合院");
         snippetList.add("求计院院花联系方式");
-        snippetList.add("寻人启示");
-        snippetList.add("招聘送餐兼职学生");
         snippetList.add("求在银桦广场投宿舍347一票");
+        snippetList.add("招聘送餐兼职学生");
+        snippetList.add("寻人启示");
 
     }
 
@@ -469,6 +475,18 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
                         .icon(BitmapDescriptorFactory.fromBitmap(changeBitmapSize(mBitmap))));
                 idList.add(marker.getId());
                 Log.e("id",idList.get(i));
+            }
+
+            hongBao= (MyHongBao)getActivity().getIntent().getSerializableExtra("hongbao");//这样获取红包对象
+            LatLng getLatlng=new LatLng(hongBao.getLatitude(),hongBao.getLongitude());
+            if(hongBao!=null){
+                final Marker markerAdd =aMap.addMarker(new MarkerOptions().title("用户 孙老师")
+                        .snippet(hongBao.getTitle())
+                        .position(getLatlng)
+                        .icon(BitmapDescriptorFactory.fromBitmap(changeBitmapSize(mBitmap)))
+                );
+                idList.add(markerAdd.getId());
+                Log.e("id",idList.get(16));
             }
         }
     }
@@ -539,7 +557,9 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
                 Intent intent=new Intent(getActivity(),HongBaoActivity.class);
                 intent.putExtra("markerId",markerLocal.getId());
                 intent.putExtra("snippet",markerLocal.getSnippet());
-
+                Bundle mBundle=new Bundle();
+                mBundle.putSerializable("hongbao",hongBao);
+                intent.putExtras(mBundle);
                 startActivity(intent);
                 hongbaoDia.dismiss();
                 break;
@@ -646,7 +666,7 @@ if(markerLocal!=pickedMarker) {
             .strokeColor(STROKE_COLOR)
             .fillColor(FILL_COLOR)
             .strokeWidth(2f)
-            .radius(320)
+            .radius(300)
             .visible(true));
 }
     }

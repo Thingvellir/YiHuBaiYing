@@ -28,7 +28,7 @@
         tools:replace="android:icon">
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="e276da00da975076c827432d23128f2a" />
+            android:value="eecbd4192526da4f18673644b0ad13c0" />
 
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".activity.redvelet.HongBaoActivity" />

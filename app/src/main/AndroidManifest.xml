@@ -36,7 +36,8 @@
         <activity android:name=".activity.redvelet.SelectHongbaoActivity" />
         <activity android:name=".activity.redvelet.JiaQunActivity" />
         <activity android:name=".activity.redvelet.ZhuanFaActivity" />
-        <activity android:name=".activity.yihubaiying.PickLocation" />
+        <activity android:name=".activity.yihubaiying.PickLocation"
+            android:theme="@style/AppTheme" />
 
         <service android:name="com.amap.api.location.APSService" />
 
@@ -92,7 +93,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RegisterActivity"></activity>
+        <activity android:name=".activity.RegisterActivity"
+            ></activity>
     </application>
 
 </manifest>

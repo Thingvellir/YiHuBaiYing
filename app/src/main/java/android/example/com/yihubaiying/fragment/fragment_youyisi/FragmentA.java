@@ -59,11 +59,11 @@ public class FragmentA extends BaseFragment {
 
     }
     private void initDatas() {
-        News news1=new News("产品力再升级！10-15万实惠家轿如何选","车天下","23569看过",R.drawable.youyisi_jiaoche);
-        News news2=new News("从《功守道》，你就只看到马云的钱吗？","成都商报","24581看过",R.drawable.youyisi_gongshoudao);
-        News news3=new News("大豆蛋白是不预防心脏病的，这样吃才可以","39健康网","86514看过",R.drawable.youyisi_daodou);
-        News news4=new News("冬天到了，吃点麻辣辣才是冬天正确的打开方式","本地宝","14527看过",R.drawable.youyisi_malatang);
-        News news5=new News("惊！公积金余额怎么只剩5毛？我的钱呢？","钱袋子金融","34527看过",R.drawable.youyisi_gongjijin);
+        News news1=new News("产品力再升级！10-15万实惠家轿如何选","车天下","23569看过 红包剩余28.2元",R.drawable.youyisi_jiaoche);
+        News news2=new News("从《功守道》，你就只看到马云的钱吗？","成都商报","24581看过 红包剩余21.3元",R.drawable.youyisi_gongshoudao);
+        News news3=new News("大豆蛋白是不预防心脏病的，这样吃才可以","39健康网","86514看过 红包剩余26.7元",R.drawable.youyisi_daodou);
+        News news4=new News("冬天到了，吃点麻辣辣才是冬天正确的打开方式","本地宝","14527看过 红包剩余32.6元",R.drawable.youyisi_malatang);
+        News news5=new News("惊！公积金余额怎么只剩5毛？我的钱呢？","钱袋子金融","34527看过 红包剩余11.2元",R.drawable.youyisi_gongjijin);
 
         newsItemList.add(news1);
         newsItemList.add(news2);

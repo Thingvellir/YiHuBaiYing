@@ -48,11 +48,11 @@ public class FragmentF extends BaseFragment {
 
     }
     private void initDatas() {
-        News news1=new News("23岁奶茶妹妹章泽天穿职业装出席活动，美的不忍直视！","新浪娱乐","13469看过",R.drawable.yule1);
-        News news2=new News("孙燕姿自曝与老公恋爱史 预计生二胎","网易娱乐","29581看过",R.drawable.yule2);
-        News news3=new News("赛琳娜比伯当众接吻 画面闪瞎眼","凤凰娱乐","86514看过",R.drawable.yule3);
-        News news4=new News("小泡芙录节目生病惹众人心疼：没力气了","大成娱乐","14547看过",R.drawable.yule4);
-        News news5=new News("恭喜！张雨绮生下龙凤胎 经纪人朋友圈晒照","中工娱乐","345275过",R.drawable.yule5);
+        News news1=new News("23岁奶茶妹妹章泽天穿职业装出席活动，美的不忍直视！","新浪娱乐","13469看过 红包剩余11.1元",R.drawable.yule1);
+        News news2=new News("孙燕姿自曝与老公恋爱史 预计生二胎","网易娱乐","29581看过 红包剩余23.1元",R.drawable.yule2);
+        News news3=new News("赛琳娜比伯当众接吻 画面闪瞎眼","凤凰娱乐","86514看过 红包剩余88.1元",R.drawable.yule3);
+        News news4=new News("小泡芙录节目生病惹众人心疼：没力气了","大成娱乐","14547看过 红包剩余17.5元",R.drawable.yule4);
+        News news5=new News("恭喜！张雨绮生下龙凤胎 经纪人朋友圈晒照","中工娱乐","345275过 红包剩余17.2元",R.drawable.yule5);
 
         newsItemList.add(news1);
         newsItemList.add(news2);

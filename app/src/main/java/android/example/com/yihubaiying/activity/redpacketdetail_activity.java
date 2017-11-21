@@ -3,6 +3,7 @@ package android.example.com.yihubaiying.activity;
 import android.content.Intent;
 import android.example.com.yihubaiying.MainActivity;
 import android.example.com.yihubaiying.enity.MyHongBao;
+import android.example.com.yihubaiying.enity.value;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.amap.api.maps.model.LatLng;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 
@@ -28,6 +30,7 @@ public class redpacketdetail_activity extends AppCompatActivity {
     private CardView cardView2;
     private CardView cardView3;
     private CardView cardView4;
+    private LatLng latLng;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,7 @@ public class redpacketdetail_activity extends AppCompatActivity {
         cardView2= (CardView) findViewById(R.id.card2);
         cardView3= (CardView) findViewById(R.id.card3);
         cardView4= (CardView) findViewById(R.id.card4);
+        latLng=new LatLng(value.latLng.latitude,value.latLng.longitude);
         ImageView delect1= (ImageView) findViewById(R.id.delect1);
         delect1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +85,8 @@ public class redpacketdetail_activity extends AppCompatActivity {
             }
         });
          hongBao= (MyHongBao) getIntent().getSerializableExtra("hongbao");
+        hongBao.setLatitude(latLng.latitude);
+        hongBao.setLongitude(latLng.longitude);
         final String ImageResourceId=hongBao.getTitle();
 
         final Button button= (Button) findViewById(R.id.btn_next_step);
@@ -100,7 +106,7 @@ public class redpacketdetail_activity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(getApplicationContext(),"支付成功",Toast.LENGTH_SHORT).show();
-                                        Intent intent=new Intent(redpacketdetail_activity.this,MainActivity.class);
+                                        Intent intent=new Intent(redpacketdetail_activity.this,MainActivity.class);//跳东西在这里更改
                                         Bundle mBundle=new Bundle();
                                         mBundle.putSerializable("hongbao",hongBao);
                                         intent.putExtras(mBundle);

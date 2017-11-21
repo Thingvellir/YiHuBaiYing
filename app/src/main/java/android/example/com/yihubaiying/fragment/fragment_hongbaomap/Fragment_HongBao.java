@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.example.com.yihubaiying.R;
 import android.example.com.yihubaiying.activity.redvelet.HongBaoActivity;
 import android.example.com.yihubaiying.adapter.MyInfoWinAdapter;
+import android.example.com.yihubaiying.adapter.RollingAdapter;
+import android.example.com.yihubaiying.application.MyAppication;
 import android.example.com.yihubaiying.enity.HongBao;
 import android.example.com.yihubaiying.loader.GlideImageLoader;
 import android.graphics.Bitmap;
@@ -26,6 +28,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +48,7 @@ import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.Marker;
 import com.amap.api.maps.model.MarkerOptions;
 import com.amap.api.maps.model.MyLocationStyle;
+import com.jkb.rollinglayout.RollingLayout;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.Permission;
 import com.yanzhenjie.permission.PermissionListener;
@@ -106,6 +110,10 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
     private ImageButton openRedvelet;
     private Button closeDia;
     private TextView hongbaoDiaText;
+    private RollingAdapter rollingAdapter;
+    private LinearLayout linearLayout1;
+    private MyAppication appication;
+    private TextView mymoney;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -113,7 +121,11 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         isInit=true;
         mapView=(TextureMapView)view.findViewById(R.id.map);
         mapView.onCreate(savedInstanceState);
-        cardView= (CardView) view.findViewById(R.id.cardView);
+        linearLayout1 = (LinearLayout) view.findViewById(R.id.linear11);
+        rollingAdapter = new RollingAdapter(getContext());
+        RollingLayout rollingLeftRight = (RollingLayout) view.findViewById(R.id.rollingleftRight);
+        rollingLeftRight.setAdapter(rollingAdapter);
+        rollingLeftRight.startRolling();
         Log.e("fragment_1","onCreate");
         AndPermission.with(this)
                 .requestCode(101)
@@ -126,6 +138,10 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
                 .start();
         initView(view);
         setUpMap();
+        appication= (MyAppication) getActivity().getApplicationContext();
+        mymoney= (TextView) view.findViewById(R.id.xuanfutiao_money);
+
+
         return view;
     }
 
@@ -229,6 +245,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         super.onResume();
         mapView.onResume();
         aMap.reloadMap();
+        mymoney.setText(appication.getYiMoney()+"元");
         Log.e("fragment_1","onResume");
     }
 
@@ -538,7 +555,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
     public void onMapClick(LatLng point){
         //点击地图上没marker 的地方，隐藏inforwindow
         banner.setVisibility(View.GONE);
-        cardView.setVisibility(View.VISIBLE);
+        linearLayout1.setVisibility(View.VISIBLE);
         if (markerLocal != null) {
             circle.remove();
             markerLocal.hideInfoWindow();
@@ -659,5 +676,6 @@ if(markerLocal!=pickedMarker) {
             }
         }
     };
+
 
 }

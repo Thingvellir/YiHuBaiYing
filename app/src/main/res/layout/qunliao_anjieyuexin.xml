@@ -681,7 +681,7 @@
                         android:layout_height="40dp"
                         android:focusable="false"
                         android:focusableInTouchMode="false"
-                        android:src="@drawable/user_xiaosong" />
+                        android:src="@drawable/user2" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -867,7 +867,7 @@
                         android:layout_height="40dp"
                         android:focusable="false"
                         android:focusableInTouchMode="false"
-                        android:src="@drawable/user_xiaosong"/>
+                        android:src="@drawable/user2"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -881,7 +881,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="中海国际左岸售楼员小宋"
+                            android:text="店长龙云"
                             android:textColor="#666666"
                             android:textSize="12sp"
                             android:visibility="visible"/>

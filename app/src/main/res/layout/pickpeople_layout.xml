@@ -209,7 +209,7 @@
                     android:textSize="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="请选择年龄"/>
+                    android:text="请选择职位"/>
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_job"
@@ -371,7 +371,7 @@
                     android:textSize="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="请选择情趣属性"/>
+                    android:text="请选择信仰"/>
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_believe"
@@ -417,7 +417,7 @@
                     android:textSize="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="请选择年薪范围"/>
+                    android:text="请选择运动喜好"/>
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_hobby"

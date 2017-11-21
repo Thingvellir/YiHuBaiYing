@@ -95,6 +95,7 @@
                         />
 
                     <EditText
+                        android:id="@+id/adv_edittext"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:layout_width="200dp"

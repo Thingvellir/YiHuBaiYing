@@ -2,8 +2,11 @@ package android.example.com.yihubaiying.activity.yihubaiying;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.example.com.yihubaiying.R;
 import android.example.com.yihubaiying.adapter.MyInfoWinAdapter;
+import android.example.com.yihubaiying.enity.MyHongBao;
+import android.example.com.yihubaiying.enity.value;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -11,6 +14,7 @@ import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -63,6 +67,9 @@ public class PickLocation extends AppCompatActivity implements AMap.OnMapLongCli
     private LatLng pickLatlng;
     //选择的地理位置名字
     private String addressName;
+    private Toolbar toolbar;
+    private MyHongBao hongbaoa;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,10 +88,29 @@ public class PickLocation extends AppCompatActivity implements AMap.OnMapLongCli
 
         mapView = (MapView) findViewById(R.id.picK_location);
         mapView.onCreate(savedInstanceState);
+        hongbaoa=new MyHongBao();
         init();
         progDialog = new ProgressDialog(this);
+        Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationIcon(R.drawable.white_back_icon1);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent=new Intent();
+//                intent.putExtra("localname",addressName);
+//                intent.putExtra("lat",pickLatlng.latitude);
+//                intent.putExtra("long",pickLatlng.longitude);
+//                Toast.makeText(PickLocation.this, addressName, Toast.LENGTH_SHORT).show();
+//                setResult(RESULT_OK,intent);
 
-
+                value.addressname=addressName;
+                value.latLng=pickLatlng;
+                finish();
+            }
+        });
+        toolbar.setTitle("选取位置");
 
     }
     /**

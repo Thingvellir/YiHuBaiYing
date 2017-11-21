@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.example.com.yihubaiying.MainActivity;
 import android.example.com.yihubaiying.activity.yihubaiying.PickLocation;
 import android.example.com.yihubaiying.enity.MyHongBao;
+import android.example.com.yihubaiying.enity.value;
 import android.graphics.Color;
 import android.media.Image;
 import android.net.Uri;
@@ -47,6 +48,7 @@ public class Main2Activity extends TakePhotoActivity {
     private ImageView pickimage2;
     private ImageView pickimage3;
     private ImageView pickloation;
+    int flag=0;
 
     private TakePhoto takePhoto;
     private CropOptions cropOptions;  //裁剪参数
@@ -59,7 +61,8 @@ public class Main2Activity extends TakePhotoActivity {
     private LatLng latLng;
     ArrayList<String> ImageResourceId;
     private Toolbar toolbar;
-
+    private MyHongBao hongbaoa;
+    private EditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,13 +77,19 @@ public class Main2Activity extends TakePhotoActivity {
         toolbar.setNavigationIcon(R.drawable.white_back_icon1);
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         toolbar.setTitle("发布红包");
+        editText= (EditText) findViewById(R.id.adv_edittext);
         pickloation= (ImageView) findViewById(R.id.adv_picklocation);
         pickloation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Main2Activity.this, PickLocation.class));
+                Intent intent=new Intent(Main2Activity.this,PickLocation.class);
+                startActivity(intent);
+
             }
         });
+
+
+
         takeFromGalleyBtn= (ImageView) findViewById(R.id.image_pick);
         takeFromGalleyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,10 +124,15 @@ public class Main2Activity extends TakePhotoActivity {
                 if (xuanchuanyu.length()==0){
                     Toast.makeText(getApplicationContext(),"红包内容不可为空",Toast.LENGTH_SHORT).show();
                 }
+                if (editText.getText().length()==0){
+                    Toast.makeText(getApplicationContext(),"请选择红包发布地址",Toast.LENGTH_SHORT).show();
+
+                }
                 if (ImageResourceId.isEmpty()){
                     Toast.makeText(getApplicationContext(),"宣传照片不可为空",Toast.LENGTH_SHORT).show();
 
                 }
+
                 if (!(guanggaotitle.length()==0||xuanchuanyu.length()==0||ImageResourceId.isEmpty())){
                     Intent intent=new Intent(Main2Activity.this,pickpeople_activity.class);
                     hongBao.setTitle(guanggaotitle);
@@ -144,14 +158,29 @@ public class Main2Activity extends TakePhotoActivity {
 //        //Google Glide库 用于加载图片资源
 //        Glide.with(this).load(iconPath).into(pickimage2);
        ArrayList<TImage> images=result.getImages();
+        if(images.size()==1){
+            ImageResourceId.add(images.get(0).getCompressPath());
+            Glide.with(this).load(new File(images.get(0).getCompressPath())).into(pickimage1);
+
+        }
+        if (images.size()==2){
+            ImageResourceId.add(images.get(0).getCompressPath());
+            Glide.with(this).load(new File(images.get(0).getCompressPath())).into(pickimage1);
+            ImageResourceId.add(images.get(1).getCompressPath());
+            Glide.with(this).load(new File(images.get(1).getCompressPath())).into(pickimage2);
+
+        }
+        if (images.size()==3){
+            ImageResourceId.add(images.get(0).getCompressPath());
+            Glide.with(this).load(new File(images.get(0).getCompressPath())).into(pickimage1);
+            ImageResourceId.add(images.get(1).getCompressPath());
+            Glide.with(this).load(new File(images.get(1).getCompressPath())).into(pickimage2);
+            ImageResourceId.add(images.get(2).getCompressPath());
+            Glide.with(this).load(new File(images.get(2).getCompressPath())).into(pickimage3);
+
+        }
 
 
-        ImageResourceId.add(images.get(0).getCompressPath());
-        ImageResourceId.add(images.get(1).getCompressPath());
-        ImageResourceId.add(images.get(2).getCompressPath());
-        Glide.with(this).load(new File(images.get(0).getCompressPath())).into(pickimage1);
-        Glide.with(this).load(new File(images.get(1).getCompressPath())).into(pickimage2);
-       Glide.with(this).load(new File(images.get(2).getCompressPath())).into(pickimage3);
 //        Toast.makeText(this, "imagePath:" + images.get(2).getOriginalPath(), Toast.LENGTH_SHORT).show();
 
 
@@ -223,5 +252,29 @@ public class Main2Activity extends TakePhotoActivity {
         File file=new File(Environment.getExternalStorageDirectory(), "/temp/"+System.currentTimeMillis() + ".jpg");
         if (!file.getParentFile().exists())file.getParentFile().mkdirs();
         return Uri.fromFile(file);
+    }
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        switch (requestCode){
+//            case 1:
+//                if(resultCode==RESULT_OK){
+//                    editText.setText(data.getStringExtra("localname"));
+//                    Toast.makeText(getApplicationContext(),String.valueOf(data.getDoubleExtra("lat",0)),Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(),String.valueOf(data.getDoubleExtra("long",0)),Toast.LENGTH_SHORT).show();
+//                    hongBao.setLatLng(new LatLng(data.getDoubleExtra("lat",0),data.getDoubleExtra("long",0)));
+//
+//                }
+//                default:
+//        }
+//    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if(flag!=0&&value.latLng!=null){
+            editText.setText(value.addressname);
+        }
+        flag+=1;
+
     }
 }

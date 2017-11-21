@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.example.com.yihubaiying.activity.Main2Activity;
 
 import android.example.com.yihubaiying.activity.youyisi_fahongbao;
+import android.example.com.yihubaiying.enity.HongBao;
+import android.example.com.yihubaiying.enity.MyHongBao;
 import android.example.com.yihubaiying.fragment.Fragment_HongBaoMap;
 import android.example.com.yihubaiying.fragment.Fragment_TongXunLu;
 import android.example.com.yihubaiying.fragment.Fragment_WoDe;
@@ -45,6 +47,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 //    private List<Fragment> fragmentList;
 
     private FrameLayout frameLayout;
+    private MyHongBao hongBao;
 
     public static Random r=new Random(1);
 
@@ -159,4 +162,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         super.finish();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+//        hongBao= (MyHongBao) getIntent().getSerializableExtra("hongbao");//这样获取红包对象
+//        if(hongBao!=null){
+//            Toast.makeText(getApplicationContext(),hongBao.getTitle()+""+hongBao.getLatitude(),Toast.LENGTH_SHORT).show();
+//        }
+    }
 }

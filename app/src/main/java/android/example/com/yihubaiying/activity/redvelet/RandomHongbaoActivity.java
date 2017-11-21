@@ -3,6 +3,7 @@ package android.example.com.yihubaiying.activity.redvelet;
 import android.content.Intent;
 import android.example.com.yihubaiying.R;
 import android.example.com.yihubaiying.activity.redvelet.BaseActivity;
+import android.example.com.yihubaiying.application.MyAppication;
 import android.example.com.yihubaiying.utils.AppManager;
 import android.example.com.yihubaiying.view.TigerMachineView;
 import android.graphics.Color;
@@ -42,6 +43,7 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
     private String thisSnippet;
     private TextView thisTextView;
     private Intent intent;
+    private MyAppication appication;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +69,8 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
         thisSnippet=intent.getStringExtra("snippet");
         thisTextView=(TextView)findViewById(R.id.title_randomactivity);
         thisTextView.setText(thisSnippet);
+
+        appication=(MyAppication)this.getApplicationContext();
     }
     @Override
     public void onDestroy() {
@@ -158,6 +162,7 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                appication.setYiMoney(appication.getYiMoney()+15.88);
             }else if(intent.getStringExtra("from").equals("ZhuanFaActivity")){
                 try {
                     Thread.sleep(time);
@@ -202,6 +207,8 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                appication.setYiMoney(appication.getYiMoney()+5.12);
+
             }else {
                 Log.e("error","random intent value wrong");
             }

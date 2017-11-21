@@ -13,7 +13,8 @@ public class MyHongBao implements Serializable{
 
     private String title;
     private String guanggaoyu;
-    private LatLng latLng;
+    private double latitude;
+    private double longitude;
     private ArrayList<String> imageResourceId;
 
     public String getTitle() {
@@ -32,12 +33,20 @@ public class MyHongBao implements Serializable{
         this.guanggaoyu = guanggaoyu;
     }
 
-    public LatLng getLatLng() {
-        return latLng;
+    public double getLatitude() {
+        return latitude;
     }
 
-    public void setLatLng(LatLng latLng) {
-        this.latLng = latLng;
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
     public ArrayList<String> getImageResourceId() {

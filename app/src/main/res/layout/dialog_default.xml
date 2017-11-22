@@ -4,38 +4,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1.6"></LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="420dp"
-        android:layout_marginBottom="50dp"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:layout_gravity="center_horizontal|center_vertical"
+
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:layout_marginTop="90dp"
+
         android:background="@drawable/open_rp_bg"
-        android:layout_gravity="center_horizontal|center_vertical"
         android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/top"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="0.8">
 
             <Button
                 android:id="@+id/close"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:background="@drawable/ic_close"
-                android:layout_margin="10dp"/>
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_close" />
 
         </LinearLayout>
         <!-- 头像以及相关文字 -->
         <LinearLayout
-            android:layout_below="@+id/top"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="10"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/top"
+            android:layout_weight="7.5"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -47,20 +52,20 @@
                     android:id="@+id/head_img"
                     android:layout_width="81dp"
                     android:layout_height="81dp"
-                    android:background="@drawable/ic_touxiang"
                     android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"/>
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ic_touxiang" />
 
                 <TextView
                     android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="中海国际"
-                    android:layout_marginTop="10dp"
                     android:layout_below="@+id/head_img"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="中海国际"
                     android:textColor="@color/gold"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/textView1"
@@ -69,55 +74,47 @@
                     android:layout_below="@+id/name"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dp"
-                    android:textSize="15sp"
+                    android:text="您正在领取见赏红包"
                     android:textColor="@color/white"
-                    android:text="您正在领取见赏红包"/>
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_below="@+id/textView1"
-                    android:layout_centerHorizontal="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:textColor="@color/white"
-                    android:textSize="23sp"
-                    android:text="恭喜发财，大吉大利"/>
+                    android:textSize="15sp" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3">
+                android:layout_weight="2.5">
 
                 <ImageButton
                     android:id="@+id/open_btn"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
                     android:background="@color/transparent"
-                    android:src="@drawable/ic_open_redvelet"
-                    android:layout_marginTop="55dp"
-                    android:layout_centerHorizontal="true" />
-
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
+                    android:src="@drawable/ic_open_redvelet" />
 
                 <ImageView
+                    android:id="@+id/imageView"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/ic_below"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="14dp"
-                    android:id="@+id/imageView" />
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/ic_below" />
 
             </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"></LinearLayout>
         </LinearLayout>
-</LinearLayout>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.1"></LinearLayout>
+</LinearLayout>
 
 

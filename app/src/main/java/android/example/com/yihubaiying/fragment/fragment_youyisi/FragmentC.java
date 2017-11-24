@@ -48,11 +48,11 @@ public class FragmentC extends BaseFragment {
 
     }
     private void initDatas() {
-        News news1=new News("曝上港要求孔卡回归遭拒 前中超MVP不想回中国","新浪体育","13569看过 红包剩余22.2元",R.drawable.tiyu1);
-        News news2=new News("西媒曝国安购21岁西甲前锋 南美国脚身价400万欧","搜狐体育","94581看过 红包剩余98.1元",R.drawable.tiyu2);
-        News news3=new News("小李雪芮？19岁小丫爆冷击败辛杜：万万没想到！","腾讯体育","76514看过 红包剩余3.2元",R.drawable.tiyu3);
-        News news4=new News("本土双子星空砍41分 广厦客场86-91惜败新疆","CBA官网","54527看过 红包剩余87.9元",R.drawable.tiyu4);
-        News news5=new News("翟晓川25分北京胜福建 弗神54分上海胜八一","优酷体育","44527看过 红包剩余11.0元",R.drawable.tiyu5);
+        News news1=new News("曝上港要求孔卡回归遭拒 前中超MVP不想回中国","新浪体育","13569看过 红包22.2元",R.drawable.tiyu1);
+        News news2=new News("西媒曝国安购21岁西甲前锋 南美国脚身价400万欧","搜狐体育","94581看过 红包98.1元",R.drawable.tiyu2);
+        News news3=new News("小李雪芮？19岁小丫爆冷击败辛杜：万万没想到！","腾讯体育","76514看过 红包3.2元",R.drawable.tiyu3);
+        News news4=new News("本土双子星空砍41分 广厦客场86-91惜败新疆","CBA官网","54527看过 红包87.9元",R.drawable.tiyu4);
+        News news5=new News("翟晓川25分北京胜福建 弗神54分上海胜八一","优酷体育","44527看过 红包11.0元",R.drawable.tiyu5);
 
         newsItemList.add(news1);
         newsItemList.add(news2);

@@ -76,6 +76,7 @@ public class Newsdetail_activity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         startActivity(new Intent(Newsdetail_activity.this,qunliao_anjieyuexin.class));
+                        finish();
                     }
                 });
 

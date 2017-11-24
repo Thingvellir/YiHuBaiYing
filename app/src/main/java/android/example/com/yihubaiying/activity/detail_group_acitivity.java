@@ -20,13 +20,14 @@ public class detail_group_acitivity extends AppCompatActivity {
     private GridView gridView;
     private List<Map<String,Object>>data_list;
     private SimpleAdapter sim_adapter;
+    private Toolbar toolbar;
     private int[] icon={R.drawable.user_two, R.drawable.user_one, R.drawable.user_three, R.drawable.user_five, R.mipmap.icon_add, R.drawable.user_six};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_group);
-        Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
+        toolbar= (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -37,6 +38,7 @@ public class detail_group_acitivity extends AppCompatActivity {
         });
         toolbar.setNavigationIcon(R.drawable.white_back_icon1);
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
+
         gridView= (GridView) findViewById(R.id.gridview);
         data_list=new ArrayList<Map<String,Object>>();
         getData();
@@ -56,5 +58,11 @@ public class detail_group_acitivity extends AppCompatActivity {
             data_list.add(map);
         }
         return data_list;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        toolbar.setTitle("群资料");
     }
 }

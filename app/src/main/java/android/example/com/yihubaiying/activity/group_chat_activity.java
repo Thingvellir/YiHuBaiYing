@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.example.com.yihubaiying.R;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
@@ -48,6 +50,8 @@ public class group_chat_activity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+        TextView shengyuhongbao= (TextView) findViewById(R.id.shengyumoney);
+        shengyuhongbao.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
 
         dialog.show();
 

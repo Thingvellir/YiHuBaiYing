@@ -26,6 +26,7 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                finish();
             }
         });
         register= (TextView) findViewById(R.id.de_login_register);
@@ -33,7 +34,7 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
-                AppManager.getAppManager().finishActivity();
+                finish();
             }
         });
 

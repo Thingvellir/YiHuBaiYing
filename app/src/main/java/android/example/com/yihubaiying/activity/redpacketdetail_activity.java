@@ -111,10 +111,12 @@ public class redpacketdetail_activity extends AppCompatActivity {
                                         mBundle.putSerializable("hongbao",hongBao);
                                         intent.putExtras(mBundle);
                                         startActivity(intent);
+                        finish();
                     }
                 });
 
                 dialog.show();
+
             }
         });
     }

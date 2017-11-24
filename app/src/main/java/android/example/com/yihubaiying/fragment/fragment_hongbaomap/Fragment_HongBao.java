@@ -148,7 +148,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         permissionRequest = new PermissionRequest(getContext(), new PermissionRequest.PermissionCallback() {
             @Override
             public void onSuccessful() {
-                
+
             }
 
             @Override

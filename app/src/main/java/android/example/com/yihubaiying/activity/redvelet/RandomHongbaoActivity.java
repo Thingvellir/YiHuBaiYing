@@ -126,7 +126,7 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
             int time = 1000;
             if(intent.getStringExtra("from").equals("HongBaoActivity")){
                 try {
-                    Thread.sleep(time);
+                    Thread.sleep(1500);
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -171,7 +171,7 @@ public class RandomHongbaoActivity extends BaseActivity implements View.OnClickL
                 appication.setYiMoney(appication.getYiMoney()+15.88);
             }else if(intent.getStringExtra("from").equals("ZhuanFaActivity")){
                 try {
-                    Thread.sleep(time);
+                    Thread.sleep(1500);
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();

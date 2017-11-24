@@ -19,6 +19,8 @@ import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.mcxtzhang.captchalib.SwipeCaptchaView;
 
+import static android.example.com.yihubaiying.R.layout.qunliao_zhonghai;
+import android.example.com.yihubaiying.activity.qunliao_zhonghai;
 
 /**
  * Created by carnivalnian on 2017/11/10.
@@ -102,6 +104,7 @@ public class JiaQunActivity extends BaseActivity implements View.OnClickListener
                 if(checkBox.isChecked()){
                     AppManager.getAppManager().finishActivity();
                     Toast.makeText(JiaQunActivity.this,"加群成功",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(JiaQunActivity.this,qunliao_zhonghai.class));
                 }else {
                     Toast.makeText(this,"请您先阅读并同意《服务协议》和《隐私条款》",Toast.LENGTH_SHORT).show();
                 }

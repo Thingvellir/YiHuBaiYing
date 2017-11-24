@@ -12,6 +12,7 @@ import android.example.com.yihubaiying.application.MyAppication;
 import android.example.com.yihubaiying.enity.HongBao;
 import android.example.com.yihubaiying.enity.MyHongBao;
 import android.example.com.yihubaiying.loader.GlideImageLoader;
+import android.example.com.yihubaiying.utils.PermissionRequest;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Matrix;
@@ -123,6 +124,9 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
     private TextView mymoney;
 
     private MyHongBao hongBao;
+
+    private PermissionRequest permissionRequest;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -130,21 +134,29 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         isInit=true;
         mapView=(TextureMapView)view.findViewById(R.id.map);
         mapView.onCreate(savedInstanceState);
-        linearLayout1 = (LinearLayout) view.findViewById(R.id.linear11);
-        rollingAdapter = new RollingAdapter(getContext());
-        RollingLayout rollingLeftRight = (RollingLayout) view.findViewById(R.id.rollingleftRight);
-        rollingLeftRight.setAdapter(rollingAdapter);
-        rollingLeftRight.startRolling();
+
         Log.e("fragment_1","onCreate");
-        AndPermission.with(this)
-                .requestCode(101)
-                .permission(
-                        // 申请多个权限组方式：
-                        Permission.LOCATION,
-                        Permission.STORAGE
-                )
-                .callback(listener)
-                .start();
+//        AndPermission.with()
+//                .requestCode(101)
+//                .permission(
+//                        // 申请多个权限组方式：
+//                        Permission.LOCATION,
+//                        Permission.STORAGE
+//                )
+//                .callback(listener)
+//                .start();
+        permissionRequest = new PermissionRequest(getContext(), new PermissionRequest.PermissionCallback() {
+            @Override
+            public void onSuccessful() {
+                
+            }
+
+            @Override
+            public void onFailure() {
+
+            }
+        });
+        permissionRequest.request();
         initView(view);
         setUpMap();
         appication= (MyAppication) getActivity().getApplicationContext();
@@ -157,6 +169,13 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
 
 
     private void initView(View view) {
+
+
+        linearLayout1 = (LinearLayout) view.findViewById(R.id.linear11);
+        rollingAdapter = new RollingAdapter(getContext());
+        RollingLayout rollingLeftRight = (RollingLayout) view.findViewById(R.id.rollingleftRight);
+        rollingLeftRight.setAdapter(rollingAdapter);
+        rollingLeftRight.startRolling();
 
         initTitleList();
         initSnipprtList();
@@ -703,27 +722,29 @@ if(markerLocal!=pickedMarker) {
         aMap.animateCamera(update, 200, callback);
     }
 
-    private PermissionListener listener = new PermissionListener() {
-        @Override
-        public void onSucceed(int requestCode, List<String> grantedPermissions) {
-            // 权限申请成功回调。
-            // 这里的requestCode就是申请时设置的requestCode。
-            // 和onActivityResult()的requestCode一样，用来区分多个不同的请求。
-            if(AndPermission.hasPermission( getContext(),Permission.LOCATION)&&AndPermission.hasPermission( getContext(),Permission.STORAGE)) {
-                if (requestCode == 200) {
 
-                }
-            }
-        }
 
-        @Override
-        public void onFailed(int requestCode, List<String> deniedPermissions) {
-            // 权限申请失败回调。
-            if(requestCode == 200) {
-
-            }
-        }
-    };
+//    private PermissionListener listener = new PermissionListener() {
+//        @Override
+//        public void onSucceed(int requestCode, List<String> grantedPermissions) {
+//            // 权限申请成功回调。
+//            // 这里的requestCode就是申请时设置的requestCode。
+//            // 和onActivityResult()的requestCode一样，用来区分多个不同的请求。
+//            if(AndPermission.hasPermission( getContext(),Permission.LOCATION)&&AndPermission.hasPermission( getContext(),Permission.STORAGE)) {
+//                if (requestCode == 200) {
+//
+//                }
+//            }
+//        }
+//
+//        @Override
+//        public void onFailed(int requestCode, List<String> deniedPermissions) {
+//            // 权限申请失败回调。
+//            if(requestCode == 200) {
+//
+//            }
+//        }
+//    };
 
 
 }

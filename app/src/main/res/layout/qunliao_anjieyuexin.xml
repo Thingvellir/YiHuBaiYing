@@ -18,6 +18,12 @@
             app:title="群聊"
             app:titleTextColor="@color/white"
             android:fitsSystemWindows="true">
+            <TextView
+                android:id="@+id/shengyumoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2135.18元"
+                android:textColor="#FFC125"/>
 
         </android.support.v7.widget.Toolbar>
         <ScrollView
@@ -252,7 +258,6 @@
                     <!-- 人物头像 -->
 
                     <de.hdodenhof.circleimageview.CircleImageView
-
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:focusable="false"
@@ -267,7 +272,6 @@
                         <!-- 昵称，当在群组中则要显示 -->
 
                         <TextView
-                            android:id="@+id/tvName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -283,7 +287,6 @@
 
 
                             <ProgressBar
-
                                 style="?android:attr/progressBarStyleSmall"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -292,14 +295,12 @@
                                 android:visibility="gone"/>
 
                             <LinearLayout
-
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:visibility="gone">
 
                                 <de.hdodenhof.circleimageview.CircleImageView
-
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:layout_gravity="center"
@@ -307,7 +308,6 @@
                                     android:src="@mipmap/img_error"/>
 
                                 <TextView
-
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
@@ -877,7 +877,7 @@
                         <!-- 昵称，当在群组中则要显示 -->
 
                         <TextView
-
+                            android:id="@+id/tvName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"

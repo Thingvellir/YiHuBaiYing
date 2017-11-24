@@ -1,6 +1,5 @@
 package android.example.com.yihubaiying.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.example.com.yihubaiying.MainActivity;
 import android.example.com.yihubaiying.activity.redvelet.BaseActivity;
@@ -27,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                LoginActivity.this.finish();
+                finish();
             }
         });
         register= (TextView) findViewById(R.id.de_login_register);
@@ -35,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+                finish();
             }
         });
 

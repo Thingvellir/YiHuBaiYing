@@ -2,6 +2,7 @@ package android.example.com.yihubaiying.fragment;
 
 import android.content.Intent;
 import android.example.com.yihubaiying.R;
+import android.example.com.yihubaiying.activity.qunliao_anjieyuexin;
 import android.example.com.yihubaiying.activity.renwu_activity;
 import android.example.com.yihubaiying.activity.shoudao_activity;
 import android.example.com.yihubaiying.activity.wode_set_activity;
@@ -9,14 +10,18 @@ import android.example.com.yihubaiying.application.MyAppication;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.amap.api.maps.model.Text;
+import com.orhanobut.dialogplus.DialogPlus;
+import com.orhanobut.dialogplus.ViewHolder;
 
 /**
  * Created by carnivalnian on 2017/10/21.
@@ -55,6 +60,8 @@ public class Fragment_WoDe extends Fragment implements View.OnClickListener{
                 startActivity(new Intent(getActivity(),renwu_activity.class));
             }
         });
+
+        
         appication= (MyAppication) getActivity().getApplicationContext();
 
         return view;

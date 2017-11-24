@@ -1,6 +1,7 @@
 package android.example.com.yihubaiying.activity;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.example.com.yihubaiying.R;
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 import com.orhanobut.dialogplus.DialogPlus;
@@ -41,6 +43,8 @@ public class qunliao_zhonghai extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+        TextView shengyuhongbao= (TextView) findViewById(R.id.shengyumoney);
+        shengyuhongbao.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
 
         dialog.show();
     }

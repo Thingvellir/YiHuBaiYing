@@ -104,7 +104,20 @@ public class Fragment_HongBaoMap extends Fragment implements View.OnClickListene
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
+                if (tab == mTablayout.getTabAt(0)) {
+                    mViewPager.setCurrentItem(0);
+                } else if (tab == mTablayout.getTabAt(1)) {
+                    mViewPager.setCurrentItem(1);
+                } else if (tab == mTablayout.getTabAt(2)) {
 
+                    mViewPager.setCurrentItem(2);
+                }else if (tab == mTablayout.getTabAt(3)){
+                    mViewPager.setCurrentItem(3);
+                }
+                else if (tab == mTablayout.getTabAt(4)){
+                    //                  tablayoutMe.setIcon(getResources().getDrawable(R.drawable.img_me_pressed));
+                    mViewPager.setCurrentItem(4);
+                }
             }
         });
     }

@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.example.com.yihubaiying.R;
+import android.example.com.yihubaiying.activity.Main2Activity;
 import android.example.com.yihubaiying.activity.redvelet.HongBaoActivity;
 import android.example.com.yihubaiying.adapter.MyInfoWinAdapter;
 import android.example.com.yihubaiying.adapter.RollingAdapter;
@@ -132,19 +133,12 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.frag_hongbao,container,false);
         isInit=true;
+        isAdded=false;
         mapView=(TextureMapView)view.findViewById(R.id.map);
         mapView.onCreate(savedInstanceState);
 
         Log.e("fragment_1","onCreate");
-//        AndPermission.with()
-//                .requestCode(101)
-//                .permission(
-//                        // 申请多个权限组方式：
-//                        Permission.LOCATION,
-//                        Permission.STORAGE
-//                )
-//                .callback(listener)
-//                .start();
+
         permissionRequest = new PermissionRequest(getContext(), new PermissionRequest.PermissionCallback() {
             @Override
             public void onSuccessful() {
@@ -268,7 +262,6 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
     public void onResume() {
         super.onResume();
         mapView.onResume();
-        aMap.reloadMap();
         mymoney.setText(appication.getYiMoney()+"元");
         Log.e("fragment_1","onResume");
     }
@@ -280,7 +273,6 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
     public void onPause() {
         super.onPause();
         mapView.onPause();
-        aMap.reloadMap();
         Log.e("fragment_1","onPause");
     }
 
@@ -653,11 +645,11 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
 
     @Override
     public void onInfoWindowClick(Marker marker){
-        if(marker == pickedMarker){
+        if(marker.getPosition() == pickedMarker.getPosition()){
             pickedMarker.hideInfoWindow();
             pickedMarker.remove();
-
-
+            Intent intent =new Intent(getActivity(), Main2Activity.class);
+            startActivity(intent);
         }else {
             marker.hideInfoWindow();
             circle.remove();
@@ -721,30 +713,5 @@ if(markerLocal!=pickedMarker) {
     private void changeCamera(CameraUpdate update, CancelableCallback callback) {
         aMap.animateCamera(update, 200, callback);
     }
-
-
-
-//    private PermissionListener listener = new PermissionListener() {
-//        @Override
-//        public void onSucceed(int requestCode, List<String> grantedPermissions) {
-//            // 权限申请成功回调。
-//            // 这里的requestCode就是申请时设置的requestCode。
-//            // 和onActivityResult()的requestCode一样，用来区分多个不同的请求。
-//            if(AndPermission.hasPermission( getContext(),Permission.LOCATION)&&AndPermission.hasPermission( getContext(),Permission.STORAGE)) {
-//                if (requestCode == 200) {
-//
-//                }
-//            }
-//        }
-//
-//        @Override
-//        public void onFailed(int requestCode, List<String> deniedPermissions) {
-//            // 权限申请失败回调。
-//            if(requestCode == 200) {
-//
-//            }
-//        }
-//    };
-
 
 }

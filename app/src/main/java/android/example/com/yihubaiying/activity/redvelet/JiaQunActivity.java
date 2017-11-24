@@ -2,7 +2,9 @@ package android.example.com.yihubaiying.activity.redvelet;
 import android.content.Intent;
 import android.example.com.yihubaiying.R;
 
+import android.example.com.yihubaiying.activity.qunliao_anjieyuexin;
 import android.example.com.yihubaiying.activity.redvelet.BaseActivity;
+import android.example.com.yihubaiying.enity.HongBao;
 import android.example.com.yihubaiying.utils.AppManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -21,6 +23,7 @@ import com.mcxtzhang.captchalib.SwipeCaptchaView;
 
 import static android.example.com.yihubaiying.R.layout.qunliao_zhonghai;
 import android.example.com.yihubaiying.activity.qunliao_zhonghai;
+import android.example.com.yihubaiying.activity.qunliao_anjieyuexin;
 
 /**
  * Created by carnivalnian on 2017/11/10.
@@ -33,7 +36,7 @@ public class JiaQunActivity extends BaseActivity implements View.OnClickListener
     private CheckBox checkBox;
     private ImageButton back_hongbaojiaqun;
     private boolean checkResult =false;
-
+private HongBao passedHongbao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +50,10 @@ public class JiaQunActivity extends BaseActivity implements View.OnClickListener
         back_hongbaojiaqun=(ImageButton)findViewById(R.id.back_hongbaojiaqun);
         back_hongbaojiaqun.setOnClickListener(this);
         checkResult=false;
+
+        passedHongbao=(HongBao)getIntent().getSerializableExtra("hongbao");
+
+
         mSwipeCaptchaView.setOnCaptchaMatchCallback(new SwipeCaptchaView.OnCaptchaMatchCallback() {
             @Override
             public void matchSuccess(SwipeCaptchaView swipeCaptchaView) {
@@ -104,7 +111,13 @@ public class JiaQunActivity extends BaseActivity implements View.OnClickListener
                 if(checkBox.isChecked()){
                     AppManager.getAppManager().finishActivity();
                     Toast.makeText(JiaQunActivity.this,"加群成功",Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(JiaQunActivity.this,qunliao_zhonghai.class));
+                    if(passedHongbao.getId()==0) {
+                        startActivity(new Intent(JiaQunActivity.this, qunliao_zhonghai.class));
+                    }else if(passedHongbao.getId()==15){
+                        startActivity(new Intent(JiaQunActivity.this, qunliao_anjieyuexin.class));
+                    }else {
+                        startActivity(new Intent(JiaQunActivity.this, qunliao_zhonghai.class));
+                    }
                 }else {
                     Toast.makeText(this,"请您先阅读并同意《服务协议》和《隐私条款》",Toast.LENGTH_SHORT).show();
                 }

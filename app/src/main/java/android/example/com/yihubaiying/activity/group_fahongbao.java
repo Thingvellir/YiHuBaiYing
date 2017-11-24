@@ -32,7 +32,7 @@ public class group_fahongbao extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"您的群红包已发布",Toast.LENGTH_SHORT).show();
-                finish();
+
             }
         });
     }

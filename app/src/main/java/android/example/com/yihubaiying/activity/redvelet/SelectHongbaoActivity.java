@@ -73,6 +73,9 @@ public class SelectHongbaoActivity extends BaseActivity implements View.OnClickL
                 break;
             case R.id.jiaqun_get:
                 Intent thatIntent=new Intent(SelectHongbaoActivity.this,JiaQunActivity.class);
+                Bundle nBundle=new Bundle();
+                nBundle.putSerializable("hongbao1",passedHongBao);
+                thatIntent.putExtras(nBundle);
                 startActivity(thatIntent);
                 AppManager.getAppManager().finishActivity(this);
                 break;

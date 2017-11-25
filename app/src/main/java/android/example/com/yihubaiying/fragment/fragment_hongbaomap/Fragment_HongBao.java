@@ -645,7 +645,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
 
     @Override
     public void onInfoWindowClick(Marker marker){
-        if(marker.getPosition() == pickedMarker.getPosition()){
+        if(pickedMarker!=null&&marker.getPosition() == pickedMarker.getPosition()){
             pickedMarker.hideInfoWindow();
             pickedMarker.remove();
             Intent intent =new Intent(getActivity(), Main2Activity.class);
@@ -657,7 +657,6 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
             if(distance>300){
                 Toast.makeText(getContext(),"距离太远，您无法领取红包",Toast.LENGTH_SHORT).show();
             }else {
-
                 showDialog();
                 hongbaoDiaText.setText(marker.getTitle());
             }

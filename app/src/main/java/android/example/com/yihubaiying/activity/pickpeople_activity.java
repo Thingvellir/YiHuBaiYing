@@ -297,6 +297,7 @@ public class pickpeople_activity extends AppCompatActivity {
                 Bundle mBundle=new Bundle();
                 mBundle.putSerializable("hongbao",hongBao);
                 intent.putExtras(mBundle);
+                finish();
                 startActivity(intent);
             }
         });

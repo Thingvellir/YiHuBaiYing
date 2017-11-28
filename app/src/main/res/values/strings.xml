@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">YiHuBaiYing</string>
+    <string name="app_name">一呼百应</string>
     <string name="agent_title">来自：%1$s</string>
     <string name="agent_message">内容：%1$s</string>
 

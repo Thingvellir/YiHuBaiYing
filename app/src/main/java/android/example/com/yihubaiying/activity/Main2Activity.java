@@ -141,6 +141,7 @@ public class Main2Activity extends TakePhotoActivity {
                     Bundle mBundle=new Bundle();
                     mBundle.putSerializable("hongbao",hongBao);
                     intent.putExtras(mBundle);
+                    finish();
                     startActivity(intent);
 
                 }

@@ -20,7 +20,7 @@
     <application
         android:name=".application.MyAppication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/yihubaiying"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -30,13 +30,14 @@
             android:name="com.amap.api.v2.apikey"
             android:value="e276da00da975076c827432d23128f2a" />
 
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".activity.redvelet.HongBaoActivity" />
         <activity android:name=".activity.redvelet.RandomHongbaoActivity" />
         <activity android:name=".activity.redvelet.SelectHongbaoActivity" />
         <activity android:name=".activity.redvelet.JiaQunActivity" />
         <activity android:name=".activity.redvelet.ZhuanFaActivity" />
-        <activity android:name=".activity.yihubaiying.PickLocation"
+        <activity
+            android:name=".activity.yihubaiying.PickLocation"
             android:theme="@style/AppTheme" />
 
         <service android:name="com.amap.api.location.APSService" />
@@ -87,14 +88,16 @@
             android:name=".activity.qunliao_anjieyuexin"
             android:theme="@style/AppTheme" />
         <activity android:name=".activity.LoginActivity">
+
+        </activity>
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.yihubaiying.LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RegisterActivity"
-            ></activity>
     </application>
 
 </manifest>

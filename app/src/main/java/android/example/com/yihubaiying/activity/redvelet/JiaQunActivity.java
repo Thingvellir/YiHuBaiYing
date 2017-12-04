@@ -111,14 +111,9 @@ private HongBao passedHongbao;
                 if(checkBox.isChecked()){
                     AppManager.getAppManager().finishActivity();
                     Toast.makeText(JiaQunActivity.this,"加群成功",Toast.LENGTH_SHORT).show();
-                    if(passedHongbao.getId()==0) {
-                        startActivity(new Intent(JiaQunActivity.this, qunliao_zhonghai.class));
-                    }else if(passedHongbao.getId()==15){
-                        startActivity(new Intent(JiaQunActivity.this, qunliao_anjieyuexin.class));
-                    }else {
-                        startActivity(new Intent(JiaQunActivity.this, qunliao_zhonghai.class));
-                    }
-                }else {
+                    startActivity(new Intent(JiaQunActivity.this,qunliao_zhonghai.class));
+                }
+                else {
                     Toast.makeText(this,"请您先阅读并同意《服务协议》和《隐私条款》",Toast.LENGTH_SHORT).show();
                 }
 

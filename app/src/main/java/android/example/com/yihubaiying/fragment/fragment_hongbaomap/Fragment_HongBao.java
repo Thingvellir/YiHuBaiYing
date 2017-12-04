@@ -217,7 +217,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         location_btn.setOnClickListener(this);
 
 //视角
-        aMap.setMinZoomLevel(15);
+//        aMap.setMinZoomLevel(15);
         aMap.setMaxZoomLevel(17);
         aMap.moveCamera(CameraUpdateFactory.zoomTo(17));
 
@@ -432,7 +432,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
         snippetList.add("求计院院花联系方式");
         snippetList.add("求在银桦广场投宿舍347一票");
         snippetList.add("招聘送餐兼职学生");
-        snippetList.add("寻人启示");
+        snippetList.add("寻人启事");
 
     }
 
@@ -457,7 +457,7 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
                 "醇厚花生酱，双层享受：\n" +
                 "    当柔滑香浓的花生酱遇上脆辣鲜嫩的鸡腿肉，两种美味在舌尖碰撞，给味蕾一次新奇体验，前所未有的口感，给你不一样惊喜");
         detailList.add("   杜应美，女，籍贯：云南省昭通市威信县\n" +
-                "出生日期：1995年11月12日，身高：160厘米，右手有残疾，右手的拇指反在手背上，身材苗条，不胖不瘦，右嘴角边有一颗痣。\n" +
+                "出生日期：1986年11月12日，身高：160厘米，右手有残疾，右手的拇指反在手背上，身材苗条，不胖不瘦，右嘴角边有一颗痣。\n" +
                 "身份证号为53213019951112****。于2017年11月09日离家出走，至今无音信。\n" +
                 "   请知情者帮忙提供线索，提供信息酬金：重谢，护送回家酬金：重谢。\n");
 
@@ -649,6 +649,9 @@ public  class Fragment_HongBao extends LazyFragment implements AMap.OnMyLocation
             pickedMarker.hideInfoWindow();
             pickedMarker.remove();
             Intent intent =new Intent(getActivity(), Main2Activity.class);
+            intent.putExtra("latitude",marker.getPosition().latitude);
+            intent.putExtra("longitude",marker.getPosition().longitude);
+            intent.putExtra("fromW","Fragment_HongBao");
             startActivity(intent);
         }else {
             marker.hideInfoWindow();

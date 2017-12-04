@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
     lintOptions {
@@ -18,7 +17,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
     }
+
+
     buildTypes {
         release {
             minifyEnabled false
@@ -41,8 +43,6 @@ dependencies {
     //输入框edittext
     //底部分享弹出框 //滑动验证
 
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'cn.pedant.sweetalert:library:1.3'

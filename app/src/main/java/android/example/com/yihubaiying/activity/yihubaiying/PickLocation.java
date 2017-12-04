@@ -101,7 +101,7 @@ public class PickLocation extends AppCompatActivity implements AMap.OnMapLongCli
                 finish();
             }
         });
-        toolbar.setTitle("选取位置");
+        toolbar.setTitle("请长按选择位置");
 
     }
     /**

@@ -63,6 +63,11 @@ public class Main2Activity extends TakePhotoActivity {
     private Toolbar toolbar;
     private MyHongBao hongbaoa;
     private EditText editText;
+
+    //nian
+    private Intent niansIntent;
+    private double nianLatitude;
+    private double nianLongtitude;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,6 +82,9 @@ public class Main2Activity extends TakePhotoActivity {
         toolbar.setNavigationIcon(R.drawable.white_back_icon1);
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         toolbar.setTitle("发布红包");
+
+
+
         editText= (EditText) findViewById(R.id.adv_edittext);
         pickloation= (ImageView) findViewById(R.id.adv_picklocation);
         pickloation.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +96,13 @@ public class Main2Activity extends TakePhotoActivity {
             }
         });
 
-
+        //nian----------------------------------------------------------------------
+        niansIntent=getIntent();
+        if(niansIntent.getStringExtra("fromW").equals("Fragment_HongBao")) {
+            nianLatitude = niansIntent.getDoubleExtra("latitude", 0.00);
+            nianLongtitude = niansIntent.getDoubleExtra("longitude", 0.00);
+            editText.setText("您选中的位置");
+        }
 
         takeFromGalleyBtn= (ImageView) findViewById(R.id.image_pick);
         takeFromGalleyBtn.setOnClickListener(new View.OnClickListener() {

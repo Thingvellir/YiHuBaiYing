@@ -130,7 +130,7 @@
     </FrameLayout>
         <!--子布局控件-->
 
-    <FrameLayout
+    <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -139,8 +139,6 @@
             android:id="@+id/map"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-        >
-
 
         <ImageButton
             android:layout_marginLeft="320dp"
@@ -150,6 +148,16 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_mylocation"
             android:background="@color/transparent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="长按发布红包"
+            android:textSize="15sp"
+            android:textColor="@color/black_text2"
+            android:background="@color/transparent"
+            android:layout_marginLeft="310dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"/>
 
-    </FrameLayout>
+    </RelativeLayout>
 </LinearLayout>

@@ -69,13 +69,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         yihu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogPlus dialog=DialogPlus.newDialog(MainActivity.this).setContentHolder(new ViewHolder(R.layout.bottomdialog)).setGravity(Gravity.CENTER).setContentBackgroundResource(R.drawable.shape_corner).create();
+               final DialogPlus dialog=DialogPlus.newDialog(MainActivity.this).setContentHolder(new ViewHolder(R.layout.bottomdialog)).setGravity(Gravity.CENTER).setContentBackgroundResource(R.drawable.shape_corner).create();
                 ImageView ad= (ImageView) dialog.getHolderView().findViewById(R.id.adboard_icon);
                 ad.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent=new Intent(MainActivity.this, Main2Activity.class);
+                        intent.putExtra("fromW","MainActivity");
                         startActivity(intent);
+                        dialog.dismiss();
                     }
                 });
 

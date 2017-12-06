@@ -132,10 +132,18 @@
             android:layout_height="30dp"
             android:src="@drawable/moneyy_icon"/>
         <TextView
+            android:id="@+id/total_money"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="550元"
+            android:text="550"
+            android:textColor="@color/red"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
             android:textColor="@color/red"
             android:textSize="20dp"/>
     </LinearLayout>

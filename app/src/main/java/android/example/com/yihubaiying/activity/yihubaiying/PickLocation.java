@@ -102,6 +102,7 @@ public class PickLocation extends AppCompatActivity implements AMap.OnMapLongCli
             }
         });
         toolbar.setTitle("选取位置");
+        Toast.makeText(getApplication(),"请在地图上长按选择位置，点击左上角返回键返回。",Toast.LENGTH_LONG).show();
 
     }
     /**
@@ -316,7 +317,7 @@ public class PickLocation extends AppCompatActivity implements AMap.OnMapLongCli
             if (result != null && result.getRegeocodeAddress() != null
                     && result.getRegeocodeAddress().getFormatAddress() != null) {
                 addressName =result.getRegeocodeAddress().getFormatAddress();
-                Toast.makeText(this,"您已选择了"+addressName+ "附近",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"您已选择了"+addressName+ "附近,点击左上角返回。",Toast.LENGTH_LONG).show();
                 aMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
                         pickLatlng, 17));
                 regeoMarker.setPosition(pickLatlng);

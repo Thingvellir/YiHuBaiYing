@@ -32,6 +32,27 @@
                 android:text="全选"
                 android:textSize="20dp"/>
             <com.wenld.smoothcheckbox.SmoothCheckBox
+                android:id="@+id/smoothcheckbox"
+                android:layout_gravity="center"
+                android:layout_marginLeft="130dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:duration="100"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="不让以下人看到"
+                android:textSize="20dp"/>
+            <com.wenld.smoothcheckbox.SmoothCheckBox
                 android:layout_gravity="center"
                 android:layout_marginLeft="130dp"
                 android:layout_width="20dp"
@@ -63,7 +84,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_sex"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -86,7 +106,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_age"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -109,7 +128,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_home"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -131,7 +149,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_edu"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -154,7 +171,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_sch"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -176,7 +192,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_col"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -211,7 +226,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_ind"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -234,7 +248,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_job"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -257,7 +270,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_sal"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -292,7 +304,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_marry"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -315,7 +326,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_child"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -338,7 +348,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_child_age"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -361,7 +370,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_child_parent"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -396,7 +404,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_believe"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -419,7 +426,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_food"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -442,7 +448,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_hobby"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -478,7 +483,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_others"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -501,7 +505,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_cars"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -524,7 +527,6 @@
 
                 <com.zhy.view.flowlayout.TagFlowLayout
                     android:id="@+id/flow_houses"
-                    zhy:max_select="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"

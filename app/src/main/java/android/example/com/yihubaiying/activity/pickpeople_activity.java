@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.wenld.smoothcheckbox.SmoothCheckBox;
 import com.zhy.view.flowlayout.FlowLayout;
 import com.zhy.view.flowlayout.TagAdapter;
 import com.zhy.view.flowlayout.TagFlowLayout;
@@ -72,6 +73,7 @@ public class pickpeople_activity extends AppCompatActivity {
     private Toolbar toolbar;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,7 +90,7 @@ public class pickpeople_activity extends AppCompatActivity {
         toolbar.setTitle("选择领取者身份");
         hongBao= (MyHongBao) getIntent().getSerializableExtra("hongbao");
         final TagFlowLayout flowLayout= (TagFlowLayout) findViewById(R.id.flow_sex);
-        flowLayout.setAdapter(new TagAdapter<String>(sexs) {
+        final TagAdapter sexsadapter=new TagAdapter<String>(sexs) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
                 TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
@@ -96,198 +98,220 @@ public class pickpeople_activity extends AppCompatActivity {
                 tv.setText(s);
                 return tv;
             }
-        });
+        };
+        final TagAdapter agesadapter=new TagAdapter<String>(ages) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter homesadapter=new TagAdapter<String>(homes) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter edusadapter=new TagAdapter<String>(edus) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter schosadapter=new TagAdapter<String>(schos) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter colsadapter=new TagAdapter<String>(cols) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter indsadapter=new TagAdapter<String>(inds) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter jobsadapter=new TagAdapter<String>(jobs) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter salsadapter=new TagAdapter<String>(sals) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter marrysadapter=new TagAdapter<String>(marrys) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter childsadapter=new TagAdapter<String>(childs) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter child_agesadapter=new TagAdapter<String>(child_ages) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter child_parentsadapter=new TagAdapter<String>(child_parents) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter believesadapter=new TagAdapter<String>(believes) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter foodsadapter=new TagAdapter<String>(foods) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter hobbysadapter=new TagAdapter<String>(hobbys) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter othersadapter=new TagAdapter<String>(others) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter housesadapter=new TagAdapter<String>(houses) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+        final TagAdapter carsadapter=new TagAdapter<String>(cars) {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                        flowLayout, false);
+                tv.setText(s);
+                return tv;
+            }
+        };
+
+
+        flowLayout.setAdapter(sexsadapter);
         final TagFlowLayout flowLayout_age= (TagFlowLayout) findViewById(R.id.flow_age);
-        flowLayout_age.setAdapter(new TagAdapter<String>(ages) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_age.setAdapter(agesadapter);
         final TagFlowLayout flowLayout_home= (TagFlowLayout) findViewById(R.id.flow_home);
-        flowLayout_home.setAdapter(new TagAdapter<String>(homes) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+
+        flowLayout_home.setAdapter(homesadapter);
         final TagFlowLayout flowLayout_edu= (TagFlowLayout) findViewById(R.id.flow_edu);
-        flowLayout_edu.setAdapter(new TagAdapter<String>(edus) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_edu.setAdapter(edusadapter);
         final TagFlowLayout flowLayout_sch= (TagFlowLayout) findViewById(R.id.flow_sch);
-        flowLayout_sch.setAdapter(new TagAdapter<String>(schos) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_sch.setAdapter(schosadapter);
         final TagFlowLayout flowLayout_col= (TagFlowLayout) findViewById(R.id.flow_col);
-        flowLayout_col.setAdapter(new TagAdapter<String>(cols) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_col.setAdapter(colsadapter);
         final TagFlowLayout flowLayout_ind= (TagFlowLayout) findViewById(R.id.flow_ind);
-        flowLayout_ind.setAdapter(new TagAdapter<String>(inds) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_ind.setAdapter(indsadapter);
 
         final TagFlowLayout flowLayout_job= (TagFlowLayout) findViewById(R.id.flow_job);
-        flowLayout_job.setAdapter(new TagAdapter<String>(jobs) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_job.setAdapter(jobsadapter);
 
         final TagFlowLayout flowLayout_sal= (TagFlowLayout) findViewById(R.id.flow_sal);
-        flowLayout_sal.setAdapter(new TagAdapter<String>(sals) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_sal.setAdapter(salsadapter);
         final TagFlowLayout flowLayout_marry= (TagFlowLayout) findViewById(R.id.flow_marry);
-        flowLayout_marry.setAdapter(new TagAdapter<String>(marrys) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_marry.setAdapter(marrysadapter);
 
         final TagFlowLayout flowLayout_child= (TagFlowLayout) findViewById(R.id.flow_child);
-        flowLayout_child.setAdapter(new TagAdapter<String>(childs) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_child.setAdapter(childsadapter);
 
 
         final TagFlowLayout flowLayout_child_age= (TagFlowLayout) findViewById(R.id.flow_child_age);
-        flowLayout_child_age.setAdapter(new TagAdapter<String>(child_ages) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_child_age.setAdapter(child_agesadapter);
 
         final TagFlowLayout flowLayout_child_parent= (TagFlowLayout) findViewById(R.id.flow_child_parent);
-        flowLayout_child_parent.setAdapter(new TagAdapter<String>(child_parents) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_child_parent.setAdapter(child_parentsadapter);
 
         final TagFlowLayout flowLayout_believe= (TagFlowLayout) findViewById(R.id.flow_believe);
-        flowLayout_believe.setAdapter(new TagAdapter<String>(believes) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_believe.setAdapter(believesadapter);
 
         final TagFlowLayout flowLayout_foods= (TagFlowLayout) findViewById(R.id.flow_food);
-        flowLayout_foods.setAdapter(new TagAdapter<String>(foods) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_foods.setAdapter(foodsadapter);
 
         final TagFlowLayout flowLayout_hobbys= (TagFlowLayout) findViewById(R.id.flow_hobby);
-        flowLayout_hobbys.setAdapter(new TagAdapter<String>(hobbys) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_hobbys.setAdapter(hobbysadapter);
 
         final TagFlowLayout flowLayout_houses= (TagFlowLayout) findViewById(R.id.flow_houses);
-        flowLayout_houses.setAdapter(new TagAdapter<String>(houses) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_houses.setAdapter(housesadapter);
 
         final TagFlowLayout flowLayout_cars= (TagFlowLayout) findViewById(R.id.flow_cars);
-        flowLayout_cars.setAdapter(new TagAdapter<String>(cars) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_cars.setAdapter(carsadapter);
         final TagFlowLayout flowLayout_others= (TagFlowLayout) findViewById(R.id.flow_others);
-        flowLayout_others.setAdapter(new TagAdapter<String>(others) {
-            @Override
-            public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
-                        flowLayout, false);
-                tv.setText(s);
-                return tv;
-            }
-        });
+        flowLayout_others.setAdapter(othersadapter);
 
         Button button= (Button) findViewById(R.id.btn_next_step);
         button.setOnClickListener(new View.OnClickListener() {
@@ -299,6 +323,54 @@ public class pickpeople_activity extends AppCompatActivity {
                 intent.putExtras(mBundle);
                 finish();
                 startActivity(intent);
+            }
+        });
+        SmoothCheckBox smoothCheckBox= (SmoothCheckBox) findViewById(R.id.smoothcheckbox);
+        smoothCheckBox.setOnCheckedChangeListener(new SmoothCheckBox.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(SmoothCheckBox checkBox, boolean isChecked) {
+                if (isChecked){
+                    sexsadapter.setSelectedList(0,1);
+                    agesadapter.setSelectedList(0,1,2,3,4);
+                    homesadapter.setSelectedList(0,1,2,3,4,5,6);
+                    edusadapter.setSelectedList(0,1,2,3,4,5);
+                    schosadapter.setSelectedList(0,1,2,3,4,5);
+                    colsadapter.setSelectedList(0,1,2,3,4,5);
+                    indsadapter.setSelectedList(0,1,2,3,4,5,6,7,8);
+                    jobsadapter.setSelectedList(0,1,2,3,4,5);
+                    salsadapter.setSelectedList(0,1,2,3);
+                    marrysadapter.setSelectedList(0,1);
+                    childsadapter.setSelectedList(0,1);
+                    child_agesadapter.setSelectedList(0,1,2,3);
+                    child_parentsadapter.setSelectedList(0,1);
+                    believesadapter.setSelectedList(0,1,2,3,4,5);
+                    foodsadapter.setSelectedList(0,1,2,3,4);
+                    hobbysadapter.setSelectedList(0,1,2,3,4,5,6,7,8);
+                    othersadapter.setSelectedList(0,1,2,3,4,5);
+                    housesadapter.setSelectedList(0,1,2);
+                    carsadapter.setSelectedList(0,1,2,3,4);
+                }else{
+                    sexsadapter.setSelectedList();
+                    agesadapter.setSelectedList();
+                    homesadapter.setSelectedList();
+                    edusadapter.setSelectedList();
+                    schosadapter.setSelectedList();
+                    colsadapter.setSelectedList();
+                    indsadapter.setSelectedList();
+                    jobsadapter.setSelectedList();
+                    salsadapter.setSelectedList();
+                    marrysadapter.setSelectedList();
+                    childsadapter.setSelectedList();
+                    child_agesadapter.setSelectedList();
+                    child_parentsadapter.setSelectedList();
+                    believesadapter.setSelectedList();
+                    foodsadapter.setSelectedList();
+                    hobbysadapter.setSelectedList();
+                    othersadapter.setSelectedList();
+                    housesadapter.setSelectedList();
+                    carsadapter.setSelectedList();
+                }
+
             }
         });
 

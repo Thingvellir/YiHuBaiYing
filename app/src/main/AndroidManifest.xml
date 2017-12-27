@@ -87,9 +87,7 @@
         <activity
             android:name=".activity.qunliao_anjieyuexin"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.LoginActivity">
-
-        </activity>
+        <activity android:name=".activity.LoginActivity"></activity>
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.yihubaiying.LaunchActivity">
             <intent-filter>
@@ -98,6 +96,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.picknopeople_activity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

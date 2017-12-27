@@ -1,9 +1,7 @@
 package android.example.com.yihubaiying.activity;
 
 import android.content.Intent;
-import android.example.com.yihubaiying.enity.MyHongBao;
 import android.graphics.Color;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.example.com.yihubaiying.R;
@@ -11,7 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.wenld.smoothcheckbox.SmoothCheckBox;
@@ -19,23 +16,19 @@ import com.zhy.view.flowlayout.FlowLayout;
 import com.zhy.view.flowlayout.TagAdapter;
 import com.zhy.view.flowlayout.TagFlowLayout;
 
-import java.util.ArrayList;
-
-import me.gujun.android.taggroup.TagGroup;
-
-public class pickpeople_activity extends AppCompatActivity {
-    private MyHongBao hongBao;
+public class picknopeople_activity extends AppCompatActivity {
+    private Toolbar toolbar;
 
     private String[] sexs = new String[]
             {"男","女"};
     private String[] ages = new String[]
             {"10~19","20~29","30~39","40~49","50~59"};
-//    ,"遂宁市","内江市","乐山市","宜宾市","广安市","南充市","达州市"
+    //    ,"遂宁市","内江市","乐山市","宜宾市","广安市","南充市","达州市"
     private String[] homes = new String[]
             {"成都市","自贡市","攀枝花市","泸州市","绵阳市","德阳市","广元市"};
     private String[] edus = new String[]
             {"初中","高中","专科","本科","研究生","博士及以上"};
-//    "四川师范大学","西南民族大学","西南石油大学","西华大学"
+    //    "四川师范大学","西南民族大学","西南石油大学","西华大学"
     private String[] schos = new String[]
             {"四川大学","电子科技大学","西南交通大学","西南财经大学","四川农业大学","成都理工大学"};
     //            "工学","农学","医学","管理学"}
@@ -72,14 +65,12 @@ public class pickpeople_activity extends AppCompatActivity {
             {"有房","无房","租房"};
     private String[] cars = new String[]
             {"无车","10万及以下","10-20万","20-30万","30-40万"};
-    private Toolbar toolbar;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pickpeople_layout);
+        setContentView(R.layout.activity_picknopeople_activity);
+
         toolbar= (Toolbar) findViewById(R.id.toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,13 +80,13 @@ public class pickpeople_activity extends AppCompatActivity {
         });
         toolbar.setNavigationIcon(R.drawable.white_back_icon1);
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
-        toolbar.setTitle("选择领取者身份");
-        hongBao= (MyHongBao) getIntent().getSerializableExtra("hongbao");
+        toolbar.setTitle("不让以下人看到");
+
         final TagFlowLayout flowLayout= (TagFlowLayout) findViewById(R.id.flow_sex);
         final TagAdapter sexsadapter=new TagAdapter<String>(sexs) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -104,7 +95,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter agesadapter=new TagAdapter<String>(ages) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -113,7 +104,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter homesadapter=new TagAdapter<String>(homes) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -122,7 +113,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter edusadapter=new TagAdapter<String>(edus) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -131,7 +122,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter schosadapter=new TagAdapter<String>(schos) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -140,7 +131,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter colsadapter=new TagAdapter<String>(cols) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -149,7 +140,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter indsadapter=new TagAdapter<String>(inds) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -158,7 +149,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter jobsadapter=new TagAdapter<String>(jobs) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -167,7 +158,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter salsadapter=new TagAdapter<String>(sals) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -176,7 +167,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter marrysadapter=new TagAdapter<String>(marrys) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -185,7 +176,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter childsadapter=new TagAdapter<String>(childs) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -194,7 +185,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter child_agesadapter=new TagAdapter<String>(child_ages) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -203,7 +194,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter child_parentsadapter=new TagAdapter<String>(child_parents) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -212,7 +203,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter believesadapter=new TagAdapter<String>(believes) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -221,7 +212,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter foodsadapter=new TagAdapter<String>(foods) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -230,7 +221,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter hobbysadapter=new TagAdapter<String>(hobbys) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -239,7 +230,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter othersadapter=new TagAdapter<String>(others) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -248,7 +239,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter housesadapter=new TagAdapter<String>(houses) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -257,7 +248,7 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagAdapter carsadapter=new TagAdapter<String>(cars) {
             @Override
             public View getView(FlowLayout parent, int position, String s) {
-                TextView tv = (TextView) LayoutInflater.from(pickpeople_activity.this).inflate(R.layout.tv,
+                TextView tv = (TextView) LayoutInflater.from(picknopeople_activity.this).inflate(R.layout.tv,
                         flowLayout, false);
                 tv.setText(s);
                 return tv;
@@ -315,25 +306,6 @@ public class pickpeople_activity extends AppCompatActivity {
         final TagFlowLayout flowLayout_others= (TagFlowLayout) findViewById(R.id.flow_others);
         flowLayout_others.setAdapter(othersadapter);
 
-        Button button= (Button) findViewById(R.id.btn_next_step);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(pickpeople_activity.this,redpacketdetail_activity.class);
-                Bundle mBundle=new Bundle();
-                mBundle.putSerializable("hongbao",hongBao);
-                intent.putExtras(mBundle);
-                finish();
-                startActivity(intent);
-            }
-        });
-        ImageView nopeople= (ImageView) findViewById(R.id.picknonextstep);
-        nopeople.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(pickpeople_activity.this, picknopeople_activity.class));
-            }
-        });
         SmoothCheckBox smoothCheckBox= (SmoothCheckBox) findViewById(R.id.smoothcheckbox);
         smoothCheckBox.setOnCheckedChangeListener(new SmoothCheckBox.OnCheckedChangeListener() {
             @Override
@@ -382,7 +354,12 @@ public class pickpeople_activity extends AppCompatActivity {
 
             }
         });
-
-
+        Button xuanhaole= (Button) findViewById(R.id.btn_next_step);
+        xuanhaole.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
